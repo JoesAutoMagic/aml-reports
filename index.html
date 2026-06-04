@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AML Reports</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --ink: #e8ebf0;
+    --muted: #9aa3b0;
+    --accent: #5b9dff;
+    --line: #242935;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 48px 20px 80px; }
+  header h1 { margin: 0 0 4px; font-size: 28px; letter-spacing: -0.01em; }
+  header p { margin: 0; color: var(--muted); font-size: 14px; }
+  ul { list-style: none; margin: 32px 0 0; padding: 0; }
+  .report {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 16px;
+  }
+  .report-link {
+    text-decoration: none;
+    color: var(--ink);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .report-link:hover .company { text-decoration: underline; }
+  .ticker {
+    color: var(--accent);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    flex: 0 0 auto;
+  }
+  .company { font-weight: 600; overflow-wrap: anywhere; }
+  .meta {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    color: var(--muted);
+    font-size: 13px;
+    flex: 0 0 auto;
+  }
+  .kind { color: var(--ink); opacity: 0.85; }
+  .engine { opacity: 0.7; }
+  .date { font-variant-numeric: tabular-nums; }
+  .empty { color: var(--muted); padding: 24px; text-align: center; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 12px; }
+  @media (max-width: 560px) {
+    .report { flex-direction: column; }
+    .meta { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>AML Reports</h1>
+      <p>0 reports · generated 2026-06-04 01:13</p>
+    </header>
+    <ul>
+      <li class="empty">No reports yet.</li>
+    </ul>
+    <footer>AutoMagic Labs · published via GitHub Pages</footer>
+  </div>
+</body>
+</html>
