@@ -1,0 +1,10 @@
+# AML GitHub Pages Publishing Config
+# Resolved: 2026-06-04
+# Skill: github-pages-report-publishing v1.0.0
+GH_USER: JoesAutoMagic
+REPO: aml-reports
+CONNECTED_FOLDER: /Users/josephpistell/Desktop/AML Giant Folder
+CLONE_PATH: /Users/josephpistell/Desktop/AML Giant Folder/aml-reports
+PAGES_BASE: https://joesautomagic.github.io/aml-reports/
+COMMIT_NAME: Joe Pistell
+COMMIT_EMAIL: joepistell@gmail.com
