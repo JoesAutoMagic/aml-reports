@@ -1,0 +1,302 @@
+.bzl-scroll-lock {
+  overflow: hidden; }
+
+div[data-bzl-ui='content-modal'] {
+  position: absolute;
+  top: 56px;
+  bottom: 56px;
+  right: 56px;
+  left: 56px;
+  display: flex;
+  flex-flow: column;
+  border-radius: 4px;
+  overflow: hidden; }
+
+.bzl-modal-actions {
+  position: relative;
+  background: #ffffff;
+  height: 36px;
+  display: flex;
+  flex-flow: row; }
+
+.bzl-modal-action {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+  margin: 6px; }
+  .bzl-modal-action :hover {
+    color: #000000;
+    cursor: pointer; }
+
+@media only screen and (max-width: 1024px) {
+  /* if screen width is less than 1024 */
+  div[data-bzl-ui='content-modal'] {
+    top: 4px;
+    bottom: 4px;
+    right: 4px;
+    left: 4px; } }
+
+.bzl-banner-drawer,
+.bzl-hometopbanner-drawer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  z-index: 1; }
+
+.bzl-banner,
+.bzl-hometopbanner {
+  text-align: center;
+  max-width: 100%;
+  width: inherit; }
+
+.bzl-banner-drawer[data-bzl-page="vsr"] {
+  order: -1; }
+
+.search-results:has(.filter-tools-expanded) .bzl-banner-drawer[data-bzl-page="vsr"] {
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+.bzl-vcta-drawer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  flex-flow: column wrap;
+  align-items: center; }
+  .bzl-vcta-drawer[data-bzl-page='vsr'] {
+    order: -999; }
+  .bzl-vcta-drawer .bzl-vcta {
+    width: inherit;
+    margin-bottom: 8px; }
+     .bzl-vcta-drawer .bzl-vcta:has(.capital-one-stacked-button) {
+	 margin-bottom: 0;
+}
+    .bzl-vcta-drawer .bzl-vcta iframe {
+      min-height: 0  !important; }
+
+.vehicleCallsToAction .bzl-vcta-drawer {
+    padding: 0;
+}
+
+.vehicleCallsToAction:has(.bzl-vcta-drawer .bzl-vcta) ul.list-unstyled.priceBlock {
+  padding-top: 0;
+}
+
+.bzl-vgalleryaction-drawer {
+  width: 100%;
+  display: flex;
+  margin: 1.5rem 0px;
+  padding: 0px 1.5rem;
+  flex-grow: 0 !important;
+  box-sizing: border-box; }
+
+.bzl-vgalleryaction {
+  width: 100%;
+  margin: 5px 0px; }
+  .bzl-vgalleryaction .link {
+    padding: 0px !important;
+    width: 100%;
+    min-height: initial !important;
+    margin: 0 !important; }
+    .bzl-vgalleryaction .link > a.primary {
+      height: 100%;
+      padding: 0px !important;
+      margin: 0px !important;
+      justify-content: start !important;
+      min-height: unset !important;
+      font-size: 12px !important;
+      line-height: 30px !important;
+      min-width: 1px !important; }
+      .bzl-vgalleryaction .link > a.primary > i {
+        margin: 0px 8px 0px 8px;
+        line-height: 30px !important; }
+
+[data-bzl-page="vsr"].bzl-vgalleryicon-drawer {
+  position: relative;
+  display: flex;
+  height: 30px;
+  width: auto;
+  bottom: 0px;
+  padding-right: 0px;
+  order: -1;
+  -webkit-order: -1;
+  pointer-events: auto; }
+
+[data-bzl-page="vdp"].bzl-vgalleryicon-drawer {
+  position: absolute;
+  display: flex;
+  height: 48px;
+  width: auto;
+  bottom: 88px; }
+
+.bzl-vgalleryicon {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: auto; }
+  .bzl-vgalleryicon :hover {
+    cursor: pointer; }
+
+.bzl-vgalleryoverlay-drawer {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 0px 40px;
+  box-sizing: border-box;
+  margin: auto;
+  align-items: center;
+  z-index: 1; }
+
+@media (min-width: 640px) {
+  .bzl-vgalleryoverlay-drawer {
+    padding-bottom: 74px;
+    z-index: 0; } }
+
+li[data-bzl-ui="vehicle-gallery-tab"] > a:hover {
+  cursor: pointer; }
+
+section[data-bzl-ui="vehicle-gallery-panel"] {
+  position: relative; }
+
+div[data-bzl-ui="vehicle-gallery-content"] {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  flex: 1 0 0%;
+  height: 100%; }
+
+main#main .bzl-4x3 {
+  padding-top: 75%; }
+
+.bzl-16x9 {
+  padding-top: 56.52%; }
+
+.bzl-1x1 {
+  padding-top: 100%; }
+
+
+@media(min-width: 2600px) {
+  .bzl-4x3 {
+    padding-top: 35%;
+  }
+}
+@media(min-width: 3200px) {
+  .bzl-4x3 {
+    padding-top: 30%;
+  }
+}
+  
+.bzl-vicon-drawer {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.content > [data-bzl-page="vsr"].bzl-vicon-drawer {
+  order: 3;
+  align-self: center;
+}
+
+[data-bzl-page="vdp"].bzl-vicon-drawer {
+  margin: 8px 0px;
+}
+.bzl-vicon {
+  position: relative;
+  display: flex;
+  margin: 4px 4px 0px 0px;
+}
+.bzl-vicon img {
+  max-height: 60px !important;
+  max-width: 115px !important;
+}
+.pricestak-post:has(.bzl-vicon-drawer), #price-stack-post:has(.bzl-vicon-drawer) {
+  padding: 0 !important;
+}
+.pricestak-post:has(.bzl-vicon-drawer) .bzl-vicon, #price-stack-post:has(.bzl-vicon-drawer) .bzl-vicon {
+  margin: 0;
+  width: 100%;
+}
+.pricestak-post:has(.bzl-vicon-drawer) .bzl-vicon a, #price-stack-post:has(.bzl-vicon-drawer) .bzl-vicon a {
+  margin-top: 5px;
+}
+.pricestak-post:has(.bzl-vicon-drawer) .bzl-vicon div:has(a), #price-stack-post:has(.bzl-vicon-drawer) .bzl-vicon div:has(a) {
+  width: 100%;
+}
+.pricestak-post:has(.bzl-vicon-drawer) .bzl-vicon-drawer, #price-stack-post:has(.bzl-vicon-drawer) .bzl-vicon-drawer {
+  margin: 0;
+}
+.pricestak-post:has(.bzl-vicon-drawer) .bzl-vicon-drawer[data-bzl-page="vsr"], #price-stack-post:has(.bzl-vicon-drawer) .bzl-vicon-drawer[data-bzl-page="vsr"], .pricestak-post:has(.bzl-vicon-drawer) .bzl-vicon-drawer[data-bzl-page="vdp"], #price-stack-post:has(.bzl-vicon-drawer) .bzl-vicon-drawer[data-bzl-page="vdp"] {
+  padding: 0;
+}
+.bzl-vicon-drawer:last-child {
+  margin-right: 0;
+}
+
+.bzl-vmathbox-drawer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin-top: 0.5rem;
+  order: 4; }
+
+.bzl-vmathbox {
+  width: inherit; }
+
+.pricestak-post:has([class*="bzl-"]) {
+    padding-top: 6px !important;
+}
+
+.bzl-vehiclepricebadge {
+  width: inherit;
+  text-align: right; }
+
+section[id="card-view/card/b04032b8-1433-4fbc-85de-908003fef8ba_32693b52-642b-4f49-9af4-42ad9edc1454"] div.arrow.single.next {
+  right: 0px !important;
+  z-index: 1000; }
+
+section[id="card-view/card/b04032b8-1433-4fbc-85de-908003fef8ba_32693b52-642b-4f49-9af4-42ad9edc1454"] div.arrow.single.prev {
+  left: 0px !important;
+  z-index: 1000; }
+
+[id="card-view/card/b04032b8-1433-4fbc-85de-908003fef8ba_32693b52-642b-4f49-9af4-42ad9edc1454"] > .deck > section .media.img-thumbnail figure {
+  height: 75px; }
+
+[id="card-view/card/b04032b8-1433-4fbc-85de-908003fef8ba_32693b52-642b-4f49-9af4-42ad9edc1454"] > .deck > section .media.img-thumbnail figure img {
+  display: none; }
+
+[id="card-view/card/b04032b8-1433-4fbc-85de-908003fef8ba_32693b52-642b-4f49-9af4-42ad9edc1454"] .deck > * {
+  width: 75px; }
+
+.priceBlockItemButton .btn i.material-icons {
+  vertical-align: bottom;
+}
+
+.mktPlatformCTA a.btn-img {
+    padding: 0;
+}
+
+.bzl-headericoncta {
+  cursor: pointer;
+}
+
+#nav-sidebar ul.navbar-nav .bzl-headericoncta .iconLink {
+  display: flex;
+}
+
+#nav-sidebar ul.navbar-nav .bzl-headericoncta .iconLink i {
+  margin-right: .5rem;
+}
+
+.bzl-vehiclefeaturesicon .fa {
+    font-size: 1.15em;
+    vertical-align: baselines;
+}
