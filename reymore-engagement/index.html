@@ -24,14 +24,23 @@
   .stairs{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:end;width:100%;max-width:1220px}
   .step{border-radius:10px 10px 4px 4px;padding:18px 18px 16px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;color:var(--ink)}
   .step .nm{font-family:'Archivo',sans-serif;font-weight:800;font-size:24px}
-  .step .what{font-size:15px;line-height:1.35}
-  .step .why{font-size:15px;line-height:1.35;font-weight:600;margin-top:6px;padding-top:8px;border-top:1px solid rgba(0,0,0,.18)}
+  .step .what{font-size:15px;line-height:1.4;margin:0;padding:0;list-style:none}
+  .step .what li{padding-left:14px;position:relative}
+  .step .what li::before{content:"•";position:absolute;left:0}
+  .step .what li.grp{font-weight:700;margin-top:6px;padding-left:0}
+  .step .what li.grp::before{content:none}
+  .step .plus{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.85;margin-bottom:2px}
   .step.ice{background:var(--ice);height:170px}
   .step.cool{background:var(--cool);height:230px}
   .step.warm{background:var(--warm);height:290px}
   .step.hot{background:var(--hot);height:380px;color:#fff}
   .step.rh{background:var(--rh);height:470px;color:#fff}
-  .step.hot .why,.step.rh .why{border-top-color:rgba(255,255,255,.35)}
+  h2 .want{display:block;color:var(--rh);margin-top:6px}
+  #s2 h2{max-width:40ch}
+  .cover .dealer{font-family:'Archivo',sans-serif;font-weight:800;font-size:34px;letter-spacing:-.01em;color:#fff}
+  .cover .dealer span{font-weight:500;font-size:18px;color:#b9b2a5;margin-left:14px;letter-spacing:.04em}
+  .sub.oneline{max-width:none;white-space:nowrap}
+  @media (max-width:900px){.sub.oneline{white-space:normal}}
   .arrowline{display:flex;align-items:center;gap:12px;font-family:'Archivo',sans-serif;font-weight:700;font-size:22px;max-width:1220px}
   .arrowline .bar{flex:1;height:3px;background:linear-gradient(90deg,var(--ice),var(--cool),var(--warm),var(--hot),var(--rh));border-radius:2px}
   /* store bar */
@@ -84,10 +93,10 @@
 
 <!-- 1 COVER -->
 <section class="slide cover" id="s1">
-  <div class="eyebrow">Reymore Chevrolet · Central Square, NY</div>
-  <h1>Website shoppers in five colors</h1>
+  <div class="dealer">Reymore Chevrolet <span>Central Square, NY</span></div>
+  <h1>Car shoppers come in five colors</h1>
   <div class="strip"><div style="background:var(--ice)"></div><div style="background:var(--cool)"></div><div style="background:var(--warm)"></div><div style="background:var(--hot)"></div><div style="background:var(--rh)"></div></div>
-  <div class="sub">Every shopper who opened a car or a list of cars on reymore.com, Aug 11 – Sep 7, 2026. 9,152 shoppers. Where they came from, and how far each one went.</div>
+  <div class="sub oneline">9,152 shoppers who opened a car or a list of cars on reymore.com, Aug 11 – Sep 7, 2026.</div>
   <div class="foot">Prepared by AutoMagic Labs · data as of Sep 16, 2026 · source: Google Analytics 4 for reymore.com</div>
   <div class="slidenum">1 / 6</div>
 </section>
@@ -95,15 +104,22 @@
 <!-- 2 STAIR STEP -->
 <section class="slide" id="s2">
   <div class="eyebrow">The five colors</div>
-  <h2>Every shopper gets one color. Advertising exists to make the last two.</h2>
+  <h2>Car shoppers can be ice cold or red hot. <span class="want">WE WANT MORE RED HOT SHOPPERS.</span></h2>
   <div class="stairs">
-    <div class="step ice"><div class="nm">Ice Cold</div><div class="what">Looked at the list. Never opened a car.</div></div>
-    <div class="step cool"><div class="nm">Cool</div><div class="what">Opened a car, took a quick look, left.</div></div>
-    <div class="step warm"><div class="nm">Warm</div><div class="what">Worked the inventory: filters, several cars, lots of photos. One visit.</div></div>
-    <div class="step hot"><div class="nm">Hot</div><div class="what">Came back, or worked the deal: payments, trade value, CARFAX, saved the car.</div><div class="why">A Hot shopper is deciding. Your inventory and your price are on the table.</div></div>
-    <div class="step rh"><div class="nm">Red Hot</div><div class="what">Asked the store: call, text, form, test drive, directions.</div><div class="why">A Red Hot shopper handed you the sale to close. This is the bounty.</div></div>
+    <div class="step ice"><div class="nm">Ice Cold</div>
+      <ul class="what"><li>Looked at the list</li><li>Never opened a car</li></ul></div>
+    <div class="step cool"><div class="nm">Cool</div>
+      <ul class="what"><li>Opened 1 car</li><li>Under 20 photos</li><li>Left</li></ul></div>
+    <div class="step warm"><div class="nm">Warm</div>
+      <ul class="what"><li>2 or more cars</li><li>20 or more photos</li><li>Filters, sort, search</li><li>Read the details</li><li>Window sticker, compare</li></ul></div>
+    <div class="step hot"><div class="nm">Hot</div>
+      <div class="plus">Warm, plus</div>
+      <ul class="what"><li>2 or more visits</li><li>40 or more photos</li><li class="grp">Tools used</li><li>Payment calculator</li><li>Trade-in value</li><li>CARFAX</li><li>Saved the car</li></ul></div>
+    <div class="step rh"><div class="nm">Red Hot</div>
+      <div class="plus">Hot, plus asked the store</div>
+      <ul class="what"><li>Called</li><li>Texted or chatted</li><li>Sent a form</li><li>Is it available?</li><li>Test drive</li><li>Credit application</li><li>Directions</li></ul></div>
   </div>
-  <div class="arrowline"><span>Less desirable</span><div class="bar"></div><span>More desirable</span></div>
+  <div class="arrowline"><span>Just Looking</span><div class="bar"></div><span>Ready to Buy</span></div>
   <div class="slidenum">2 / 6</div>
 </section>
 
