@@ -49,7 +49,19 @@
   .voll .t{font-size:15px;color:var(--muted);line-height:1.35;margin-top:2px}
   h2 .want{display:block;color:var(--rh);margin-top:6px}
   #s2 h2{max-width:40ch}
-  #s4 h2,#s5 h2{max-width:44ch}
+  #s4 h2,#s5 h2,#s6 h2{max-width:44ch}
+  #s6 table{font-size:14px} #s6 th,#s6 td{padding:4px 7px} #s6 .sub{max-width:none} #s6 .tablewrap{max-width:none}
+  table.fixed{table-layout:fixed}
+  table.fixed td.name small{white-space:normal}
+  thead tr.grp th{border-bottom:1px solid var(--rule);text-align:center;font-size:12px;letter-spacing:.08em;padding-bottom:6px}
+  thead tr.grp th[rowspan]{vertical-align:bottom;text-align:right}
+  thead tr.grp th:first-child{text-align:left}
+  thead tr.grp th.g1{background:#f3f0ea} thead tr.grp th.g2{background:#ebe8e1}
+  table.hr td.sum,table.hr th.sum{border-left:2px solid var(--rule)}
+  table.hr td:nth-child(6),table.hr th:nth-child(6){border-left:2px solid var(--ink)}
+  table.hr thead tr:nth-child(2) th:nth-child(4),table.hr td:nth-child(6){border-left:2px solid var(--ink)}
+  td.name sup,thead sup{font-size:10px;color:var(--muted);margin-left:2px}
+  .fn{font-size:13px;color:var(--muted);display:grid;gap:3px;max-width:1240px;line-height:1.35}
   #s4 th,#s4 td,#s5 th,#s5 td{padding:5px 10px}
   #s4 .legend,#s5 .legend{margin-top:-8px}
   .cover .dealer{font-family:'Archivo',sans-serif;font-weight:800;font-size:30px;letter-spacing:-.01em;color:#fff}
@@ -154,13 +166,6 @@
     <div><div class="nm"><i style="background:var(--hot)"></i>Hot</div><div class="t">2 or more visits, tools used</div></div>
     <div><div class="nm"><i style="background:var(--rh)"></i>Red Hot</div><div class="t">Asked the store</div></div>
   </div>
-  <div class="numbers">
-    <div><b>35%</b><span>Hot or Red Hot: 3,158 shoppers</span></div>
-    <div><b>31%</b><span>Came back, 2 or more visits in 28 days</span></div>
-    <div><b>2.2</b><span>Cars opened per shopper</span></div>
-    <div><b>5.9</b><span>Photos viewed per car</span></div>
-    <div><b>34% · 5%</b><span>Benchmark: shoppers who already knew the store (Business Profile + Direct) went Hot-or-better 34%, Red Hot 5%</span></div>
-  </div>
   <div class="slidenum">3 / 7</div>
 </section>
 
@@ -173,30 +178,31 @@
     <span><i class="sw" style="background:var(--hot-top)"></i> Best in its group</span>
     <span><b>Bold</b> = at or above the benchmark</span>
     <span><i class="sw" style="background:var(--bench)"></i> Benchmark: shoppers who already know the store</span>
-    <span>Share = that source's shoppers who reached the color · Count = share × shoppers</span>
   </div>
   <div class="tablewrap">
-  <table>
-    <thead><tr>
-      <th>Traffic source</th><th>Shoppers</th>
-      <th class="hotc"><span class="dot" style="background:var(--hot)"></span>Hot</th><th class="hotc">Hot shoppers</th>
-      <th class="rhc"><span class="dot" style="background:var(--rh)"></span>Red Hot</th><th class="rhc">Red Hot shoppers</th>
-      <th class="sum">Hot + Red Hot</th><th class="sum">Hot + Red Hot shoppers</th>
-    </tr></thead>
+  <table class="fixed hr">
+    <colgroup><col style="width:29%"><col style="width:11%"><col style="width:10%"><col style="width:10%"><col style="width:10%"><col style="width:10%"><col style="width:10%"><col style="width:10%"></colgroup>
+    <thead>
+      <tr class="grp"><th rowspan="2">Traffic source</th><th rowspan="2">Shoppers</th><th colspan="3" class="g1">Share of the source's shoppers</th><th colspan="3" class="g2">Number of shoppers</th></tr>
+      <tr>
+        <th class="hotc"><span class="dot" style="background:var(--hot)"></span>Hot</th><th class="rhc"><span class="dot" style="background:var(--rh)"></span>Red Hot</th><th class="sum">Hot + Red Hot</th>
+        <th class="hotc"><span class="dot" style="background:var(--hot)"></span>Hot</th><th class="rhc"><span class="dot" style="background:var(--rh)"></span>Red Hot</th><th class="sum">Hot + Red Hot</th>
+      </tr>
+    </thead>
     <tbody>
       <tr class="cat"><td colspan="8">Paid · the store buys this traffic</td></tr>
-      <tr><td class="name">Paid social<small>Facebook and Instagram ads</small></td><td>2,894</td><td class="hotc">27%</td><td class="hotc">781</td><td class="rhc top-rh above">6%</td><td class="rhc top-rh above">174</td><td class="sum">33%</td><td class="sum">955</td></tr>
-      <tr><td class="name">Google paid search<small>Search ads</small></td><td>1,991</td><td class="hotc">25%</td><td class="hotc">498</td><td class="rhc">3%</td><td class="rhc">60</td><td class="sum">28%</td><td class="sum">558</td></tr>
-      <tr><td class="name">Listing vendors' social ads<small>Edmunds and Cars.com: 96–98% of this traffic arrives from Facebook and Instagram</small></td><td>1,957</td><td class="hotc top-hot above">41%</td><td class="hotc top-hot above">802</td><td class="rhc">2%</td><td class="rhc">39</td><td class="sum">43%</td><td class="sum">841</td></tr>
-      <tr><td class="name">Paid display<small>CarGurus display</small></td><td>522</td><td class="hotc top-hot above">41%</td><td class="hotc top-hot above">214</td><td class="rhc">2%</td><td class="rhc">10</td><td class="sum">43%</td><td class="sum">224</td></tr>
+      <tr><td class="name">Paid social<small>Facebook and Instagram ads</small></td><td>2,894</td><td class="hotc">27%</td><td class="rhc top-rh above">6%</td><td class="sum">33%</td><td class="hotc">781</td><td class="rhc top-rh above">174</td><td class="sum">955</td></tr>
+      <tr><td class="name">Google paid search<small>Search ads</small></td><td>1,991</td><td class="hotc">25%</td><td class="rhc">3%</td><td class="sum">28%</td><td class="hotc">498</td><td class="rhc">60</td><td class="sum">558</td></tr>
+      <tr><td class="name">Listing vendors' social ads<small>Edmunds and Cars.com; 96–98% arrives from Facebook and Instagram</small></td><td>1,957</td><td class="hotc top-hot above">41%</td><td class="rhc">2%</td><td class="sum">43%</td><td class="hotc top-hot above">802</td><td class="rhc">39</td><td class="sum">841</td></tr>
+      <tr><td class="name">Paid display<small>CarGurus display</small></td><td>522</td><td class="hotc top-hot above">41%</td><td class="rhc">2%</td><td class="sum">43%</td><td class="hotc top-hot above">214</td><td class="rhc">10</td><td class="sum">224</td></tr>
       <tr class="cat"><td colspan="8">Near-zero cost · organic, direct, owned</td></tr>
-      <tr><td class="name">Organic search<small>Google, Bing, Yahoo, unpaid</small></td><td>358</td><td class="hotc top-hot above">38%</td><td class="hotc top-hot above">136</td><td class="rhc top-rh above">5%</td><td class="rhc top-rh above">18</td><td class="sum">43%</td><td class="sum">154</td></tr>
-      <tr><td class="name">Google Business Profile<small>Maps and the store listing</small></td><td>541</td><td class="hotc above">30%</td><td class="hotc above">162</td><td class="rhc top-rh above">5%</td><td class="rhc top-rh above">27</td><td class="sum">35%</td><td class="sum">189</td></tr>
-      <tr><td class="name">Direct<small>Typed the address or used a saved link</small></td><td>545</td><td class="hotc">28%</td><td class="hotc">153</td><td class="rhc">4%</td><td class="rhc">22</td><td class="sum">32%</td><td class="sum">175</td></tr>
-      <tr><td class="name">Email and text<small>Store campaigns</small></td><td>106</td><td class="hotc">26%</td><td class="hotc">28</td><td class="rhc">1%</td><td class="rhc">1</td><td class="sum">27%</td><td class="sum">29</td></tr>
-      <tr><td class="name">Organic social<small>Facebook, TikTok, unpaid</small></td><td>171</td><td class="hotc">11%</td><td class="hotc">19</td><td class="rhc">2%</td><td class="rhc">3</td><td class="sum">13%</td><td class="sum">22</td></tr>
-      <tr class="bench"><td class="name">Benchmark: Business Profile + Direct<small>Shoppers who already know the store</small></td><td>1,086</td><td class="hotc">29%</td><td class="hotc">315</td><td class="rhc">5%</td><td class="rhc">54</td><td class="sum">34%</td><td class="sum">369</td></tr>
-      <tr class="all"><td>All shoppers</td><td>9,152</td><td class="hotc">31%</td><td class="hotc">2,805</td><td class="rhc">4%</td><td class="rhc">353</td><td class="sum">35%</td><td class="sum">3,158</td></tr>
+      <tr><td class="name">Organic search<small>Google, Bing, Yahoo, unpaid</small></td><td>358</td><td class="hotc top-hot above">38%</td><td class="rhc top-rh above">5%</td><td class="sum">43%</td><td class="hotc top-hot above">136</td><td class="rhc top-rh above">18</td><td class="sum">154</td></tr>
+      <tr><td class="name">Google Business Profile<small>Maps and the store listing</small></td><td>541</td><td class="hotc above">30%</td><td class="rhc top-rh above">5%</td><td class="sum">35%</td><td class="hotc above">162</td><td class="rhc top-rh above">27</td><td class="sum">189</td></tr>
+      <tr><td class="name">Direct<small>Typed the address or used a saved link</small></td><td>545</td><td class="hotc">28%</td><td class="rhc">4%</td><td class="sum">32%</td><td class="hotc">153</td><td class="rhc">22</td><td class="sum">175</td></tr>
+      <tr><td class="name">Email and text<small>Store campaigns</small></td><td>106</td><td class="hotc">26%</td><td class="rhc">1%</td><td class="sum">27%</td><td class="hotc">28</td><td class="rhc">1</td><td class="sum">29</td></tr>
+      <tr><td class="name">Organic social<small>Facebook, TikTok, unpaid</small></td><td>171</td><td class="hotc">11%</td><td class="rhc">2%</td><td class="sum">13%</td><td class="hotc">19</td><td class="rhc">3</td><td class="sum">22</td></tr>
+      <tr class="bench"><td class="name">Benchmark: Business Profile + Direct<small>Shoppers who already know the store</small></td><td>1,086</td><td class="hotc">29%</td><td class="rhc">5%</td><td class="sum">34%</td><td class="hotc">315</td><td class="rhc">54</td><td class="sum">369</td></tr>
+      <tr class="all"><td>All shoppers</td><td>9,152</td><td class="hotc">31%</td><td class="rhc">4%</td><td class="sum">35%</td><td class="hotc">2,805</td><td class="rhc">353</td><td class="sum">3,158</td></tr>
     </tbody>
   </table>
   </div>
@@ -245,35 +251,41 @@
 <section class="slide" id="s6">
   <div class="eyebrow">Paid sources, one by one</div>
   <h2>What each paid dollar bought</h2>
-  <div class="sub">Same 28 days. Spend is the September 2026 billing. "How they shop" is per shopper across all visits. Grey rows have too few tracked shoppers to judge.</div>
+  <div class="sub">Same 28 days. Spend is the September 2026 billing. Visits, cars opened and photos are per shopper across all visits. Grey rows have too few shoppers to judge.</div>
   <div class="tablewrap">
   <table>
     <thead><tr>
       <th>Paid source</th><th>Shoppers</th>
       <th><span class="dot" style="background:var(--ice)"></span>Ice Cold</th><th><span class="dot" style="background:var(--cool)"></span>Cool</th><th><span class="dot" style="background:var(--warm)"></span>Warm</th>
       <th class="hotc"><span class="dot" style="background:var(--hot)"></span>Hot</th><th class="rhc"><span class="dot" style="background:var(--rh)"></span>Red Hot</th><th class="sum">Hot + Red Hot</th>
-      <th>Visits</th><th>Cars opened</th><th>Photos per car</th><th>Spend</th><th>$ per shopper</th><th class="sum">$ per Hot or better</th>
+      <th>Visits</th><th>Cars opened</th><th>Photos / car</th><th>Spend</th><th>$ / shopper</th><th class="sum">$ / Hot or better</th>
     </tr></thead>
     <tbody>
       <tr class="cat"><td colspan="14">Social ads run by Reymore's agency</td></tr>
       <tr><td class="name">Facebook ads</td><td>2,776</td><td>1%</td><td>58%</td><td>8%</td><td class="hotc">27%</td><td class="rhc above">6%</td><td class="sum">33%</td><td>1.8</td><td>2.2</td><td>3.6</td><td>$4,690</td><td>$1.69</td><td class="sum">$5.06</td></tr>
       <tr><td class="name">Instagram ads</td><td>117</td><td>13%</td><td>45%</td><td>8%</td><td class="hotc">27%</td><td class="rhc top-rh above">7%</td><td class="sum">34%</td><td>1.6</td><td>2.2</td><td>4.8</td><td>$198</td><td>$1.69</td><td class="sum">$4.94</td></tr>
       <tr class="cat"><td colspan="14">Social ads run by listing vendors · billed as listing sites</td></tr>
-      <tr><td class="name">Edmunds social ads<small>96% arrive from Facebook and Instagram, 4% from edmunds.com</small></td><td>1,376</td><td>3%</td><td>38%</td><td>14%</td><td class="hotc top-hot above">44%</td><td class="rhc">1%</td><td class="sum">45%</td><td>2.1</td><td>3.1</td><td>4.6</td><td>$2,175</td><td>$1.58</td><td class="sum top-hot">$3.54</td></tr>
-      <tr><td class="name">Cars Social<small>98% arrive from Facebook and Instagram, 2% from cars.com</small></td><td>550</td><td>2%</td><td>48%</td><td>11%</td><td class="hotc above">35%</td><td class="rhc">4%</td><td class="sum">39%</td><td>1.9</td><td>2.4</td><td>4.1</td><td>$1,000</td><td>$1.82</td><td class="sum">$4.65</td></tr>
+      <tr><td class="name">Edmunds social ads <sup>1</sup></td><td>1,376</td><td>3%</td><td>38%</td><td>14%</td><td class="hotc top-hot above">44%</td><td class="rhc">1%</td><td class="sum">45%</td><td>2.1</td><td>3.1</td><td>4.6</td><td>$2,175</td><td>$1.58</td><td class="sum top-hot">$3.54</td></tr>
+      <tr><td class="name">Cars Social <sup>2</sup></td><td>550</td><td>2%</td><td>48%</td><td>11%</td><td class="hotc above">35%</td><td class="rhc">4%</td><td class="sum">39%</td><td>1.9</td><td>2.4</td><td>4.1</td><td>$1,000</td><td>$1.82</td><td class="sum">$4.65</td></tr>
       <tr class="cat"><td colspan="14">Search ads</td></tr>
       <tr><td class="name">Google search ads</td><td>1,979</td><td>16%</td><td>40%</td><td>16%</td><td class="hotc">25%</td><td class="rhc">3%</td><td class="sum">28%</td><td>1.6</td><td>1.5</td><td>8.1</td><td>$4,181</td><td>$2.11</td><td class="sum">$7.60</td></tr>
       <tr class="cat"><td colspan="14">Display ads</td></tr>
       <tr><td class="name">CarGurus display</td><td>514</td><td>1%</td><td>42%</td><td>13%</td><td class="hotc above">42%</td><td class="rhc">2%</td><td class="sum">44%</td><td>2.0</td><td>2.8</td><td>4.6</td><td>$1,000</td><td>$1.95</td><td class="sum">$4.44</td></tr>
-      <tr class="cat"><td colspan="14">Listing-site click-throughs · shoppers who came from the listing site itself</td></tr>
-      <tr class="small"><td class="name">Edmunds site</td><td>78</td><td>–</td><td>–</td><td>–</td><td class="hotc">–</td><td class="rhc">–</td><td class="sum">–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td class="sum">–</td></tr>
-      <tr class="small"><td class="name">Cars.com listing</td><td>16</td><td>–</td><td>–</td><td>–</td><td class="hotc">–</td><td class="rhc">–</td><td class="sum">–</td><td>–</td><td>–</td><td>–</td><td>$2,200</td><td>$138</td><td class="sum">–</td></tr>
-      <tr class="small"><td class="name">CarGurus listing</td><td>11</td><td>–</td><td>–</td><td>–</td><td class="hotc">–</td><td class="rhc">–</td><td class="sum">–</td><td>–</td><td>–</td><td>–</td><td>$5,050</td><td>$459</td><td class="sum">$842</td></tr>
-      <tr class="small"><td class="name">CARFAX listing</td><td>8</td><td>–</td><td>–</td><td>–</td><td class="hotc">–</td><td class="rhc">–</td><td class="sum">–</td><td>–</td><td>–</td><td>–</td><td>$4,100</td><td>$513</td><td class="sum">$1,025</td></tr>
-      <tr class="small"><td class="name">Autotrader listing</td><td>10</td><td>–</td><td>–</td><td>–</td><td class="hotc">–</td><td class="rhc">–</td><td class="sum">–</td><td>–</td><td>–</td><td>–</td><td>$1,420</td><td>$142</td><td class="sum">$710</td></tr>
+      <tr class="cat"><td colspan="14">Listing-site click-throughs · shoppers who came from the listing site itself · too few to judge</td></tr>
+      <tr class="small"><td class="name">Edmunds site <sup>3</sup></td><td>78</td><td>–</td><td>–</td><td>–</td><td class="hotc">–</td><td class="rhc">–</td><td class="sum">–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td class="sum">–</td></tr>
+      <tr class="small"><td class="name">Cars.com listing <sup>3</sup></td><td>16</td><td>–</td><td>–</td><td>–</td><td class="hotc">–</td><td class="rhc">–</td><td class="sum">–</td><td>–</td><td>–</td><td>–</td><td>$2,200</td><td>$138</td><td class="sum">–</td></tr>
+      <tr class="small"><td class="name">CarGurus listing <sup>4</sup></td><td>11</td><td>0%</td><td>9%</td><td>36%</td><td class="hotc">36%</td><td class="rhc">18%</td><td class="sum">55%</td><td>–</td><td>–</td><td>–</td><td>$5,050</td><td>$459</td><td class="sum">$842</td></tr>
+      <tr class="small"><td class="name">CARFAX listing <sup>4</sup></td><td>8</td><td>50%</td><td>0%</td><td>0%</td><td class="hotc">38%</td><td class="rhc">12%</td><td class="sum">50%</td><td>–</td><td>–</td><td>–</td><td>$4,100</td><td>$513</td><td class="sum">$1,025</td></tr>
+      <tr class="small"><td class="name">Autotrader listing <sup>4</sup></td><td>10</td><td>50%</td><td>30%</td><td>0%</td><td class="hotc">20%</td><td class="rhc">0%</td><td class="sum">20%</td><td>–</td><td>–</td><td>–</td><td>$1,420</td><td>$142</td><td class="sum">$710</td></tr>
       <tr class="all"><td>All paid</td><td>7,345</td><td>6%</td><td>47%</td><td>12%</td><td class="hotc">31%</td><td class="rhc">4%</td><td class="sum">35%</td><td>–</td><td>–</td><td>–</td><td>$26,015</td><td>$3.54</td><td class="sum">$10.07</td></tr>
     </tbody>
   </table>
+  </div>
+  <div class="fn">
+    <div><sup>1</sup> Edmunds social ads: 96% of these shoppers arrived from Facebook and Instagram, 4% from edmunds.com.</div>
+    <div><sup>2</sup> Cars Social: 98% arrived from Facebook and Instagram, 2% from cars.com. A separate $1,000 product from the Cars.com listing.</div>
+    <div><sup>3</sup> Edmunds site and Cars.com listing: the shoppers who arrived from the listing site itself. Their colors were not pulled; the color pull is by source, and these are a slice of the Edmunds and Cars.com source rows.</div>
+    <div><sup>4</sup> CarGurus, CARFAX and Autotrader listings: colors shown, but 8–11 shoppers is too few to judge a source. The vendors' own click reports were not part of this report.</div>
   </div>
   <div class="slidenum">6 / 7</div>
 </section>
