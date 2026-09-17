@@ -68,10 +68,12 @@
   td.name sup,thead sup{font-size:10px;color:var(--muted);margin-left:2px}
   .fn{font-size:13px;color:var(--muted);display:grid;gap:3px;max-width:1240px;line-height:1.35}
   #s4 th,#s4 td,#s6 th,#s6 td{padding:5px 10px}
-  #s5 table{font-size:14px} #s5 th,#s5 td{padding:2px 8px} #s5 .fn{font-size:12px} #s5{gap:16px;padding-top:40px} #s5 h2{font-size:32px} #s5 td.name small{display:inline;margin-left:8px}
+  #s5 table{font-size:14px} #s5 th,#s5 td{padding:6px 10px} #s5 .fn{font-size:12px} #s5{gap:22px} #s5 h2{font-size:38px} #s5 td.name small{display:inline;margin-left:8px}
   #s4 .legend,#s5 .legend,#s6 .legend{margin-top:-8px}
   td.best{background:var(--bench);font-weight:700}
-  table.sp td:nth-child(6),table.sp th:nth-child(6){border-left:2px solid var(--ink)}
+  table.sp td:nth-child(6),table.sp thead tr:nth-child(2) th:nth-child(4){border-left:2px solid var(--ink)}
+  table.sp .tot{font-weight:700}
+  table.sp tr.all td:nth-child(6){border-left:2px solid var(--ink)}
   .cover .dealer{font-family:'Archivo',sans-serif;font-weight:800;font-size:30px;letter-spacing:-.01em;color:#fff}
   .cover .dealer span{font-weight:500;font-size:16px;color:#b9b2a5;margin-left:12px;letter-spacing:.04em}
   .sub.oneline{max-width:none;white-space:nowrap}
@@ -160,7 +162,7 @@
 <!-- 3 THE STORE -->
 <section class="slide" id="s3">
   <div class="eyebrow">The store · Aug 11 – Sep 7, 2026</div>
-  <h2>9,152 shoppers,<br>80% followed your paid ad.</h2>
+  <h2>9,152 shoppers,<br>80% followed your paid ads.</h2>
   <div class="vol">
     <div class="col"><div class="cnt">1,151</div><div class="bar" style="height:26%;background:var(--ice)"><span class="pct">13%</span></div></div>
     <div class="col"><div class="cnt">3,731</div><div class="bar" style="height:84%;background:var(--cool)"><span class="pct">41%</span></div></div>
@@ -173,7 +175,7 @@
     <div><div class="nm"><i style="background:var(--cool)"></i>Cool</div><div class="t">1 visit, opened 1 VDP</div></div>
     <div><div class="nm"><i style="background:var(--warm)"></i>Warm</div><div class="t">1 visit, 2 or more VDPs</div></div>
     <div><div class="nm"><i style="background:var(--hot)"></i>Hot</div><div class="t">2 or more visits, tools used</div></div>
-    <div><div class="nm"><i style="background:var(--rh)"></i>Red Hot</div><div class="t">Asked the store</div></div>
+    <div><div class="nm"><i style="background:var(--rh)"></i>Red Hot</div><div class="t">Back to your site many times, saw lots of VDPs, used tools and sent you a lead</div></div>
   </div>
   <div class="arrowline"><span>Just Looking</span><div class="bar"></div><span>Ready to Buy</span></div>
   <div class="slidenum">3 / 8</div>
@@ -221,11 +223,10 @@
 
 <!-- 5 SPEND PER HOT + RED HOT -->
 <section class="slide" id="s5">
-  <div class="eyebrow">What the ad dollars bought · August 2026 bills</div>
-  <h2>Cost of a Hot or Red Hot shopper, by source</h2>
+  <div class="eyebrow">Ad Spend Productivity • August 2026</div>
+  <h2>What Does a HOT Shopper Cost?</h2>
   <div class="legend">
     <span><i class="sw" style="background:var(--bench)"></i> Lowest cost per Hot + Red Hot shopper</span>
-    <span>Spend: August 2026 bills from Search Engines MD and the store. Counts: Google Analytics, Aug 11 – Sep 7.</span>
   </div>
   <div class="tablewrap">
   <table class="fixed sp">
@@ -233,29 +234,24 @@
     <thead>
       <tr class="grp"><th rowspan="2">Traffic source</th><th rowspan="2">Shoppers</th><th colspan="3" class="g1">Count</th><th colspan="3" class="g2">August ad spend</th></tr>
       <tr>
-        <th class="hotc"><span class="dot" style="background:var(--hot)"></span>Hot</th><th class="rhc"><span class="dot" style="background:var(--rh)"></span>Red Hot</th><th class="sum">Hot + Red Hot</th>
-        <th>Spend</th><th class="sum">$ per Hot + Red Hot</th><th>$ per shopper</th>
+        <th class="hotc"><span class="dot" style="background:var(--hot)"></span>Hot</th><th class="rhc"><span class="dot" style="background:var(--rh)"></span>Red Hot</th><th class="tot">Hot + Red Hot</th>
+        <th>Spend</th><th class="tot">$ per Hot + Red Hot</th><th>$ per shopper</th>
       </tr>
     </thead>
     <tbody>
       <tr class="cat"><td colspan="8">Paid traffic</td></tr>
-      <tr><td class="name">Paid social<small>Facebook and Instagram ads</small></td><td>2,894</td><td class="hotc">781</td><td class="rhc">174</td><td class="sum">955</td><td>$4,888</td><td class="sum">$5.12</td><td>$1.69</td></tr>
-      <tr><td class="name">Google paid search<small>Search ads</small></td><td>1,991</td><td class="hotc">498</td><td class="rhc">60</td><td class="sum">558</td><td>$4,181</td><td class="sum">$7.49</td><td>$2.10</td></tr>
-      <tr><td class="name">Edmunds social ads<small>Ads run by Edmunds; the Edmunds listing fee</small></td><td>1,376</td><td class="hotc">598</td><td class="rhc">17</td><td class="sum">615</td><td>$2,175</td><td class="sum">$3.54</td><td>$1.58</td></tr>
-      <tr><td class="name">Cars Social<small>Facebook and Instagram ads run by Cars.com <sup>1</sup></small></td><td>550</td><td class="hotc">195</td><td class="rhc">20</td><td class="sum">215</td><td>$599</td><td class="sum best">$2.79</td><td>$1.09</td></tr>
-      <tr><td class="name">Paid display<small>CarGurus display</small></td><td>522</td><td class="hotc">214</td><td class="rhc">10</td><td class="sum">224</td><td>$1,000</td><td class="sum">$4.46</td><td>$1.92</td></tr>
-      <tr class="bench"><td class="name">Paid, tracked</td><td>7,333</td><td class="hotc">2,286</td><td class="rhc">281</td><td class="sum">2,567</td><td>$12,844</td><td class="sum">$5.00</td><td>$1.75</td></tr>
-      <tr class="cat"><td colspan="8">Near-zero cost · organic, direct, owned</td></tr>
-      <tr><td class="name">Organic search<small>Google, Bing, Yahoo, unpaid</small></td><td>358</td><td class="hotc">136</td><td class="rhc">18</td><td class="sum">154</td><td>$0</td><td class="sum">—</td><td>—</td></tr>
-      <tr><td class="name">Google Business Profile<small>Maps and the store listing</small></td><td>541</td><td class="hotc">162</td><td class="rhc">27</td><td class="sum">189</td><td>$0</td><td class="sum">—</td><td>—</td></tr>
-      <tr><td class="name">Direct<small>Typed the address or used a saved link</small></td><td>545</td><td class="hotc">153</td><td class="rhc">22</td><td class="sum">175</td><td>$0</td><td class="sum">—</td><td>—</td></tr>
-      <tr><td class="name">Email and text<small>Store campaigns; paid by LMA</small></td><td>106</td><td class="hotc">28</td><td class="rhc">1</td><td class="sum">29</td><td>$0</td><td class="sum">—</td><td>—</td></tr>
-      <tr><td class="name">Organic social<small>Facebook, TikTok, unpaid</small></td><td>171</td><td class="hotc">19</td><td class="rhc">3</td><td class="sum">22</td><td>$0</td><td class="sum">—</td><td>—</td></tr>
-      <tr class="all"><td>All shoppers · all store ad dollars <sup>2</sup></td><td>9,152</td><td class="hotc">2,805</td><td class="rhc">353</td><td class="sum">3,158</td><td>$25,614</td><td class="sum">$8.11</td><td>$2.80</td></tr>
+      <tr><td class="name">Paid social<small>Facebook and Instagram ads</small></td><td>2,894</td><td class="hotc">781</td><td class="rhc">174</td><td class="tot">955</td><td>$4,888</td><td class="tot">$5.12</td><td>$1.69</td></tr>
+      <tr><td class="name">Google paid search<small>Search ads</small></td><td>1,991</td><td class="hotc">498</td><td class="rhc">60</td><td class="tot">558</td><td>$4,181</td><td class="tot">$7.49</td><td>$2.10</td></tr>
+      <tr><td class="name">Edmunds social ads<small>Ads run by Edmunds; the Edmunds listing fee</small></td><td>1,376</td><td class="hotc">598</td><td class="rhc">17</td><td class="tot">615</td><td>$2,175</td><td class="tot">$3.54</td><td>$1.58</td></tr>
+      <tr><td class="name">Cars Social<small>Facebook and Instagram ads run by Cars.com <sup>1</sup></small></td><td>550</td><td class="hotc">195</td><td class="rhc">20</td><td class="tot">215</td><td>$599</td><td class="tot best">$2.79</td><td>$1.09</td></tr>
+      <tr><td class="name">Paid display<small>CarGurus display</small></td><td>522</td><td class="hotc">214</td><td class="rhc">10</td><td class="tot">224</td><td>$1,000</td><td class="tot">$4.46</td><td>$1.92</td></tr>
+      <tr class="bench"><td class="name">All paid, tracked</td><td>7,333</td><td class="hotc">2,286</td><td class="rhc">281</td><td class="tot">2,567</td><td>$12,844</td><td class="tot">$5.00</td><td>$1.75</td></tr>
+      <tr class="all"><td>All shoppers · all store ad dollars <sup>2</sup></td><td>9,152</td><td class="hotc">2,805</td><td class="rhc">353</td><td class="tot">3,158</td><td>$25,614</td><td class="tot">$8.11</td><td>$2.80</td></tr>
     </tbody>
   </table>
   </div>
   <div class="fn">
+    <div>Spend: August 2026 bills from Search Engines MD and the store. Counts: Google Analytics, Aug 11 – Sep 7, 2026.</div>
     <div><sup>1</sup> Cars Social: $599 per the store's Sep 11, 2026 email, which also says it was canceled. An earlier draft used $1,000.</div>
     <div><sup>2</sup> Includes listing fees with almost no tracked website shoppers: CarGurus listing + Highlight $5,050, Cars.com $2,200, Autotrader $1,420, CARFAX $4,100 ($12,770 of $25,614). LMA and DTG Octane email: paid by LMA, $0 to the store.</div>
   </div>
