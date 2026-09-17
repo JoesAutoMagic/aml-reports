@@ -71,10 +71,11 @@
   #s5 table{font-size:14px} #s5 th,#s5 td{padding:6px 10px} #s5 .fn{font-size:12px} #s5{gap:22px} #s5 h2{font-size:38px} #s5 td.name small{display:inline;margin-left:8px}
   #s4 .legend,#s5 .legend,#s6 .legend{margin-top:-8px}
   td.best{background:var(--bench);font-weight:700}
-  td.circle{position:relative;overflow:visible}
-  td.circle::after{content:"";position:absolute;left:8%;right:8%;top:-4px;bottom:-4px;border:3px solid #d8261c;border-radius:50%;transform:rotate(-3deg);pointer-events:none;box-shadow:inset 0 0 0 1px rgba(216,38,28,.25)}
+  td.circle,th.circle{position:relative;overflow:visible}
+  td.circle::after,th.circle::after{content:"";position:absolute;left:8%;right:8%;top:-4px;bottom:-4px;border:3px solid #d8261c;border-radius:50%;transform:rotate(-3deg);pointer-events:none;box-shadow:inset 0 0 0 1px rgba(216,38,28,.25)}
   table.sp td:nth-child(6),table.sp thead tr:nth-child(2) th:nth-child(4){border-left:2px solid var(--ink)}
   table.sp .tot{font-weight:700}
+  table.sp th.circle::after{left:2%;right:2%;top:-3px;bottom:-3px;border-width:2.5px}
   table.sp tr.all td:nth-child(6){border-left:2px solid var(--ink)}
   .cover .dealer{font-family:'Archivo',sans-serif;font-weight:800;font-size:30px;letter-spacing:-.01em;color:#fff}
   .cover .dealer span{font-weight:500;font-size:16px;color:#b9b2a5;margin-left:12px;letter-spacing:.04em}
@@ -238,7 +239,7 @@
       <tr class="grp"><th rowspan="2">Traffic source</th><th rowspan="2">Shoppers</th><th colspan="3" class="g1">Count</th><th colspan="3" class="g2">August ad spend</th></tr>
       <tr>
         <th class="hotc"><span class="dot" style="background:var(--hot)"></span>Hot</th><th class="rhc"><span class="dot" style="background:var(--rh)"></span>Red Hot</th><th class="tot">Hot + Red Hot</th>
-        <th>Spend</th><th class="tot">$ per Hot + Red Hot</th><th>$ per shopper</th>
+        <th>Spend</th><th class="tot circle">$ per Hot + Red Hot</th><th class="circle">$ per shopper</th>
       </tr>
     </thead>
     <tbody>
@@ -317,8 +318,8 @@
       <tr><td class="name">Facebook ads</td><td>2,776</td><td>1%</td><td>58%</td><td>8%</td><td class="hotc">27%</td><td class="rhc above">6%</td><td class="sum">33%</td><td>1.8</td><td>2.2</td><td>3.6</td><td>$4,690</td><td>$1.69</td><td class="sum">$5.06</td></tr>
       <tr><td class="name">Instagram ads</td><td>117</td><td>13%</td><td>45%</td><td>8%</td><td class="hotc">27%</td><td class="rhc top-rh above">7%</td><td class="sum">34%</td><td>1.6</td><td>2.2</td><td>4.8</td><td>$198</td><td>$1.69</td><td class="sum">$4.94</td></tr>
       <tr class="cat"><td colspan="14">Social ads run by listing vendors · billed as listing sites</td></tr>
-      <tr><td class="name">Edmunds social ads <sup>1</sup></td><td>1,376</td><td>3%</td><td>38%</td><td>14%</td><td class="hotc top-hot above">44%</td><td class="rhc">1%</td><td class="sum">45%</td><td>2.1</td><td>3.1</td><td>4.6</td><td>$2,175</td><td>$1.58</td><td class="sum top-hot">$3.54</td></tr>
-      <tr><td class="name">Cars Social <sup>2</sup></td><td>550</td><td>2%</td><td>48%</td><td>11%</td><td class="hotc above">35%</td><td class="rhc">4%</td><td class="sum">39%</td><td>1.9</td><td>2.4</td><td>4.1</td><td>$599</td><td>$1.09</td><td class="sum">$2.79</td></tr>
+      <tr><td class="name">Edmunds social ads <sup>1</sup></td><td>1,376</td><td>3%</td><td>38%</td><td>14%</td><td class="hotc top-hot above">44%</td><td class="rhc">1%</td><td class="sum">45%</td><td>2.1</td><td>3.1</td><td>4.6</td><td>$2,175</td><td>$1.58</td><td class="sum">$3.54</td></tr>
+      <tr><td class="name">Cars Social <sup>2</sup></td><td>550</td><td>2%</td><td>48%</td><td>11%</td><td class="hotc above">35%</td><td class="rhc">4%</td><td class="sum">39%</td><td>1.9</td><td>2.4</td><td>4.1</td><td>$599</td><td>$1.09</td><td class="sum top-hot">$2.79</td></tr>
       <tr class="cat"><td colspan="14">Search ads</td></tr>
       <tr><td class="name">Google search ads</td><td>1,979</td><td>16%</td><td>40%</td><td>16%</td><td class="hotc">25%</td><td class="rhc">3%</td><td class="sum">28%</td><td>1.6</td><td>1.5</td><td>8.1</td><td>$4,181</td><td>$2.11</td><td class="sum">$7.60</td></tr>
       <tr class="cat"><td colspan="14">Display ads</td></tr>
