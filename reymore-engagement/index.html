@@ -16,10 +16,11 @@
   h2{font-family:'Archivo',sans-serif;font-weight:700;font-size:38px;line-height:1.1;margin:0;letter-spacing:-.015em;max-width:24ch}
   .sub{color:var(--muted);font-size:18px;max-width:70ch}
   .slidenum{position:absolute;right:72px;bottom:28px;font-family:'Archivo',sans-serif;font-size:12px;color:var(--muted);letter-spacing:.08em}
-  .nav{position:fixed;right:16px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:6px;z-index:5;padding:8px 6px;background:rgba(255,255,255,.92);border:1px solid #cfd3cd;border-radius:22px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
-  .nav a{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;color:#4a5058;text-decoration:none;border:1.5px solid #b9bdb8;background:#fff;transition:background .15s,color .15s}
-  .nav a:hover{background:#e9ebe6;color:var(--ink)}
-  .nav a.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .nav{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:5}
+  .nav a{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.94);border:1.5px solid #b9bdb8;box-shadow:0 2px 10px rgba(0,0,0,.14);color:var(--ink);text-decoration:none;transition:background .15s}
+  .nav a svg{width:20px;height:20px;stroke:currentColor;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .nav a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .nav a.off{opacity:.3;pointer-events:none}
   .hint{position:fixed;left:72px;bottom:26px;font-size:13px;color:var(--muted)}
   /* stairs */
   .stairs{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:end;width:100%;max-width:1220px}
@@ -118,7 +119,8 @@
 <body>
 
 <nav class="nav" aria-label="Slides">
-  <a href="#s1" title="Cover">1</a><a href="#s2" title="Five colors">2</a><a href="#s3" title="The store">3</a><a href="#s4" title="Hot and Red Hot by source">4</a><a href="#s5" title="All five colors by source">5</a><a href="#s6" title="Paid sources">6</a><a href="#s7" title="Notes">7</a>
+  <a href="#" id="navUp" title="Previous slide" aria-label="Previous slide"><svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg></a>
+  <a href="#" id="navDown" title="Next slide" aria-label="Next slide"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
 </nav>
 <div class="hint">Scroll or press ↓ for the next slide</div>
 
@@ -314,14 +316,15 @@
 <script>
   (function(){
     var ids=['s1','s2','s3','s4','s5','s6','s7'];
-    var dots=document.querySelectorAll('.nav a');
+    var up=document.getElementById('navUp'),down=document.getElementById('navDown');
     function cur(){var y=window.scrollY+window.innerHeight/2;var i=0;ids.forEach(function(id,k){var el=document.getElementById(id);if(el&&el.offsetTop<=y)i=k;});return i;}
-    function mark(){var i=cur();dots.forEach(function(d,k){d.classList.toggle('on',k===i);});}
+    function mark(){var i=cur();up.classList.toggle('off',i===0);down.classList.toggle('off',i===ids.length-1);}
     window.addEventListener('scroll',mark);mark();
     var root=document.documentElement,timer=null;
     function go(i){var el=document.getElementById(ids[i]);if(!el)return;root.style.scrollSnapType='none';root.style.scrollBehavior='auto';
       window.scrollTo(0,el.offsetTop);clearTimeout(timer);timer=setTimeout(function(){root.style.scrollSnapType='';root.style.scrollBehavior='';mark();},120);}
-    dots.forEach(function(d,k){d.addEventListener('click',function(e){e.preventDefault();go(k);history.replaceState(null,'','#'+ids[k]);});});
+    up.addEventListener('click',function(e){e.preventDefault();go(Math.max(cur()-1,0));});
+    down.addEventListener('click',function(e){e.preventDefault();go(Math.min(cur()+1,ids.length-1));});
     if(location.hash){var h=ids.indexOf(location.hash.slice(1));if(h>-1)setTimeout(function(){go(h);},50);}
     document.addEventListener('keydown',function(e){
       if(['ArrowDown','PageDown',' '].indexOf(e.key)>-1){e.preventDefault();go(Math.min(cur()+1,ids.length-1));}
