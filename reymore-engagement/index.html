@@ -52,6 +52,7 @@
   #s4 h2,#s5 h2,#s6 h2{max-width:44ch}
   #s6 table{font-size:14px} #s6 th,#s6 td{padding:4px 7px} #s6 .sub{max-width:none} #s6 .tablewrap{max-width:none}
   table.fixed{table-layout:fixed}
+  table.fixed th:not(:first-child),table.fixed td:not(:first-child){text-align:center}
   table.fixed td.name small{white-space:normal}
   thead tr.grp th{border-bottom:1px solid var(--rule);text-align:center;font-size:12px;letter-spacing:.08em;padding-bottom:6px}
   thead tr.grp th[rowspan]{vertical-align:bottom;text-align:right}
@@ -166,13 +167,14 @@
     <div><div class="nm"><i style="background:var(--hot)"></i>Hot</div><div class="t">2 or more visits, tools used</div></div>
     <div><div class="nm"><i style="background:var(--rh)"></i>Red Hot</div><div class="t">Asked the store</div></div>
   </div>
+  <div class="arrowline"><span>Just Looking</span><div class="bar"></div><span>Ready to Buy</span></div>
   <div class="slidenum">3 / 7</div>
 </section>
 
 <!-- 4 HOT AND RED HOT BY SOURCE -->
 <section class="slide" id="s4">
   <div class="eyebrow">Where the shoppers came from</div>
-  <h2>Hot and Red Hot shoppers, by source</h2>
+  <h2>Who has the hot shoppers!</h2>
   <div class="legend">
     <span><i class="sw" style="background:var(--hot-col)"></i> Hot and Red Hot: the dealer's bounty</span>
     <span><i class="sw" style="background:var(--hot-top)"></i> Best in its group</span>
@@ -190,7 +192,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="cat"><td colspan="8">Paid · the store buys this traffic</td></tr>
+      <tr class="cat"><td colspan="8">Paid traffic</td></tr>
       <tr><td class="name">Paid social<small>Facebook and Instagram ads</small></td><td>2,894</td><td class="hotc">27%</td><td class="rhc top-rh above">6%</td><td class="sum">33%</td><td class="hotc">781</td><td class="rhc top-rh above">174</td><td class="sum">955</td></tr>
       <tr><td class="name">Google paid search<small>Search ads</small></td><td>1,991</td><td class="hotc">25%</td><td class="rhc">3%</td><td class="sum">28%</td><td class="hotc">498</td><td class="rhc">60</td><td class="sum">558</td></tr>
       <tr><td class="name">Listing vendors' social ads<small>Edmunds and Cars.com; 96–98% arrives from Facebook and Instagram</small></td><td>1,957</td><td class="hotc top-hot above">41%</td><td class="rhc">2%</td><td class="sum">43%</td><td class="hotc top-hot above">802</td><td class="rhc">39</td><td class="sum">841</td></tr>
@@ -313,9 +315,14 @@
     function cur(){var y=window.scrollY+window.innerHeight/2;var i=0;ids.forEach(function(id,k){var el=document.getElementById(id);if(el&&el.offsetTop<=y)i=k;});return i;}
     function mark(){var i=cur();dots.forEach(function(d,k){d.classList.toggle('on',k===i);});}
     window.addEventListener('scroll',mark);mark();
+    var root=document.documentElement,timer=null;
+    function go(i){var el=document.getElementById(ids[i]);if(!el)return;root.style.scrollSnapType='none';root.style.scrollBehavior='auto';
+      window.scrollTo(0,el.offsetTop);clearTimeout(timer);timer=setTimeout(function(){root.style.scrollSnapType='';root.style.scrollBehavior='';mark();},120);}
+    dots.forEach(function(d,k){d.addEventListener('click',function(e){e.preventDefault();go(k);history.replaceState(null,'','#'+ids[k]);});});
+    if(location.hash){var h=ids.indexOf(location.hash.slice(1));if(h>-1)setTimeout(function(){go(h);},50);}
     document.addEventListener('keydown',function(e){
-      if(['ArrowDown','PageDown',' '].indexOf(e.key)>-1){e.preventDefault();var i=Math.min(cur()+1,ids.length-1);document.getElementById(ids[i]).scrollIntoView({behavior:'smooth'});}
-      if(['ArrowUp','PageUp'].indexOf(e.key)>-1){e.preventDefault();var j=Math.max(cur()-1,0);document.getElementById(ids[j]).scrollIntoView({behavior:'smooth'});}
+      if(['ArrowDown','PageDown',' '].indexOf(e.key)>-1){e.preventDefault();go(Math.min(cur()+1,ids.length-1));}
+      if(['ArrowUp','PageUp'].indexOf(e.key)>-1){e.preventDefault();go(Math.max(cur()-1,0));}
     });
   })();
 </script>
