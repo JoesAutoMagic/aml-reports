@@ -16,9 +16,11 @@
   h2{font-family:'Archivo',sans-serif;font-weight:700;font-size:38px;line-height:1.1;margin:0;letter-spacing:-.015em;max-width:24ch}
   .sub{color:var(--muted);font-size:18px;max-width:70ch}
   .slidenum{position:absolute;right:72px;bottom:28px;font-family:'Archivo',sans-serif;font-size:12px;color:var(--muted);letter-spacing:.08em}
-  .nav{position:fixed;right:22px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:5}
-  .nav a{width:10px;height:10px;border-radius:50%;background:var(--rule);display:block}
-  .nav a.on{background:var(--ink)}
+  .nav{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:6px;z-index:5}
+  .nav a{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+  .nav a::after{content:"";width:12px;height:12px;border-radius:50%;background:#b9bdb8;display:block;transition:transform .15s}
+  .nav a:hover::after{transform:scale(1.35);background:var(--muted)}
+  .nav a.on::after{background:var(--ink);transform:scale(1.35)}
   .hint{position:fixed;left:72px;bottom:26px;font-size:13px;color:var(--muted)}
   /* stairs */
   .stairs{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:end;width:100%;max-width:1220px}
@@ -30,15 +32,28 @@
   .step .what li.grp{font-weight:700;margin-top:6px;padding-left:0}
   .step .what li.grp::before{content:none}
   .step .plus{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.85;margin-bottom:2px}
-  .step.ice{background:var(--ice);height:170px}
-  .step.cool{background:var(--cool);height:230px}
-  .step.warm{background:var(--warm);height:290px}
-  .step.hot{background:var(--hot);height:380px;color:#fff}
-  .step.rh{background:var(--rh);height:470px;color:#fff}
+  .step.ice{background:var(--ice);min-height:170px}
+  .step.cool{background:var(--cool);min-height:230px}
+  .step.warm{background:var(--warm);min-height:290px}
+  .step.hot{background:var(--hot);min-height:380px;color:#fff}
+  .step.rh{background:var(--rh);min-height:480px;color:#fff}
+  /* volume bars (slide 3) */
+  .vol{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:end;width:100%;max-width:1220px;height:360px}
+  .vol .col{display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;height:100%}
+  .vol .cnt{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;line-height:1;margin-bottom:6px}
+  .vol .cnt small{font-size:15px;font-weight:600;color:var(--muted);margin-left:8px}
+  .vol .bar{border-radius:10px 10px 4px 4px}
+  .voll{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;width:100%;max-width:1220px}
+  .voll .nm{font-family:'Archivo',sans-serif;font-weight:800;font-size:22px;display:flex;align-items:center;gap:8px}
+  .voll .nm i{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .voll .t{font-size:15px;color:var(--muted);line-height:1.35;margin-top:2px}
   h2 .want{display:block;color:var(--rh);margin-top:6px}
   #s2 h2{max-width:40ch}
-  .cover .dealer{font-family:'Archivo',sans-serif;font-weight:800;font-size:34px;letter-spacing:-.01em;color:#fff}
-  .cover .dealer span{font-weight:500;font-size:18px;color:#b9b2a5;margin-left:14px;letter-spacing:.04em}
+  #s4 h2,#s5 h2{max-width:44ch}
+  #s4 th,#s4 td,#s5 th,#s5 td{padding:5px 10px}
+  #s4 .legend,#s5 .legend{margin-top:-8px}
+  .cover .dealer{font-family:'Archivo',sans-serif;font-weight:800;font-size:30px;letter-spacing:-.01em;color:#fff}
+  .cover .dealer span{font-weight:500;font-size:16px;color:#b9b2a5;margin-left:12px;letter-spacing:.04em}
   .sub.oneline{max-width:none;white-space:nowrap}
   @media (max-width:900px){.sub.oneline{white-space:normal}}
   .arrowline{display:flex;align-items:center;gap:12px;font-family:'Archivo',sans-serif;font-weight:700;font-size:22px;max-width:1220px}
@@ -87,7 +102,7 @@
 <body>
 
 <nav class="nav" aria-label="Slides">
-  <a href="#s1" title="Cover"></a><a href="#s2" title="Five colors"></a><a href="#s3" title="The store"></a><a href="#s4" title="Sources"></a><a href="#s5" title="Paid sources"></a><a href="#s6" title="Notes"></a>
+  <a href="#s1" title="Cover"></a><a href="#s2" title="Five colors"></a><a href="#s3" title="The store"></a><a href="#s4" title="Hot and Red Hot by source"></a><a href="#s5" title="All five colors by source"></a><a href="#s6" title="Paid sources"></a><a href="#s7" title="Notes"></a>
 </nav>
 <div class="hint">Scroll or press ↓ for the next slide</div>
 
@@ -96,50 +111,48 @@
   <div class="dealer">Reymore Chevrolet <span>Central Square, NY</span></div>
   <h1>Car shoppers come in five colors</h1>
   <div class="strip"><div style="background:var(--ice)"></div><div style="background:var(--cool)"></div><div style="background:var(--warm)"></div><div style="background:var(--hot)"></div><div style="background:var(--rh)"></div></div>
-  <div class="sub oneline">9,152 shoppers who opened a car or a list of cars on reymore.com, Aug 11 – Sep 7, 2026.</div>
+  <div class="sub oneline">A study of Reymore's 9,152 car shoppers, Aug 11 – Sep 7, 2026</div>
   <div class="foot">Prepared by AutoMagic Labs · data as of Sep 16, 2026 · source: Google Analytics 4 for reymore.com</div>
-  <div class="slidenum">1 / 6</div>
+  <div class="slidenum">1 / 7</div>
 </section>
 
 <!-- 2 STAIR STEP -->
 <section class="slide" id="s2">
   <div class="eyebrow">The five colors</div>
-  <h2>Car shoppers can be ice cold or red hot. <span class="want">WE WANT MORE RED HOT SHOPPERS.</span></h2>
+  <h2>Car shoppers can be ice cold... <span class="want">WE WANT MORE RED HOT SHOPPERS.</span></h2>
   <div class="stairs">
     <div class="step ice"><div class="nm">Ice Cold</div>
-      <ul class="what"><li>Looked at the list</li><li>Never opened a car</li></ul></div>
+      <ul class="what"><li>1 Visit</li><li>Looked at the SRP</li><li>Never Saw a VDP</li></ul></div>
     <div class="step cool"><div class="nm">Cool</div>
-      <ul class="what"><li>Opened 1 car</li><li>Under 20 photos</li><li>Left</li></ul></div>
+      <ul class="what"><li>1 Visit</li><li>Opened 1 VDP</li></ul></div>
     <div class="step warm"><div class="nm">Warm</div>
-      <ul class="what"><li>2 or more cars</li><li>20 or more photos</li><li>Filters, sort, search</li><li>Read the details</li><li>Window sticker, compare</li></ul></div>
+      <ul class="what"><li>1 Visit</li><li>2 or More VDPs</li><li>20 or more photos clicked</li><li>Filters, Sort, Search</li></ul></div>
     <div class="step hot"><div class="nm">Hot</div>
-      <div class="plus">Warm, plus</div>
-      <ul class="what"><li>2 or more visits</li><li>40 or more photos</li><li class="grp">Tools used</li><li>Payment calculator</li><li>Trade-in value</li><li>CARFAX</li><li>Saved the car</li></ul></div>
+      <ul class="what"><li>2 or More Visits</li><li>2 or More VDPs</li><li>40 or more photos clicked</li><li class="grp">Tools Used</li><li>Payment Calculators</li><li>Tradein Forms</li><li>CarFax</li><li>MSRP Stickers</li></ul></div>
     <div class="step rh"><div class="nm">Red Hot</div>
-      <div class="plus">Hot, plus asked the store</div>
-      <ul class="what"><li>Called</li><li>Texted or chatted</li><li>Sent a form</li><li>Is it available?</li><li>Test drive</li><li>Credit application</li><li>Directions</li></ul></div>
+      <ul class="what"><li>2 or More Visits</li><li>2 or More VDPs</li><li>40 or more photos clicked</li><li class="grp">Tools Used</li><li>Payment Calculators</li><li>Tradein Forms</li><li>CarFax</li><li>MSRP Stickers</li><li class="grp">Asked the Store</li><li>Called</li><li>Texted</li><li>Sent a Form</li><li>Test Drive</li><li>Credit App</li><li>Directions</li></ul></div>
   </div>
   <div class="arrowline"><span>Just Looking</span><div class="bar"></div><span>Ready to Buy</span></div>
-  <div class="slidenum">2 / 6</div>
+  <div class="slidenum">2 / 7</div>
 </section>
 
 <!-- 3 THE STORE -->
 <section class="slide" id="s3">
   <div class="eyebrow">The store · Aug 11 – Sep 7, 2026</div>
   <h2>9,152 shoppers. One in three went Hot or Red Hot.</h2>
-  <div class="bar5">
-    <div style="width:12.6%;background:var(--ice)">13%</div>
-    <div style="width:40.8%;background:var(--cool)">41%</div>
-    <div style="width:12.2%;background:var(--warm)">12%</div>
-    <div style="width:30.6%;background:var(--hot);color:#fff">31%</div>
-    <div style="width:3.8%;background:var(--rh);color:#fff;font-size:18px">4%</div>
+  <div class="vol">
+    <div class="col"><div class="cnt">1,151<small>13%</small></div><div class="bar" style="height:26%;background:var(--ice)"></div></div>
+    <div class="col"><div class="cnt">3,731<small>41%</small></div><div class="bar" style="height:84%;background:var(--cool)"></div></div>
+    <div class="col"><div class="cnt">1,112<small>12%</small></div><div class="bar" style="height:25%;background:var(--warm)"></div></div>
+    <div class="col"><div class="cnt">2,805<small>31%</small></div><div class="bar" style="height:63%;background:var(--hot)"></div></div>
+    <div class="col"><div class="cnt">353<small>4%</small></div><div class="bar" style="height:8%;background:var(--rh)"></div></div>
   </div>
-  <div class="cards">
-    <div class="card"><div class="k"><i style="background:var(--ice)"></i>Ice Cold</div><div class="n">1,151</div><div class="t">Looked at the list, never opened a car</div></div>
-    <div class="card"><div class="k"><i style="background:var(--cool)"></i>Cool</div><div class="n">3,731</div><div class="t">Opened a car, lightly, one visit</div></div>
-    <div class="card"><div class="k"><i style="background:var(--warm)"></i>Warm</div><div class="n">1,112</div><div class="t">Worked the inventory in one visit</div></div>
-    <div class="card"><div class="k"><i style="background:var(--hot)"></i>Hot</div><div class="n">2,805</div><div class="t">Came back or worked the deal</div></div>
-    <div class="card"><div class="k"><i style="background:var(--rh)"></i>Red Hot</div><div class="n">353</div><div class="t">Called, texted, or sent a form</div></div>
+  <div class="voll">
+    <div><div class="nm"><i style="background:var(--ice)"></i>Ice Cold</div><div class="t">1 visit, looked at the SRP, never saw a VDP</div></div>
+    <div><div class="nm"><i style="background:var(--cool)"></i>Cool</div><div class="t">1 visit, opened 1 VDP</div></div>
+    <div><div class="nm"><i style="background:var(--warm)"></i>Warm</div><div class="t">1 visit, 2 or more VDPs</div></div>
+    <div><div class="nm"><i style="background:var(--hot)"></i>Hot</div><div class="t">2 or more visits, tools used</div></div>
+    <div><div class="nm"><i style="background:var(--rh)"></i>Red Hot</div><div class="t">Asked the store</div></div>
   </div>
   <div class="numbers">
     <div><b>35%</b><span>Hot or Red Hot: 3,158 shoppers</span></div>
@@ -148,12 +161,51 @@
     <div><b>5.9</b><span>Photos viewed per car</span></div>
     <div><b>34% · 5%</b><span>Benchmark: shoppers who already knew the store (Business Profile + Direct) went Hot-or-better 34%, Red Hot 5%</span></div>
   </div>
-  <div class="slidenum">3 / 6</div>
+  <div class="slidenum">3 / 7</div>
 </section>
 
-<!-- 4 SOURCES -->
+<!-- 4 HOT AND RED HOT BY SOURCE -->
 <section class="slide" id="s4">
   <div class="eyebrow">Where the shoppers came from</div>
+  <h2>Hot and Red Hot shoppers, by source</h2>
+  <div class="legend">
+    <span><i class="sw" style="background:var(--hot-col)"></i> Hot and Red Hot: the dealer's bounty</span>
+    <span><i class="sw" style="background:var(--hot-top)"></i> Best in its group</span>
+    <span><b>Bold</b> = at or above the benchmark</span>
+    <span><i class="sw" style="background:var(--bench)"></i> Benchmark: shoppers who already know the store</span>
+    <span>Share = that source's shoppers who reached the color · Count = share × shoppers</span>
+  </div>
+  <div class="tablewrap">
+  <table>
+    <thead><tr>
+      <th>Traffic source</th><th>Shoppers</th>
+      <th class="hotc"><span class="dot" style="background:var(--hot)"></span>Hot</th><th class="hotc">Hot shoppers</th>
+      <th class="rhc"><span class="dot" style="background:var(--rh)"></span>Red Hot</th><th class="rhc">Red Hot shoppers</th>
+      <th class="sum">Hot + Red Hot</th><th class="sum">Hot + Red Hot shoppers</th>
+    </tr></thead>
+    <tbody>
+      <tr class="cat"><td colspan="8">Paid · the store buys this traffic</td></tr>
+      <tr><td class="name">Paid social<small>Facebook and Instagram ads</small></td><td>2,894</td><td class="hotc">27%</td><td class="hotc">781</td><td class="rhc top-rh above">6%</td><td class="rhc top-rh above">174</td><td class="sum">33%</td><td class="sum">955</td></tr>
+      <tr><td class="name">Google paid search<small>Search ads</small></td><td>1,991</td><td class="hotc">25%</td><td class="hotc">498</td><td class="rhc">3%</td><td class="rhc">60</td><td class="sum">28%</td><td class="sum">558</td></tr>
+      <tr><td class="name">Listing vendors' social ads<small>Edmunds and Cars.com: 96–98% of this traffic arrives from Facebook and Instagram</small></td><td>1,957</td><td class="hotc top-hot above">41%</td><td class="hotc top-hot above">802</td><td class="rhc">2%</td><td class="rhc">39</td><td class="sum">43%</td><td class="sum">841</td></tr>
+      <tr><td class="name">Paid display<small>CarGurus display</small></td><td>522</td><td class="hotc top-hot above">41%</td><td class="hotc top-hot above">214</td><td class="rhc">2%</td><td class="rhc">10</td><td class="sum">43%</td><td class="sum">224</td></tr>
+      <tr class="cat"><td colspan="8">Near-zero cost · organic, direct, owned</td></tr>
+      <tr><td class="name">Organic search<small>Google, Bing, Yahoo, unpaid</small></td><td>358</td><td class="hotc top-hot above">38%</td><td class="hotc top-hot above">136</td><td class="rhc top-rh above">5%</td><td class="rhc top-rh above">18</td><td class="sum">43%</td><td class="sum">154</td></tr>
+      <tr><td class="name">Google Business Profile<small>Maps and the store listing</small></td><td>541</td><td class="hotc above">30%</td><td class="hotc above">162</td><td class="rhc top-rh above">5%</td><td class="rhc top-rh above">27</td><td class="sum">35%</td><td class="sum">189</td></tr>
+      <tr><td class="name">Direct<small>Typed the address or used a saved link</small></td><td>545</td><td class="hotc">28%</td><td class="hotc">153</td><td class="rhc">4%</td><td class="rhc">22</td><td class="sum">32%</td><td class="sum">175</td></tr>
+      <tr><td class="name">Email and text<small>Store campaigns</small></td><td>106</td><td class="hotc">26%</td><td class="hotc">28</td><td class="rhc">1%</td><td class="rhc">1</td><td class="sum">27%</td><td class="sum">29</td></tr>
+      <tr><td class="name">Organic social<small>Facebook, TikTok, unpaid</small></td><td>171</td><td class="hotc">11%</td><td class="hotc">19</td><td class="rhc">2%</td><td class="rhc">3</td><td class="sum">13%</td><td class="sum">22</td></tr>
+      <tr class="bench"><td class="name">Benchmark: Business Profile + Direct<small>Shoppers who already know the store</small></td><td>1,086</td><td class="hotc">29%</td><td class="hotc">315</td><td class="rhc">5%</td><td class="rhc">54</td><td class="sum">34%</td><td class="sum">369</td></tr>
+      <tr class="all"><td>All shoppers</td><td>9,152</td><td class="hotc">31%</td><td class="hotc">2,805</td><td class="rhc">4%</td><td class="rhc">353</td><td class="sum">35%</td><td class="sum">3,158</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="slidenum">4 / 7</div>
+</section>
+
+<!-- 5 ALL FIVE COLORS BY SOURCE -->
+<section class="slide" id="s5">
+  <div class="eyebrow">Where the shoppers came from · all five colors</div>
   <h2>Each source, and how far its shoppers went</h2>
   <div class="legend">
     <span><i class="sw" style="background:var(--hot-col)"></i> Hot and Red Hot: the dealer's bounty</span>
@@ -186,11 +238,11 @@
     </tbody>
   </table>
   </div>
-  <div class="slidenum">4 / 6</div>
+  <div class="slidenum">5 / 7</div>
 </section>
 
-<!-- 5 PAID DRILL -->
-<section class="slide" id="s5">
+<!-- 6 PAID DRILL -->
+<section class="slide" id="s6">
   <div class="eyebrow">Paid sources, one by one</div>
   <h2>What each paid dollar bought</h2>
   <div class="sub">Same 28 days. Spend is the September 2026 billing. "How they shop" is per shopper across all visits. Grey rows have too few tracked shoppers to judge.</div>
@@ -223,28 +275,28 @@
     </tbody>
   </table>
   </div>
-  <div class="slidenum">5 / 6</div>
+  <div class="slidenum">6 / 7</div>
 </section>
 
-<!-- 6 NOTES -->
-<section class="slide" id="s6">
+<!-- 7 NOTES -->
+<section class="slide" id="s7">
   <div class="eyebrow">Method and data notes</div>
   <h2>How to read this report</h2>
   <div class="notes">
     <div><b>Who is counted</b>People in the United States who opened at least one vehicle page or one inventory list page on reymore.com between Aug 11 and Sep 7, 2026. Visitors who only saw the homepage or a service page are not counted. Known vendor tools and bots are removed.</div>
     <div><b>How a color is set</b>By what the shopper did across all visits in the 28 days. Red Hot wins over Hot, Hot over Warm, Warm over Cool. Red Hot = a call, text, form, chat, test-drive or directions request. Hot = a second visit, or a payment, trade, CARFAX or save-the-car action, or 40+ photos. Warm = filters, 2+ cars or 20+ photos in one visit. Cool = the rest who opened a car. Ice Cold = list only.</div>
     <div><b>Where a shopper "came from"</b>The source of the shopper's first recorded visit, as Google Analytics labels it. Edmunds and Cars.com are labeled "referral" by their links; the page that actually sent the click was Facebook or Instagram 96–98% of the time.</div>
-    <div><b>Counts and rounding</b>Google Analytics estimates user counts, so rows can overlap by about 1%. Each row is rounded to sum to 100%. Rows under 100 shoppers are shown grey and never win a highlight.</div>
+    <div><b>Counts and rounding</b>Google Analytics estimates user counts, so rows can overlap by about 1%. Each row is rounded to sum to 100%. On slide 4 the Hot and Red Hot shopper counts are computed as share × shoppers from the rounded shares; the All shoppers row uses the measured counts. Rows under 100 shoppers are shown grey and never win a highlight.</div>
     <div><b>Spend</b>September 2026 billing as supplied by the store. Cars Social is a separate $1,000 product from the Cars.com listing. CarGurus listing, CARFAX and Autotrader show 29 tracked click-throughs between them; the vendors' own click reports were not part of this report.</div>
     <div><b>What this report does not do</b>It does not connect website shoppers to leads or sales, and it does not look at where shoppers live. It reads the website only.</div>
   </div>
   <div class="foot" style="color:var(--muted)">Prepared by AutoMagic Labs for Reymore Chevrolet · Sep 16, 2026 · Questions: Joe Pistell</div>
-  <div class="slidenum">6 / 6</div>
+  <div class="slidenum">7 / 7</div>
 </section>
 
 <script>
   (function(){
-    var ids=['s1','s2','s3','s4','s5','s6'];
+    var ids=['s1','s2','s3','s4','s5','s6','s7'];
     var dots=document.querySelectorAll('.nav a');
     function cur(){var y=window.scrollY+window.innerHeight/2;var i=0;ids.forEach(function(id,k){var el=document.getElementById(id);if(el&&el.offsetTop<=y)i=k;});return i;}
     function mark(){var i=cur();dots.forEach(function(d,k){d.classList.toggle('on',k===i);});}
