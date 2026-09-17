@@ -41,7 +41,11 @@
   .vol .col{display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;height:100%}
   .vol .cnt{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;line-height:1;margin-bottom:6px}
   .vol .cnt small{font-size:15px;font-weight:600;color:var(--muted);margin-left:8px}
-  .vol .bar{border-radius:10px 10px 4px 4px}
+  .vol .bar{border-radius:10px 10px 4px 4px;position:relative;display:flex;align-items:center;justify-content:center}
+  .vol .pct{font-family:'Archivo',sans-serif;font-weight:800;font-size:44px;line-height:1;letter-spacing:-.02em}
+  .vol .rhbar{overflow:visible}
+  .vol .pct.badge{position:absolute;left:50%;bottom:calc(100% - 6px);transform:translateX(-50%);width:96px;height:96px;border-radius:50%;background:var(--rh);color:#fff;display:flex;align-items:center;justify-content:center;font-size:36px;box-shadow:0 4px 14px rgba(0,0,0,.18);border:4px solid var(--ground)}
+  .vol .col:last-child .cnt{margin-bottom:100px}
   .voll{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;width:100%;max-width:1220px}
   .voll .nm{font-family:'Archivo',sans-serif;font-weight:800;font-size:22px;display:flex;align-items:center;gap:8px}
   .voll .nm i{width:14px;height:14px;border-radius:3px;display:inline-block}
@@ -153,11 +157,11 @@
   <div class="eyebrow">The store · Aug 11 – Sep 7, 2026</div>
   <h2>9,152 shoppers,<br>80% followed your paid ad.</h2>
   <div class="vol">
-    <div class="col"><div class="cnt">1,151<small>13%</small></div><div class="bar" style="height:26%;background:var(--ice)"></div></div>
-    <div class="col"><div class="cnt">3,731<small>41%</small></div><div class="bar" style="height:84%;background:var(--cool)"></div></div>
-    <div class="col"><div class="cnt">1,112<small>12%</small></div><div class="bar" style="height:25%;background:var(--warm)"></div></div>
-    <div class="col"><div class="cnt">2,805<small>31%</small></div><div class="bar" style="height:63%;background:var(--hot)"></div></div>
-    <div class="col"><div class="cnt">353<small>4%</small></div><div class="bar" style="height:8%;background:var(--rh)"></div></div>
+    <div class="col"><div class="cnt">1,151</div><div class="bar" style="height:26%;background:var(--ice)"><span class="pct">13%</span></div></div>
+    <div class="col"><div class="cnt">3,731</div><div class="bar" style="height:84%;background:var(--cool)"><span class="pct">41%</span></div></div>
+    <div class="col"><div class="cnt">1,112</div><div class="bar" style="height:25%;background:var(--warm)"><span class="pct">12%</span></div></div>
+    <div class="col"><div class="cnt">2,805</div><div class="bar" style="height:63%;background:var(--hot);color:#fff"><span class="pct">31%</span></div></div>
+    <div class="col"><div class="cnt">353</div><div class="bar rhbar" style="height:8%;background:var(--rh);color:#fff"><span class="pct badge">4%</span></div></div>
   </div>
   <div class="voll">
     <div><div class="nm"><i style="background:var(--ice)"></i>Ice Cold</div><div class="t">1 visit, looked at the SRP, never saw a VDP</div></div>
