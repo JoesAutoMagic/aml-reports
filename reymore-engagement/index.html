@@ -53,8 +53,8 @@
   .voll .t{font-size:15px;color:var(--muted);line-height:1.35;margin-top:2px}
   h2 .want{display:block;color:var(--rh);margin-top:6px}
   #s2 h2{max-width:40ch}
-  #s3 h2,#s4 h2,#s5 h2,#s6 h2{max-width:44ch}
-  #s6 table{font-size:14px} #s6 th,#s6 td{padding:4px 7px} #s6 .sub{max-width:none} #s6 .tablewrap{max-width:none}
+  #s3 h2,#s4 h2,#s5 h2,#s6 h2,#s7 h2{max-width:44ch}
+  #s7 table{font-size:14px} #s7 th,#s7 td{padding:4px 7px} #s7 .sub{max-width:none} #s7 .tablewrap{max-width:none}
   table.fixed{table-layout:fixed}
   table.fixed th:not(:first-child),table.fixed td:not(:first-child){text-align:center}
   table.fixed td.name small{white-space:normal}
@@ -67,8 +67,11 @@
   table.hr thead tr:nth-child(2) th:nth-child(4),table.hr td:nth-child(6){border-left:2px solid var(--ink)}
   td.name sup,thead sup{font-size:10px;color:var(--muted);margin-left:2px}
   .fn{font-size:13px;color:var(--muted);display:grid;gap:3px;max-width:1240px;line-height:1.35}
-  #s4 th,#s4 td,#s5 th,#s5 td{padding:5px 10px}
-  #s4 .legend,#s5 .legend{margin-top:-8px}
+  #s4 th,#s4 td,#s6 th,#s6 td{padding:5px 10px}
+  #s5 table{font-size:14px} #s5 th,#s5 td{padding:2px 8px} #s5 .fn{font-size:12px} #s5{gap:16px;padding-top:40px} #s5 h2{font-size:32px} #s5 td.name small{display:inline;margin-left:8px}
+  #s4 .legend,#s5 .legend,#s6 .legend{margin-top:-8px}
+  td.best{background:var(--bench);font-weight:700}
+  table.sp td:nth-child(6),table.sp th:nth-child(6){border-left:2px solid var(--ink)}
   .cover .dealer{font-family:'Archivo',sans-serif;font-weight:800;font-size:30px;letter-spacing:-.01em;color:#fff}
   .cover .dealer span{font-weight:500;font-size:16px;color:#b9b2a5;margin-left:12px;letter-spacing:.04em}
   .sub.oneline{max-width:none;white-space:nowrap}
@@ -131,7 +134,7 @@
   <div class="strip"><div style="background:var(--ice)"></div><div style="background:var(--cool)"></div><div style="background:var(--warm)"></div><div style="background:var(--hot)"></div><div style="background:var(--rh)"></div></div>
   <div class="sub oneline">A study of Reymore's 9,152 car shoppers, Aug 11 – Sep 7, 2026</div>
   <div class="foot">Prepared by AutoMagic Labs · data as of Sep 16, 2026 · source: Google Analytics 4 for reymore.com</div>
-  <div class="slidenum">1 / 7</div>
+  <div class="slidenum">1 / 8</div>
 </section>
 
 <!-- 2 STAIR STEP -->
@@ -151,7 +154,7 @@
       <ul class="what"><li>2 or More Visits</li><li>2 or More VDPs</li><li>40 or more photos clicked</li><li class="grp">Tools Used</li><li>Payment Calculators</li><li>Tradein Forms</li><li>CarFax</li><li>MSRP Stickers</li><li class="grp">Asked the Store</li><li>Called</li><li>Texted</li><li>Sent a Form</li><li>Test Drive</li><li>Credit App</li><li>Directions</li></ul></div>
   </div>
   <div class="arrowline"><span>Just Looking</span><div class="bar"></div><span>Ready to Buy</span></div>
-  <div class="slidenum">2 / 7</div>
+  <div class="slidenum">2 / 8</div>
 </section>
 
 <!-- 3 THE STORE -->
@@ -173,7 +176,7 @@
     <div><div class="nm"><i style="background:var(--rh)"></i>Red Hot</div><div class="t">Asked the store</div></div>
   </div>
   <div class="arrowline"><span>Just Looking</span><div class="bar"></div><span>Ready to Buy</span></div>
-  <div class="slidenum">3 / 7</div>
+  <div class="slidenum">3 / 8</div>
 </section>
 
 <!-- 4 HOT AND RED HOT BY SOURCE -->
@@ -213,11 +216,54 @@
     </tbody>
   </table>
   </div>
-  <div class="slidenum">4 / 7</div>
+  <div class="slidenum">4 / 8</div>
 </section>
 
-<!-- 5 ALL FIVE COLORS BY SOURCE -->
+<!-- 5 SPEND PER HOT + RED HOT -->
 <section class="slide" id="s5">
+  <div class="eyebrow">What the ad dollars bought · August 2026 bills</div>
+  <h2>Cost of a Hot or Red Hot shopper, by source</h2>
+  <div class="legend">
+    <span><i class="sw" style="background:var(--bench)"></i> Lowest cost per Hot + Red Hot shopper</span>
+    <span>Spend: August 2026 bills from Search Engines MD and the store. Counts: Google Analytics, Aug 11 – Sep 7.</span>
+  </div>
+  <div class="tablewrap">
+  <table class="fixed sp">
+    <colgroup><col style="width:27%"><col style="width:10%"><col style="width:9%"><col style="width:9%"><col style="width:11%"><col style="width:11%"><col style="width:12%"><col style="width:11%"></colgroup>
+    <thead>
+      <tr class="grp"><th rowspan="2">Traffic source</th><th rowspan="2">Shoppers</th><th colspan="3" class="g1">Count</th><th colspan="3" class="g2">August ad spend</th></tr>
+      <tr>
+        <th class="hotc"><span class="dot" style="background:var(--hot)"></span>Hot</th><th class="rhc"><span class="dot" style="background:var(--rh)"></span>Red Hot</th><th class="sum">Hot + Red Hot</th>
+        <th>Spend</th><th class="sum">$ per Hot + Red Hot</th><th>$ per shopper</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="cat"><td colspan="8">Paid traffic</td></tr>
+      <tr><td class="name">Paid social<small>Facebook and Instagram ads</small></td><td>2,894</td><td class="hotc">781</td><td class="rhc">174</td><td class="sum">955</td><td>$4,888</td><td class="sum">$5.12</td><td>$1.69</td></tr>
+      <tr><td class="name">Google paid search<small>Search ads</small></td><td>1,991</td><td class="hotc">498</td><td class="rhc">60</td><td class="sum">558</td><td>$4,181</td><td class="sum">$7.49</td><td>$2.10</td></tr>
+      <tr><td class="name">Edmunds social ads<small>Ads run by Edmunds; the Edmunds listing fee</small></td><td>1,376</td><td class="hotc">598</td><td class="rhc">17</td><td class="sum">615</td><td>$2,175</td><td class="sum">$3.54</td><td>$1.58</td></tr>
+      <tr><td class="name">Cars Social<small>Facebook and Instagram ads run by Cars.com <sup>1</sup></small></td><td>550</td><td class="hotc">195</td><td class="rhc">20</td><td class="sum">215</td><td>$599</td><td class="sum best">$2.79</td><td>$1.09</td></tr>
+      <tr><td class="name">Paid display<small>CarGurus display</small></td><td>522</td><td class="hotc">214</td><td class="rhc">10</td><td class="sum">224</td><td>$1,000</td><td class="sum">$4.46</td><td>$1.92</td></tr>
+      <tr class="bench"><td class="name">Paid, tracked</td><td>7,333</td><td class="hotc">2,286</td><td class="rhc">281</td><td class="sum">2,567</td><td>$12,844</td><td class="sum">$5.00</td><td>$1.75</td></tr>
+      <tr class="cat"><td colspan="8">Near-zero cost · organic, direct, owned</td></tr>
+      <tr><td class="name">Organic search<small>Google, Bing, Yahoo, unpaid</small></td><td>358</td><td class="hotc">136</td><td class="rhc">18</td><td class="sum">154</td><td>$0</td><td class="sum">—</td><td>—</td></tr>
+      <tr><td class="name">Google Business Profile<small>Maps and the store listing</small></td><td>541</td><td class="hotc">162</td><td class="rhc">27</td><td class="sum">189</td><td>$0</td><td class="sum">—</td><td>—</td></tr>
+      <tr><td class="name">Direct<small>Typed the address or used a saved link</small></td><td>545</td><td class="hotc">153</td><td class="rhc">22</td><td class="sum">175</td><td>$0</td><td class="sum">—</td><td>—</td></tr>
+      <tr><td class="name">Email and text<small>Store campaigns; paid by LMA</small></td><td>106</td><td class="hotc">28</td><td class="rhc">1</td><td class="sum">29</td><td>$0</td><td class="sum">—</td><td>—</td></tr>
+      <tr><td class="name">Organic social<small>Facebook, TikTok, unpaid</small></td><td>171</td><td class="hotc">19</td><td class="rhc">3</td><td class="sum">22</td><td>$0</td><td class="sum">—</td><td>—</td></tr>
+      <tr class="all"><td>All shoppers · all store ad dollars <sup>2</sup></td><td>9,152</td><td class="hotc">2,805</td><td class="rhc">353</td><td class="sum">3,158</td><td>$25,614</td><td class="sum">$8.11</td><td>$2.80</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="fn">
+    <div><sup>1</sup> Cars Social: $599 per the store's Sep 11, 2026 email, which also says it was canceled. An earlier draft used $1,000.</div>
+    <div><sup>2</sup> Includes listing fees with almost no tracked website shoppers: CarGurus listing + Highlight $5,050, Cars.com $2,200, Autotrader $1,420, CARFAX $4,100 ($12,770 of $25,614). LMA and DTG Octane email: paid by LMA, $0 to the store.</div>
+  </div>
+  <div class="slidenum">5 / 8</div>
+</section>
+
+<!-- 6 ALL FIVE COLORS BY SOURCE -->
+<section class="slide" id="s6">
   <div class="eyebrow">Where the shoppers came from · all five colors</div>
   <h2>Each source, and how far its shoppers went</h2>
   <div class="legend">
@@ -251,14 +297,14 @@
     </tbody>
   </table>
   </div>
-  <div class="slidenum">5 / 7</div>
+  <div class="slidenum">6 / 8</div>
 </section>
 
-<!-- 6 PAID DRILL -->
-<section class="slide" id="s6">
+<!-- 7 PAID DRILL -->
+<section class="slide" id="s7">
   <div class="eyebrow">Paid sources, one by one</div>
   <h2>What each paid dollar bought</h2>
-  <div class="sub">Same 28 days. Spend is the September 2026 billing. Visits, cars opened and photos are per shopper across all visits. Grey rows have too few shoppers to judge.</div>
+  <div class="sub">Same 28 days. Spend is the August 2026 bills. Visits, cars opened and photos are per shopper across all visits. Grey rows have too few shoppers to judge.</div>
   <div class="tablewrap">
   <table>
     <thead><tr>
@@ -273,7 +319,7 @@
       <tr><td class="name">Instagram ads</td><td>117</td><td>13%</td><td>45%</td><td>8%</td><td class="hotc">27%</td><td class="rhc top-rh above">7%</td><td class="sum">34%</td><td>1.6</td><td>2.2</td><td>4.8</td><td>$198</td><td>$1.69</td><td class="sum">$4.94</td></tr>
       <tr class="cat"><td colspan="14">Social ads run by listing vendors · billed as listing sites</td></tr>
       <tr><td class="name">Edmunds social ads <sup>1</sup></td><td>1,376</td><td>3%</td><td>38%</td><td>14%</td><td class="hotc top-hot above">44%</td><td class="rhc">1%</td><td class="sum">45%</td><td>2.1</td><td>3.1</td><td>4.6</td><td>$2,175</td><td>$1.58</td><td class="sum top-hot">$3.54</td></tr>
-      <tr><td class="name">Cars Social <sup>2</sup></td><td>550</td><td>2%</td><td>48%</td><td>11%</td><td class="hotc above">35%</td><td class="rhc">4%</td><td class="sum">39%</td><td>1.9</td><td>2.4</td><td>4.1</td><td>$1,000</td><td>$1.82</td><td class="sum">$4.65</td></tr>
+      <tr><td class="name">Cars Social <sup>2</sup></td><td>550</td><td>2%</td><td>48%</td><td>11%</td><td class="hotc above">35%</td><td class="rhc">4%</td><td class="sum">39%</td><td>1.9</td><td>2.4</td><td>4.1</td><td>$599</td><td>$1.09</td><td class="sum">$2.79</td></tr>
       <tr class="cat"><td colspan="14">Search ads</td></tr>
       <tr><td class="name">Google search ads</td><td>1,979</td><td>16%</td><td>40%</td><td>16%</td><td class="hotc">25%</td><td class="rhc">3%</td><td class="sum">28%</td><td>1.6</td><td>1.5</td><td>8.1</td><td>$4,181</td><td>$2.11</td><td class="sum">$7.60</td></tr>
       <tr class="cat"><td colspan="14">Display ads</td></tr>
@@ -284,21 +330,21 @@
       <tr class="small"><td class="name">CarGurus listing <sup>4</sup></td><td>11</td><td>0%</td><td>9%</td><td>36%</td><td class="hotc">36%</td><td class="rhc">18%</td><td class="sum">55%</td><td>–</td><td>–</td><td>–</td><td>$5,050</td><td>$459</td><td class="sum">$842</td></tr>
       <tr class="small"><td class="name">CARFAX listing <sup>4</sup></td><td>8</td><td>50%</td><td>0%</td><td>0%</td><td class="hotc">38%</td><td class="rhc">12%</td><td class="sum">50%</td><td>–</td><td>–</td><td>–</td><td>$4,100</td><td>$513</td><td class="sum">$1,025</td></tr>
       <tr class="small"><td class="name">Autotrader listing <sup>4</sup></td><td>10</td><td>50%</td><td>30%</td><td>0%</td><td class="hotc">20%</td><td class="rhc">0%</td><td class="sum">20%</td><td>–</td><td>–</td><td>–</td><td>$1,420</td><td>$142</td><td class="sum">$710</td></tr>
-      <tr class="all"><td>All paid</td><td>7,345</td><td>6%</td><td>47%</td><td>12%</td><td class="hotc">31%</td><td class="rhc">4%</td><td class="sum">35%</td><td>–</td><td>–</td><td>–</td><td>$26,015</td><td>$3.54</td><td class="sum">$10.07</td></tr>
+      <tr class="all"><td>All paid</td><td>7,345</td><td>6%</td><td>47%</td><td>12%</td><td class="hotc">31%</td><td class="rhc">4%</td><td class="sum">35%</td><td>–</td><td>–</td><td>–</td><td>$25,614</td><td>$3.49</td><td class="sum">$9.91</td></tr>
     </tbody>
   </table>
   </div>
   <div class="fn">
     <div><sup>1</sup> Edmunds social ads: 96% of these shoppers arrived from Facebook and Instagram, 4% from edmunds.com.</div>
-    <div><sup>2</sup> Cars Social: 98% arrived from Facebook and Instagram, 2% from cars.com. A separate $1,000 product from the Cars.com listing.</div>
+    <div><sup>2</sup> Cars Social: 98% arrived from Facebook and Instagram, 2% from cars.com. A separate $599 product from the Cars.com listing; the store says it was canceled.</div>
     <div><sup>3</sup> Edmunds site and Cars.com listing: the shoppers who arrived from the listing site itself. Their colors were not pulled; the color pull is by source, and these are a slice of the Edmunds and Cars.com source rows.</div>
     <div><sup>4</sup> CarGurus, CARFAX and Autotrader listings: colors shown, but 8–11 shoppers is too few to judge a source. The vendors' own click reports were not part of this report.</div>
   </div>
-  <div class="slidenum">6 / 7</div>
+  <div class="slidenum">7 / 8</div>
 </section>
 
-<!-- 7 NOTES -->
-<section class="slide" id="s7">
+<!-- 8 NOTES -->
+<section class="slide" id="s8">
   <div class="eyebrow">Method and data notes</div>
   <h2>How to read this report</h2>
   <div class="notes">
@@ -306,16 +352,16 @@
     <div><b>How a color is set</b>By what the shopper did across all visits in the 28 days. Red Hot wins over Hot, Hot over Warm, Warm over Cool. Red Hot = a call, text, form, chat, test-drive or directions request. Hot = a second visit, or a payment, trade, CARFAX or save-the-car action, or 40+ photos. Warm = filters, 2+ cars or 20+ photos in one visit. Cool = the rest who opened a car. Ice Cold = list only.</div>
     <div><b>Where a shopper "came from"</b>The source of the shopper's first recorded visit, as Google Analytics labels it. Edmunds and Cars.com are labeled "referral" by their links; the page that actually sent the click was Facebook or Instagram 96–98% of the time.</div>
     <div><b>Counts and rounding</b>Google Analytics estimates user counts, so rows can overlap by about 1%. Each row is rounded to sum to 100%. On slide 4 the Hot and Red Hot shopper counts are computed as share × shoppers from the rounded shares; the All shoppers row uses the measured counts. Rows under 100 shoppers are shown grey and never win a highlight.</div>
-    <div><b>Spend</b>September 2026 billing as supplied by the store. Cars Social is a separate $1,000 product from the Cars.com listing. CarGurus listing, CARFAX and Autotrader show 29 tracked click-throughs between them; the vendors' own click reports were not part of this report.</div>
+    <div><b>Spend</b>August 2026 bills: Google and Facebook/Instagram from Search Engines MD (based on payments, Sep 10, 2026); listing sites from the store (Sep 11, 2026). Cars Social is a separate $599 product from the Cars.com listing. CarGurus listing, CARFAX and Autotrader show 29 tracked click-throughs between them; the vendors' own click reports were not part of this report.</div>
     <div><b>What this report does not do</b>It does not connect website shoppers to leads or sales, and it does not look at where shoppers live. It reads the website only.</div>
   </div>
   <div class="foot" style="color:var(--muted)">Prepared by AutoMagic Labs for Reymore Chevrolet · Sep 16, 2026 · Questions: Joe Pistell</div>
-  <div class="slidenum">7 / 7</div>
+  <div class="slidenum">8 / 8</div>
 </section>
 
 <script>
   (function(){
-    var ids=['s1','s2','s3','s4','s5','s6','s7'];
+    var ids=['s1','s2','s3','s4','s5','s6','s7','s8'];
     var up=document.getElementById('navUp'),down=document.getElementById('navDown');
     function cur(){var y=window.scrollY+window.innerHeight/2;var i=0;ids.forEach(function(id,k){var el=document.getElementById(id);if(el&&el.offsetTop<=y)i=k;});return i;}
     function mark(){var i=cur();up.classList.toggle('off',i===0);down.classList.toggle('off',i===ids.length-1);}
