@@ -1,0 +1,203 @@
+<title>Dolan Toyota · Executive report #2</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow report column; each study is a framed table "plate"; tier labels right-aligned, numbers centered. */
+:root{
+  --bg:#f5f6f8; --paper:#ffffff; --ink:#15202b; --muted:#5b6673; --rule:#d9dee5; --band:#eef1f5;
+  --miss:#b4232f; --aml:#1f4f7a; --aml-soft:#e3ecf5;
+  --display:"Archivo", "Arial Narrow", Arial, sans-serif; --body:"Public Sans", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f141a; --paper:#161d25; --ink:#e7ecf1; --muted:#9aa6b2; --rule:#2a3540; --band:#1c252f;
+  --miss:#ef6b74; --aml:#8fb8e0; --aml-soft:#1b2a3a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f141a; --paper:#161d25; --ink:#e7ecf1; --muted:#9aa6b2; --rule:#2a3540; --band:#1c252f;
+  --miss:#ef6b74; --aml:#8fb8e0; --aml-soft:#1b2a3a; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:980px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:40px}
+header{display:grid;gap:10px}
+.draft{font-family:var(--display);font-stretch:85%;font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--miss)}
+h1{font-family:var(--display);font-stretch:80%;font-weight:800;font-size:clamp(30px,5vw,46px);line-height:1.02;margin:0;text-wrap:balance}
+.meta{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.meta span{white-space:nowrap}
+section{display:grid;gap:12px}
+.label{font-family:var(--display);font-stretch:85%;font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h2{font-family:var(--display);font-stretch:85%;font-weight:700;font-size:24px;margin:0;text-wrap:balance}
+.plate{background:var(--paper);border:1px solid var(--rule);border-radius:6px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px;font-variant-numeric:tabular-nums}
+th,td{padding:12px 16px;text-align:center;vertical-align:middle}
+th:first-child,td:first-child{text-align:right;padding-right:28px;width:1%;white-space:nowrap}
+thead th{font-family:var(--display);font-stretch:85%;font-weight:600;font-size:13px;letter-spacing:.02em;color:var(--muted);border-bottom:1px solid var(--rule);line-height:1.25}
+thead tr.group th{font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:none;padding-bottom:6px}
+thead tr.group th.g-dolan{color:var(--ink);background:var(--band);border-bottom:2px solid var(--ink)}
+thead tr.group th.g-aml{color:var(--aml);background:var(--aml-soft);border-bottom:2px solid var(--aml)}
+tbody td{border-bottom:1px solid var(--rule);font-size:16px}
+tbody td:first-child{font-weight:500}
+tbody tr:last-child td{border-bottom:none}
+tr.total td{background:var(--band);font-weight:600;border-top:2px solid var(--ink)}
+.miss{color:var(--miss);font-weight:600}
+.inl{font-weight:500;font-size:12.5px;color:var(--muted);margin-left:6px}
+.pct{display:block;font-size:12.5px;font-weight:500;color:var(--muted);margin-top:2px}
+.col-aml{background:color-mix(in srgb,var(--aml-soft) 45%,transparent)}
+.aml-strong{color:var(--aml);font-weight:600}
+.notes{color:var(--muted);font-size:13.5px;margin:0;padding-left:18px;display:grid;gap:4px}
+.notes li{margin:0}
+.notes b{color:var(--ink);font-weight:600}
+.ps{border-top:1px dashed var(--rule);padding-top:28px}
+.detail{display:grid;gap:10px;margin-top:6px}
+.detail h3{font-family:var(--display);font-stretch:85%;font-weight:700;font-size:16px;margin:8px 0 0}
+table.mini{min-width:0;font-size:13px}
+table.mini th,table.mini td{padding:5px 10px;font-size:13px;text-align:left;width:auto;white-space:normal}
+table.mini td:last-child,table.mini th:last-child{text-align:right;white-space:nowrap}
+table.mini td:nth-child(2){white-space:nowrap}
+table.mini td.desc{min-width:0}
+.opt{color:var(--aml);font-size:12px}
+td.more{color:var(--muted);font-style:italic;text-align:left!important}
+ul.feat li.more{color:var(--muted);font-style:italic}
+ul.feat{list-style:none;margin:0;padding:0;columns:2 280px;column-gap:24px;font-size:13px}
+ul.feat li{break-inside:avoid;padding:2px 0}
+ul.feat .stk{color:var(--muted);font-size:12px;margin-left:6px}
+@media print{section[aria-labelledby="t2"]{break-before:page}}
+footer{color:var(--muted);font-size:13px;border-top:1px solid var(--rule);padding-top:16px}
+.subtitle{font-family:var(--display);font-stretch:85%;font-weight:600;font-size:clamp(17px,2.4vw,21px);color:var(--muted);margin:0}
+section.study{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:22px clamp(14px,3vw,24px) 26px;box-shadow:0 1px 0 var(--rule)}
+section.study.s1{border-top:6px solid var(--miss)}
+section.study.s2{border-top:6px solid var(--aml)}
+section.study .plate{border-color:var(--rule)}
+.chip{display:inline-block;font-family:var(--display);font-stretch:85%;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--miss);border-radius:4px;padding:3px 8px;margin-right:8px}
+section.s2 .chip{background:var(--aml)}
+section.road{display:grid;gap:12px;border-top:1px solid var(--rule);padding-top:22px}
+.road .sh{font-family:var(--display);font-stretch:85%;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.road .lead{font-family:var(--display);font-stretch:85%;font-weight:800;font-size:clamp(24px,3.6vw,32px);line-height:1.1;color:var(--ink)}
+.road .steps{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:16px}
+.road .steps li{padding-left:30px;position:relative}
+.road .steps li::before{content:"";position:absolute;left:0;top:.72em;width:18px;height:3px;background:var(--miss);border-radius:2px}
+.road .limit{margin:4px 0 0;font-size:15px;color:var(--muted)}
+.road .limit b{color:var(--ink)}
+.cta{margin-top:18px;background:#16294a;color:#fff;border-radius:12px;padding:22px clamp(16px,3vw,28px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 28px}
+.cta .a{flex:1 1 380px;max-width:640px;font-family:var(--display);font-stretch:85%;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.12}
+.cta .a small{display:block;font-family:var(--body);font-size:15px;font-weight:400;color:#c9d5e3;margin-top:8px;line-height:1.4}
+.cta .c{text-align:right}
+.cta .call{font-size:15px;color:#c9d5e3}
+.cta .num{font-family:var(--display);font-stretch:85%;font-size:clamp(24px,3.4vw,32px);font-weight:800;margin-top:2px}
+.cta .mail{font-size:15px;color:#dbe3ee;margin-top:2px}
+.cta a{color:inherit;text-decoration:none}
+.road .stamp{font-size:12.5px;color:var(--muted);text-align:right}
+@media (max-width:640px){.cta .c{text-align:left;margin-left:0}table.mini th,table.mini td{padding:5px 6px}table.mini td:nth-child(2){white-space:normal}table.mini td.desc{word-break:break-word}}
+.cta .c{margin-left:auto}
+@media print{section.road{break-before:page}}
+</style>
+
+
+<div class="wrap">
+  <header>
+    <div class="draft">Executive report #2 · v4</div>
+    <h1>Dolan Toyota</h1>
+    <p class="subtitle">Taking the DAG VDP to the Next Level</p>
+  </header>
+
+<section class="study s2" aria-labelledby="t2">
+    <div class="label"><span class="chip">Study</span> Website Audit: Does It Sell -More- Cars?</div>
+    <h2 id="t2">Compare Dolan Toyota Export to OEM Build data</h2>
+    <div class="plate">
+      <table>
+        <thead>
+          <tr class="group"><th></th><th colspan="2" class="g-dolan">Missing on DDC</th><th colspan="2" class="g-aml">AutoMagic Labs Audit</th></tr>
+          <tr><th>Tier</th><th>Exported by Dolan</th><th>Totally missing</th><th class="col-aml">+ # Missing<br>in Dolan Export</th><th class="col-aml">= True Total Missing</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Packages</td><td>75</td><td class="miss">6</td><td class="col-aml miss">22</td><td class="col-aml"><span class="miss">28</span></td></tr>
+          <tr><td>Priced options</td><td>54</td><td class="miss">12</td><td class="col-aml miss">45</td><td class="col-aml"><span class="miss">57</span></td></tr>
+          <tr><td>Platinum</td><td>317</td><td class="miss">79</td><td class="col-aml miss">128</td><td class="col-aml"><span class="miss">207</span></td></tr>
+          <tr><td>Gold</td><td>622</td><td class="miss">223</td><td class="col-aml miss">100</td><td class="col-aml"><span class="miss">323</span></td></tr>
+          <tr><td>Silver</td><td>1,727</td><td class="miss">284</td><td class="col-aml miss">178</td><td class="col-aml"><span class="miss">462</span></td></tr>
+          <tr class="total"><td>Total</td><td>2,795</td><td class="miss">604</td><td class="col-aml miss">473</td><td class="col-aml"><span class="miss">1,077</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li><b>Totally missing:</b> Dolan exported the item; it is in neither the VDP feature list nor the dealer notes.</li><li><b>Priced options</b> (<span class='opt'>&#9670;</span>): installed on their own, not in a package, with their own price on the build. Scarce, and high power for merchandising.</li><li>Packages and priced options under $500 MSRP are not counted.</li>
+      <li><b># Missing in Dolan Export:</b> on the car's factory build data, never in Dolan's export, and totally missing from the VDP.</li>
+      <li><b>True Total Missing</b> = Totally missing + # Missing in Dolan Export.</li>
+      <li>Executive report #2 also counts packages and options found only in the dealer notes. This study does not.</li>
+    </ul>
+    <div class="detail">
+      <h3>True total missing packages and options <span class="miss">$117,252</span></h3>
+      <table class="mini"><thead><tr><th>Stock</th><th>Vehicle</th><th>Package or option</th><th>MSRP</th></tr></thead><tbody>
+        <tr><td>TR250031B</td><td>2024 Ford F-350SD</td><td class='desc'><span class='opt'>&#9670;</span> 6.7L 4V OHV Power Stroke V8 Turbo Diesel B20 Engine</td><td class='miss'>$10,495</td></tr>
+        <tr><td>T2613262C</td><td>2018 Ram 2500</td><td class='desc'><span class='opt'>&#9670;</span> 6.7L I6 Cummins Turbo Diesel Engine</td><td class='miss'>$9,300</td></tr>
+        <tr><td>TR250065</td><td>2025 Toyota Camry</td><td class='desc'>Premium Plus Package: Includes Traffic Jam Assist (req. Drive Connect…</td><td class='miss'>$4,760</td></tr>
+        <tr><td>TAD26519</td><td>2021 Chevrolet Colorado</td><td class='desc'><span class='opt'>&#9670;</span> 2.8L Duramax Turbo-Diesel DI 4-Cylinder Engine</td><td class='miss'>$3,500</td></tr>
+        <tr><td>TSA26303</td><td>2022 Audi Q7</td><td class='desc'>Executive Package</td><td class='miss'>$2,750</td></tr>
+        <tr><td>TLR26171A</td><td>2023 Ford F-150</td><td class='desc'>STX APPEARANCE PACKAGE</td><td class='miss'>$2,585</td></tr>
+        <tr><td>TDR26159</td><td>2023 Jeep Grand Cherokee</td><td class='desc'><span class='opt'>&#9670;</span> 19 Speakers High Performance Audio</td><td class='miss'>$2,505</td></tr>
+        <tr><td>TAD26508</td><td>2022 GMC Sierra 1500 Limited</td><td class='desc'><span class='opt'>&#9670;</span> 6.2L EcoTec3 V8 Engine</td><td class='miss'>$2,495</td></tr>
+        <tr><td>TMA26062B</td><td>2015 MINI Cooper S</td><td class='desc'><span class='opt'>&#9670;</span> MINI Yours Lounge Leather Seat Trim</td><td class='miss'>$2,250</td></tr>
+        <tr><td colspan='4' class='desc more'>&amp; More...</td></tr>
+      </tbody></table>
+      <h3>True total missing Platinum features <span class="miss">207</span></h3>
+      <ul class="feat">
+        <li><b>Evasion Assist</b> <span class='stk'>T2612739B, T2612913A, T2613081A, T2613190A, T2613231B, T2613389A +40 more</span></li>
+        <li><b>360° Camera</b> <span class='stk'>T2611951A, T2612375A, T2612645A, T2612913A, T2612959A, T2613081A +15 more</span></li>
+        <li><b>Panoramic Sunroof</b> <span class='stk'>T2612375A, T2612395A, T2612645A, T2612681A, T2612734A, T2612913A +15 more</span></li>
+        <li><b>7-Passenger Seating</b> <span class='stk'>T2612305A, T2612489E, T2612804B, T2612913A, T2613050A, TBB26403A +7 more</span></li>
+        <li><b>Ambient Lighting</b> <span class='stk'>T2612305A, T2612681A, TBB26403A, TBB26448, TE26227, TFJ26071S +5 more</span></li>
+        <li><b>Spray-In Bed Liner</b> <span class='stk'>T2612365A, T2612375A, T2612645A, TA26023A, TBB26377, TLN26161 +1 more</span></li>
+        <li><b>Dual Sunroof</b> <span class='stk'>T2612489E, TBB26493, TBB26494, TDR26161A, TE26227, TMA26093</span></li>
+        <li><b>Heated Front Seats</b> <span class='stk'>T2612369A, T2612754A, TBB26532, TFJ26081B, TR250041A</span></li>
+        <li><b>Power-Folding Third Row</b> <span class='stk'>T2612913A, TBB26403A, TE26227, TMK26127, TSA26303</span></li>
+        <li><b>Remote Start</b> <span class='stk'>T2511169E, T2612375A, T2612395A, T2613081A, TR250068</span></li>
+        <li class='more'>&amp; More...</li>
+      </ul>
+      <h3>True total missing Gold features <span class="miss">323</span></h3>
+      <ul class="feat">
+        <li><b>Tinted Windows</b> <span class='stk'>T2511169E, T2611378A, T2611813B, T2611951A, T2612251C, T2612305A +133 more</span></li>
+        <li><b>Heated Wipers</b> <span class='stk'>T2611813B, T2612395A, T2612734A, T2612887B, T2612929B, T2612935A +33 more</span></li>
+        <li><b>Hands-Free Liftgate</b> <span class='stk'>T2611951A, T2612475C, T2612489E, T2612681A, T2612734A, T2613081A +21 more</span></li>
+        <li><b>Noise Cancellation</b> <span class='stk'>T2612395B, T2612489E, T2612935A, T2613110B, T2613192B, T2613377A +7 more</span></li>
+        <li><b>Truck Bed Storage</b> <span class='stk'>T2612715A, T2612959A, T2613192B, TACV26113, TAD26503, TAD26533 +7 more</span></li>
+        <li><b>Roof Rack</b> <span class='stk'>T2612754A, T2613026A, T2613081A, T2613262B, TBB26448, TLD26016A +4 more</span></li>
+        <li><b>Front Cross-Traffic Warning</b> <span class='stk'>T2613231B, TBB26493, TBB26494, TBB26495, TBB26496, TFJ26097 +3 more</span></li>
+        <li><b>Cornering Lights</b> <span class='stk'>T2612734A, T2613376A, TDR26159, TDR26161A, TLR26167, TSA26303 +1 more</span></li>
+        <li><b>Pedestrian Detection</b> <span class='stk'>T2612681A, T2612715A, T2612961A, TACV26103, TDD26014A, TMK26127 +1 more</span></li>
+        <li><b>Two 120V Power Outlets</b> <span class='stk'>T2612375A, T2613081A, T2613389A, TBB26486A, TMA26090, TMK26096</span></li>
+        <li class='more'>&amp; More...</li>
+      </ul>
+      <h3>True total missing Silver features <span class="miss">462</span></h3>
+      <ul class="feat">
+        <li><b>12V Power Outlet</b> <span class='stk'>T2611378A, T2612369A, T2612395A, T2612715A, T2612754A, T2612825B +68 more</span></li>
+        <li><b>Interior Accents</b> <span class='stk'>T2611378A, T2612369A, T2612715A, T2612813A, T2612825B, T2612933A +56 more</span></li>
+        <li><b>Partial Driving Automation</b> <span class='stk'>T2511169E, T2611378A, T2611813B, T2612825B, T2612887B, T2612955D +52 more</span></li>
+        <li><b>Reclining Rear Seats</b> <span class='stk'>T2611378A, T2612825B, T2612933A, T2612935A, T2612955D, T2612980A +41 more</span></li>
+        <li><b>Center Console Storage</b> <span class='stk'>T2612715A, T2612955D, T2612989A, T2613262B, T2613414A, TACV26103 +35 more</span></li>
+        <li><b>Auto-Leveling Headlights</b> <span class='stk'>T2612395A, T2612887B, T2612989A, T2613262B, TACV26104C, TAD26516 +10 more</span></li>
+        <li><b>Bed Rails</b> <span class='stk'>T2612369A, T2612715A, T2612813A, T2613262C, TACV26113, TAD26519 +7 more</span></li>
+        <li><b>120V Power Outlet</b> <span class='stk'>T2612980A, T2613050A, T2613414A, TACV26109, TAD26513, TAD26524 +6 more</span></li>
+        <li><b>Bed Lighting</b> <span class='stk'>T2511169E, T2612251C, T2612369A, T2613262C, TA26023A, TAD26519 +5 more</span></li>
+        <li><b>Tinted Windows</b> <span class='stk'>T2612961A, TACV26103, TAD26520, TBB26418B, TBB26441E, TMA26088 +5 more</span></li>
+        <li class='more'>&amp; More...</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="road" aria-label="Fix this fast">
+    <div class="sh">Fix this fast</div>
+    <div class="lead">AutoMagic Labs does it for you. 100% turnkey.</div>
+    <ul class="steps">
+      <li>We log into your inventory system and finish every car on this lot: every missing package, option and feature the factory record proves.</li>
+      <li>We rewrite the dealer notes on every car.</li>
+      <li>Every new arrival gets the same treatment before a shopper ever sees it.</li>
+    </ul>
+    <p class="limit"><b>We are limiting the stores we take on during the initial rollout.</b> Every early lot is finished under our direct supervision.</p>
+    <div class="cta">
+      <div class="a">One price. Nothing to install. No contract. Done fast.<small>Call me for a one-on-one and I will walk you through your lot. Fifteen minutes.</small></div>
+      <div class="c"><div class="call">Joe Pistell · AutoMagic Labs</div><div class="num"><a href="tel:+13152009825">(315) 200-9825</a></div><div class="mail"><a href="mailto:joe@automagiclabs.ai">joe@automagiclabs.ai</a></div></div>
+    </div>
+    <div class="stamp">Audited Audited Oct 22, 2026, 2:21 PM ET..</div>
+  </section>
+
+  <footer>Sources: Dolan Toyota inventory export (DolanToyota_2026-10-21.csv) and the VDPs on Dolan Toyota&#x27;s Dealer.com website as read by AutoMagic Labs on Oct 22, 2026. Executive view; not tied to any score or grade.</footer>
+</div>
