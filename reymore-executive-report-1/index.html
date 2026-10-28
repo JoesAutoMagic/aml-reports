@@ -1,0 +1,247 @@
+<title>Reymore Chevrolet · Executive report #1</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow report column; each study is a framed table "plate"; tier labels right-aligned, numbers centered. */
+:root{
+  --bg:#f5f6f8; --paper:#ffffff; --ink:#15202b; --muted:#5b6673; --rule:#d9dee5; --band:#eef1f5;
+  --miss:#b4232f; --aml:#1f4f7a; --aml-soft:#e3ecf5;
+  --display:"Archivo", "Arial Narrow", Arial, sans-serif; --body:"Public Sans", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f141a; --paper:#161d25; --ink:#e7ecf1; --muted:#9aa6b2; --rule:#2a3540; --band:#1c252f;
+  --miss:#ef6b74; --aml:#8fb8e0; --aml-soft:#1b2a3a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f141a; --paper:#161d25; --ink:#e7ecf1; --muted:#9aa6b2; --rule:#2a3540; --band:#1c252f;
+  --miss:#ef6b74; --aml:#8fb8e0; --aml-soft:#1b2a3a; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:980px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:40px}
+header{display:grid;gap:10px}
+.draft{font-family:var(--display);font-stretch:85%;font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--miss)}
+h1{font-family:var(--display);font-stretch:80%;font-weight:800;font-size:clamp(30px,5vw,46px);line-height:1.02;margin:0;text-wrap:balance}
+.meta{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.meta span{white-space:nowrap}
+section{display:grid;gap:12px}
+.label{font-family:var(--display);font-stretch:85%;font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h2{font-family:var(--display);font-stretch:85%;font-weight:700;font-size:24px;margin:0;text-wrap:balance}
+.plate{background:var(--paper);border:1px solid var(--rule);border-radius:6px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px;font-variant-numeric:tabular-nums}
+th,td{padding:12px 16px;text-align:center;vertical-align:middle}
+th:first-child,td:first-child{text-align:right;padding-right:28px;width:1%;white-space:nowrap}
+thead th{font-family:var(--display);font-stretch:85%;font-weight:600;font-size:13px;letter-spacing:.02em;color:var(--muted);border-bottom:1px solid var(--rule);line-height:1.25}
+thead tr.group th{font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:none;padding-bottom:6px}
+thead tr.group th.g-dolan{color:var(--ink);background:var(--band);border-bottom:2px solid var(--ink)}
+thead tr.group th.g-aml{color:var(--aml);background:var(--aml-soft);border-bottom:2px solid var(--aml)}
+tbody td{border-bottom:1px solid var(--rule);font-size:16px}
+tbody td:first-child{font-weight:500}
+tbody tr:last-child td{border-bottom:none}
+tr.total td{background:var(--band);font-weight:600;border-top:2px solid var(--ink)}
+.miss{color:var(--miss);font-weight:600}
+.inl{font-weight:500;font-size:12.5px;color:var(--muted);margin-left:6px}
+.pct{display:block;font-size:12.5px;font-weight:500;color:var(--muted);margin-top:2px}
+.col-aml{background:color-mix(in srgb,var(--aml-soft) 45%,transparent)}
+.aml-strong{color:var(--aml);font-weight:600}
+.notes{color:var(--muted);font-size:13.5px;margin:0;padding-left:18px;display:grid;gap:4px}
+.notes li{margin:0}
+.notes b{color:var(--ink);font-weight:600}
+.ps{border-top:1px dashed var(--rule);padding-top:28px}
+.detail{display:grid;gap:10px;margin-top:6px}
+.detail h3{font-family:var(--display);font-stretch:85%;font-weight:700;font-size:16px;margin:8px 0 0}
+table.mini{min-width:0;font-size:13px}
+table.mini th,table.mini td{padding:5px 10px;font-size:13px;text-align:left;width:auto;white-space:normal}
+table.mini td:last-child,table.mini th:last-child{text-align:right;white-space:nowrap}
+table.mini td:nth-child(2){white-space:nowrap}
+table.mini td.desc{min-width:0}
+.opt{color:var(--aml);font-size:12px}
+td.more{color:var(--muted);font-style:italic;text-align:left!important}
+ul.feat li.more{color:var(--muted);font-style:italic}
+ul.feat{list-style:none;margin:0;padding:0;columns:2 280px;column-gap:24px;font-size:13px}
+ul.feat li{break-inside:avoid;padding:2px 0}
+ul.feat .stk{color:var(--muted);font-size:12px;margin-left:6px}
+@media print{section[aria-labelledby="t2"]{break-before:page}}
+footer{color:var(--muted);font-size:13px;border-top:1px solid var(--rule);padding-top:16px}
+.subtitle{font-family:var(--display);font-stretch:85%;font-weight:600;font-size:clamp(17px,2.4vw,21px);color:var(--muted);margin:0}
+section.study{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:22px clamp(14px,3vw,24px) 26px;box-shadow:0 1px 0 var(--rule)}
+section.study.s1{border-top:6px solid var(--miss)}
+section.study.s2{border-top:6px solid var(--aml)}
+section.study .plate{border-color:var(--rule)}
+.chip{display:inline-block;font-family:var(--display);font-stretch:85%;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--miss);border-radius:4px;padding:3px 8px;margin-right:8px}
+section.s2 .chip{background:var(--aml)}
+section.road{display:grid;gap:12px;border-top:1px solid var(--rule);padding-top:22px}
+.road .sh{font-family:var(--display);font-stretch:85%;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.road .lead{font-family:var(--display);font-stretch:85%;font-weight:800;font-size:clamp(24px,3.6vw,32px);line-height:1.1;color:var(--ink)}
+.road .steps{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:16px}
+.road .steps li{padding-left:30px;position:relative}
+.road .steps li::before{content:"";position:absolute;left:0;top:.72em;width:18px;height:3px;background:var(--miss);border-radius:2px}
+.road .limit{margin:4px 0 0;font-size:15px;color:var(--muted)}
+.road .limit b{color:var(--ink)}
+.cta{margin-top:18px;background:#16294a;color:#fff;border-radius:12px;padding:22px clamp(16px,3vw,28px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 28px}
+.cta .a{flex:1 1 380px;max-width:640px;font-family:var(--display);font-stretch:85%;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.12}
+.cta .a small{display:block;font-family:var(--body);font-size:15px;font-weight:400;color:#c9d5e3;margin-top:8px;line-height:1.4}
+.cta .c{text-align:right}
+.cta .call{font-size:15px;color:#c9d5e3}
+.cta .num{font-family:var(--display);font-stretch:85%;font-size:clamp(24px,3.4vw,32px);font-weight:800;margin-top:2px}
+.cta .mail{font-size:15px;color:#dbe3ee;margin-top:2px}
+.cta a{color:inherit;text-decoration:none}
+.road .stamp{font-size:12.5px;color:var(--muted);text-align:right}
+@media (max-width:640px){.cta .c{text-align:left;margin-left:0}table.mini th,table.mini td{padding:5px 6px}table.mini td:nth-child(2){white-space:normal}table.mini td.desc{word-break:break-word}}
+.cta .c{margin-left:auto}
+@media print{section.road{break-before:page}}
+
+.banner{background:#fff4e5;border:1px solid #f0c48a;color:#6b4300;border-radius:8px;padding:10px 14px;font-size:13.5px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .banner{background:#3a2a10;border-color:#8a6a2a;color:#f3dcb0}}
+:root[data-theme="dark"] .banner{background:#3a2a10;border-color:#8a6a2a;color:#f3dcb0}
+section.study.s0{border-top:6px solid var(--ink)}
+section.s0 .chip{background:var(--ink)}
+.summary{font-size:17px;line-height:1.5;margin:0}
+.summary b{color:var(--miss)}
+table.mini td:nth-child(2){white-space:normal}
+table.mini.gaps td:last-child,table.mini.gaps th:last-child{text-align:center}
+table.mini.gaps td:nth-child(n+3),table.mini.gaps th:nth-child(n+3){text-align:center;white-space:nowrap}
+.pkg{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:16px}
+.pkg li{padding-left:30px;position:relative}
+.ex{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:4px 0 6px}
+.ex div{background:var(--band);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;font-size:14px;line-height:1.45}
+.ex b{display:block;font-family:var(--display);font-stretch:85%;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.ex .miss{font-weight:600}
+table.mini tr.tier td{background:var(--band);font-family:var(--display);font-stretch:85%;font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.disc{border-top:1px solid var(--rule);padding-top:16px;font-size:14px;color:var(--ink)}
+.disc b{font-family:var(--display);font-stretch:85%;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px;color:var(--muted);display:block;margin-bottom:4px}
+.pkg li::before{content:"";position:absolute;left:0;top:.72em;width:18px;height:3px;background:var(--aml);border-radius:2px}
+@media (max-width:700px){.plate,.detail{overflow-x:auto;-webkit-overflow-scrolling:touch}}
+</style>
+
+
+
+<div class="wrap">
+  <header>
+    <div class="draft">Executive report #1 · v4</div>
+    <h1>Reymore Chevrolet</h1>
+    <p class="subtitle">Is DealerOn Dropping Features?</p>
+  </header>
+
+  <section class="study s0" aria-labelledby="t0">
+    <div class="label"><span class="chip">Summary</span> Website Audit: Does It Sell Cars?</div>
+    <h2 id="t0">Team Reymore sends the features. Does DealerOn drop any of them?</h2>
+    <p class="summary">Reymore Chevrolet's export on 88 used cars on reymore.com lists <b>10,320</b> features in total. AutoMagic Labs knows what sells cars and we know that <b>1,704</b> of them are <b>hot features</b> that need high priority. Missing hot features makes the car harder to sell.</p>
+    <p class="summary">On the Oct 28 read, DealerOn shows Reymore's own words for <b>983</b> of the <b>988</b> packages, priced options and Platinum features Reymore sent. Here are 4 examples that Team Reymore sent to DealerOn and are missing:</p>
+    <div class="ex">
+      <div><b>Example: P5427A</b>2017 Jeep Compass High Altitude<br>Reymore Sent: Power Express Open/Close Sunroof<br>Hot feature: Platinum<br>Website: <span class="miss">Not on the page</span></div>
+      <div><b>Example: P5427A</b>2017 Jeep Compass High Altitude<br>Reymore Sent: AM/FM radio: SiriusXM<br>Hot feature: Platinum<br>Website: <span class="miss">Not on the page</span></div>
+      <div><b>Example: P5427A</b>2017 Jeep Compass High Altitude<br>Reymore Sent: Remote Start System<br>Hot feature: Platinum<br>Website: <span class="miss">Not on the page</span></div>
+      <div><b>Example: P5422A</b>2012 Chevrolet Express 2500 Work Van<br>Reymore Sent: Smoker&#x27;s Package<br>Factory package<br>Website: <span class="miss">Not presented</span></div>
+    </div>
+  </section>
+
+<section class="study s1" aria-labelledby="t1v1">
+    <div class="label"><span class="chip">Study #1</span></div>
+    <h2 id="t1v1">Study #1: Compare Reymore Export to DealerOn</h2>
+    <div class="plate">
+      <table>
+        <thead><tr><th>Tier</th><th>Exported by Reymore</th><th>Not presented</th></tr></thead>
+        <tbody>
+          <tr><td>Packages</td><td>207</td><td><span class="miss">1</span><span class="inl">(&lt;1%)</span></td></tr>
+          <tr><td>Priced options</td><td>1</td><td><span class="miss">0</span><span class="inl">(0%)</span></td></tr>
+          <tr><td>Platinum</td><td>780</td><td><span class="miss">4</span><span class="inl">(&lt;1%)</span></td></tr>
+          <tr><td>Gold (Oct 24)</td><td>164</td><td><span class="miss">0</span><span class="inl">(0%)</span></td></tr>
+          <tr><td>Silver (Oct 24)</td><td>552</td><td><span class="miss">0</span><span class="inl">(0%)</span></td></tr>
+          <tr class="total"><td>Total</td><td>1,704</td><td><span class="miss">5</span><span class="inl">(&lt;1%)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="summary">Team Reymore exported <b>1,704</b> hot features and DealerOn did not present <b>5</b> of them as sent (&lt;1% of all hot features).</p>
+    <ul class="notes"><li><b>Packages, priced options and Platinum:</b> presented only when Reymore's own wording is on the vehicle page, outside the "Dealer Comments" box (Reymore's own text). Near-exact match: case, punctuation, spacing, plurals, &amp; for and, w/ for with, and Pkg for Package are ignored; any other different word is a miss. Vehicle pages read Oct 28, 2026, 3:02 PM ET.</li><li><b>Gold and Silver (Oct 24):</b> carried from the Oct 24 audit; not presented means the item is in neither the vehicle page's feature list nor the dealer comments (pages read Oct 24, 2026).</li><li><b>Priced options</b> (<span class='opt'>&#9670;</span>): installed on their own, with their own price on the factory build, and named in Reymore's export. Factory build data is on file from the Oct 24 audit only; cars added since then are not checked for priced options.</li><li><b>Platinum:</b> every Features entry that names the feature counts as Reymore's wording for it (for example "Heated Front Seats" or "Heated Driver &amp; Front Passenger Seats").</li><li>Most of Reymore's wording appears in the "All Features" section of the vehicle page (Options tab).</li></ul>
+    <div class="detail">
+      <h3>Packages and priced options not presented <span class="miss">1</span></h3>
+      <table class="mini"><thead><tr><th>Stock</th><th>Vehicle</th><th>Package or option</th><th>MSRP</th></tr></thead><tbody>
+        <tr><td>P5422A</td><td>2012 Chevrolet Express 2500 Work Van</td><td class='desc'>Smoker&#x27;s Package</td><td class='miss'>—</td></tr>
+      </tbody></table>
+      <h3>Platinum features not in Reymore's words <span class="miss">4</span></h3>
+      <table class="mini"><thead><tr><th>Stock</th><th>Vehicle</th><th>Reymore sent</th><th>On the page in other words</th></tr></thead><tbody>
+        <tr><td>P5427A</td><td>2017 Jeep Compass High Altitude</td><td class='desc'>Power Express Open/Close Sunroof</td><td>no</td></tr>
+        <tr><td>P5427A</td><td>2017 Jeep Compass High Altitude</td><td class='desc'>AM/FM radio: SiriusXM</td><td>no</td></tr>
+        <tr><td>P5427A</td><td>2017 Jeep Compass High Altitude</td><td class='desc'>Remote Start System</td><td>no</td></tr>
+        <tr><td>P5427A</td><td>2017 Jeep Compass High Altitude</td><td class='desc'>ParkView Rear Back-Up Camera</td><td>no</td></tr>
+      </tbody></table>
+    </div>
+  </section>
+
+  <section class="study s2" aria-labelledby="t2">
+    <div class="label"><span class="chip">Study #2</span></div>
+    <h2 id="t2">Study #2: Compare Reymore Export to DealerOn SRP Filters</h2>
+    <p class="summary">Shoppers find cars on the website with the SRP Search filters (the "Features" check boxes on the used-car search page). Reymore's export names <b>1,296</b> hot shopper features that pair with those filters, on 88 used cars on the site. The SRP Search filters show <b>1,178</b> of them (91 of 100) and do not show <b>118</b> (9 of 100). <b>1 of 88</b> cars have 5 or more features named in the export and not seen.</p>
+    <p class="summary">Here are 4 examples that Team Reymore sent to DealerOn and the SRP Search filters do not show:</p>
+    <div class="ex">
+      <div><b>Example: 96435A</b>2024 Chevrolet Equinox RS<br>Reymore Sent: HD Surround Vision<br>SRP Search filter "360 Cameras": <span class="miss">Not Seen</span></div>
+      <div><b>Example: 96508A</b>2025 Chevrolet Equinox LT<br>Reymore Sent: Rear Parking Aid<br>SRP Search filter "Parking Assistance": <span class="miss">Not Seen</span></div>
+      <div><b>Example: 97014A</b>2024 Chevrolet Equinox LT<br>Reymore Sent: CarPlay/Android Auto<br>SRP Search filter "Apple CarPlay": <span class="miss">Not Seen</span></div>
+      <div><b>Example: 96620A</b>2024 Chevrolet Silverado 1500 LT<br>Reymore Sent: SiriusXM w/360L<br>SRP Search filter "Satellite Radio": <span class="miss">Not Seen</span></div>
+    </div>
+    <div class="plate">
+      <table>
+        <thead><tr><th>Group</th><th># in Export</th><th># on SRP</th><th># not seen</th></tr></thead>
+        <tbody>
+          <tr><td>Safety and driver assist</td><td>520</td><td>427</td><td><span class="miss">93</span><span class="inl">(18%)</span></td></tr>
+          <tr><td>Comfort and convenience</td><td>398</td><td>389</td><td><span class="miss">9</span><span class="inl">(2%)</span></td></tr>
+          <tr><td>Audio and connectivity</td><td>316</td><td>301</td><td><span class="miss">15</span><span class="inl">(5%)</span></td></tr>
+          <tr><td>Exterior and utility</td><td>62</td><td>61</td><td><span class="miss">1</span><span class="inl">(2%)</span></td></tr>
+          <tr class="total"><td>Total</td><td>1,296</td><td>1,178</td><td><span class="miss">118</span><span class="inl">(9%)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li><b># in Export:</b> an entry in the Features column of Reymore's export for that car names the feature (for example "Remote start" or "Remote Vehicle Starter System"). 24 hot features, each paired with a Features filter that reymore.com offers.</li>
+      <li><b># on SRP:</b> of the cars the export names, those that the reymore.com "Features" filter shows, so a shopper filtering on it finds the car.</li>
+      <li><b># not seen:</b> in the export, not in the filters. The percent is against # in Export.</li>
+    </ul>
+    <div class="detail">
+      <h3>Every SRP Search filter with a gap <span class="miss">118 feature-cars</span></h3>
+      <table class="mini gaps"><thead><tr><th>SRP Search filter</th><th>Reymore export phrase</th><th># in Export</th><th># on SRP</th><th># not seen</th></tr></thead><tbody>
+        <tr class='tier'><td colspan='5'>Platinum · 10 filters · 57 not seen</td></tr>
+        <tr><td>360 Cameras</td><td class='desc'>360 Surround View Camera System / 360-Degree Camera Package / 360-degree surround-view camera systems / HD Surround Vision / HD Surround Vision w/2 Trailer View Camera Provisions / Surround View Monitor System</td><td>23</td><td>1</td><td class='miss'>22</td></tr>
+        <tr><td>Parking Assistance</td><td class='desc'>Front &amp; Rear Park Assist / Front Parking Sensors / Parallel &amp; Perpendicular Park Assist w/Stop / ParkSense Front/Rear Park Assist w/Stop / Parking Assist Sensors / Rear Park Assist / Rear Park Assist w/Audible Warning / Rear Parking Aid / Rear Parking Sensors / Ultrasonic Front &amp; Rear Park Assist / Ultrasonic Rear Park Assist</td><td>48</td><td>33</td><td class='miss'>15</td></tr>
+        <tr><td>Apple CarPlay</td><td class='desc'>Android Auto &amp; Apple CarPlay / Apple CarPlay / Apple CarPlay &amp; Android Auto / Apple CarPlay/Android Auto / CarPlay/Android Auto / NissanConnect featuring Apple CarPlay and Android Auto / STARLINK/Apple CarPlay/Android Auto / SYNC 3/Apple CarPlay/Android Auto / Wireless Apple CarPlay/Android Auto / Wireless Apple CarPlay/Wireless Android Auto</td><td>83</td><td>73</td><td class='miss'>10</td></tr>
+        <tr><td>Satellite Radio</td><td class='desc'>AM/FM radio: SiriusXM / AM/FM radio: SiriusXM 360L / AM/FM radio: SiriusXM w/360L / AM/FM radio: SiriusXM with 360L / SiriusXM Radio / SiriusXM Radio Service / SiriusXM Satellite Radio / SiriusXM w/360L / XM Satellite Radio</td><td>85</td><td>82</td><td class='miss'>3</td></tr>
+        <tr><td>Premium Sound System</td><td class='desc'>19 harman/kardon Speakers w/Subwoofer / Black Fender Vent Surround / Bose 10-Speaker Centerpoint Surround Audio Sys Ft / Bose 9-Speaker Stereo Audio System Feature / Bose Performance Series 14-Speaker System / Bose Performance Series 17-Speaker Sound System / Bose Performance-Enhanced 10-Speaker System / Bose Premium 12-Speaker Audio System Feature / Bose Premium 12-Speaker System with Sub-Woofer / Bose Premium 7 Speaker Sound System / Bose Premium 7-Speaker Audio System Feature / Bose Premium Audio System / Fender Premium Audio System w/10 Speakers / Premium Bose 7-Speaker Sound System / Premium Sound System / harman/kardon 19 Speaker Premium Sound / harman/kardon Aud &amp; Pwr Moonroof &amp; Pwr Driver Seat / harman/kardon® Speakers</td><td>27</td><td>25</td><td class='miss'>2</td></tr>
+        <tr><td>Heated Seats</td><td class='desc'>1st Row Heated Seats / 2nd Row Heated Outboard Seats / Driver &amp; Front Passenger Heated Seats / Heated &amp; Ventilated Driver &amp; Front Passenger Seats / Heated &amp; Ventilated Front Bucket Seats / Heated 8-Way Power Driver&#x27;s Seat / Heated Driver &amp; Front Outboard Passenger Seating / Heated Driver &amp; Front Outboard Passenger Seats / Heated Driver &amp; Front Passenger Seats / Heated Driver and Front Outboard Passenger Seating / Heated Driver and Front Passenger Seats / Heated Front Bucket Seats / Heated Front Bucket Seats w/Driver Memory / Heated Front Row Seats / Heated Front Seats / Heated and Ventilated Front Sport Seats / Heated front seats / Heated/Actively Ventilated Front Bucket Seats</td><td>69</td><td>68</td><td class='miss'>1</td></tr>
+        <tr><td>Sunroof/Moonroof</td><td class='desc'>Auto-Tilt &amp; Slide Sunroof w/Manual Shade / Dual-Pane Panoramic Power Sunroof / Dual-Pane Power Panoramic Sunroof / Panoramic Power Moonroof w/UV/Drk Tint Dual Glass / Power Express Open/Close Sunroof / Power Moonroof / Power Panoramic Sunroof / Power Sliding Glass Sunroof w/Manual Shade / Power Sunroof / Power moonroof / Power moonroof: UltraView / Sunroof</td><td>27</td><td>26</td><td class='miss'>1</td></tr>
+        <tr><td>Remote Start</td><td class='desc'>Remote Engine Starter / Remote Start / Remote Start System / Remote Vehicle Starter System / Remote start / Smart Key w/ Push Button and Remote Start</td><td>62</td><td>61</td><td class='miss'>1</td></tr>
+        <tr><td>Rear View Camera</td><td class='desc'>Back-Up Camera / HD Rear Vision Camera / ParkView Rear Back-Up Camera / Rear Vision Camera</td><td>84</td><td>83</td><td class='miss'>1</td></tr>
+        <tr><td>Keyless Entry</td><td class='desc'>Remote Keyless Entry / Remote keyless entry</td><td>86</td><td>85</td><td class='miss'>1</td></tr>
+        <tr class='tier'><td colspan='5'>Gold · 5 filters · 59 not seen</td></tr>
+        <tr><td>Automatic High Beams</td><td class='desc'>Auto High Beam Headlamp Control / Auto High-beam Headlights / Automatic High Beam / High Beam Assist (HBA) / IntelliBeam Automatic High Beam On/Off</td><td>72</td><td>18</td><td class='miss'>54</td></tr>
+        <tr><td>Leather Seats</td><td class='desc'>Cloth w/Leatherette Seat Trim / Cloth/Leatherette Seat Trim / Durable Synthetic Leather Seat Trim / Front &amp; Rear Leather Seat Trim (1st/2nd Rows) / Leather / Leather Package / Leather Seat Trim / Leather Seating Surfaces w/Mini Perforated Inserts / Leather Seats / Leather Trimmed Bucket Seats / Leather-Appointed Seating Surfaces / Nappa Leather Seats / Perf Leather-Appointed Front Outboard Seat Trim / Perforated Leather Seat Trim / Perforated Leather-Appointed Front Seat Trim / Perforated Leather-Appointed Seat Trim / Perforated Leather-Appointed Seating / Perforated V-Tex Leatherette Seating Surfaces / Semi-Aniline Leather-Appointed Seating Surfaces / Synthetic Leather Seating Surfaces</td><td>39</td><td>37</td><td class='miss'>2</td></tr>
+        <tr><td>Power Tailgate/Liftgate</td><td class='desc'>AutoSense Hands-Free Power Programmable Liftgate / Hands-Free Foot-Activated Liftgate / Hands-Free Power Programmable Rear Liftgate / Hands-Free Rear Power Programmable Liftgate / Power Liftgate / Power Tailgate / Rear Power Liftgate</td><td>39</td><td>38</td><td class='miss'>1</td></tr>
+        <tr><td>Keyless Ignition System</td><td class='desc'>Keyless Access w/Push Button Start / Keyless Open &amp; Start / Push Button Start / Smart Key w/ Push Button and Remote Start</td><td>20</td><td>19</td><td class='miss'>1</td></tr>
+        <tr><td>Adaptive Cruise Control</td><td class='desc'>Adaptive Cruise Control / Adaptive Cruise Control: Adaptive Cruise Control (ACC) with Low-Speed Follow / Intelligent Adaptive Cruise Control / Intelligent Cruise Control</td><td>35</td><td>34</td><td class='miss'>1</td></tr>
+        <tr class='tier'><td colspan='5'>Silver · 1 filters · 2 not seen</td></tr>
+        <tr><td>Rain Sensing Wipers</td><td class='desc'>Front Rainsensing Wipers / Intermittent Front Rain-Sensing Wipers / Rain Sensitive Windshield Wipers / Rain sensing wipers</td><td>28</td><td>26</td><td class='miss'>2</td></tr>
+      </tbody></table>
+      <ul class="notes"><li># on SRP counts the cars the export names that the filter also shows, so # in Export = # on SRP + # not seen on every line.</li><li>22 of the 110 used stock numbers in Reymore's export were not on reymore.com when the pages and filters were read on Oct 28, 2026.</li></ul>
+    </div>
+  </section>
+
+  <section class="road" aria-label="The research package">
+    <div class="sh">The research package</div>
+    <div class="lead">What the service delivers.</div>
+    <ul class="pkg">
+      <li>A research package written on Reymore's behalf: every feature, every car, the export beside the website.</li>
+      <li>DealerOn engaged with it.</li>
+      <li>Each gap becomes a DealerOn ticket, tied to DealerOn's own ticket number.</li>
+      <li>Each ticket tracked to close and approval through a dedicated email address.</li>
+      <li>The website re-read after each close to confirm it.</li>
+      <li>A close-out report to Reymore's leaders.</li>
+    </ul>
+    <div class="cta">
+      <div class="a">Call me for a one-on-one and I will walk you through your lot.<small>Fifteen minutes.</small></div>
+      <div class="c"><div class="call">Joe Pistell · AutoMagic Labs</div><div class="num"><a href="tel:+13152009825">(315) 200-9825</a></div><div class="mail"><a href="mailto:joe@automagiclabs.ai">joe@automagiclabs.ai</a></div></div>
+    </div>
+    <div class="stamp">Audited Oct 28, 2026, 3:02 PM ET. Search filters read Oct 28, 2026, 3:02 PM ET.</div>
+  </section>
+
+  <div class="disc"><b>Disclaimer</b>Study #1 and Study #2 rest on the words in Reymore's export beside the words on reymore.com when it was read. "Not presented" means the wording is not on the page; it does not prove what equipment the car has.</div>
+
+  <footer>Sources: Inputs: Reymore Chevrolet inventory export, the vehicle pages and the Features search filters on reymore.com (DealerOn). Computation: AutoMagicLabs.ai performed for Reymore Chevrolet.</footer>
+</div>
