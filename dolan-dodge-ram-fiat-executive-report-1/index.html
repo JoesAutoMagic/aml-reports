@@ -1,0 +1,290 @@
+<title>Dolan Dodge Ram FIAT · Executive report #1</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow report column; each study is a framed table "plate"; tier labels right-aligned, numbers centered. */
+:root{
+  --bg:#f5f6f8; --paper:#ffffff; --ink:#15202b; --muted:#5b6673; --rule:#d9dee5; --band:#eef1f5;
+  --miss:#b4232f; --aml:#1f4f7a; --aml-soft:#e3ecf5;
+  --display:"Archivo", "Arial Narrow", Arial, sans-serif; --body:"Public Sans", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f141a; --paper:#161d25; --ink:#e7ecf1; --muted:#9aa6b2; --rule:#2a3540; --band:#1c252f;
+  --miss:#ef6b74; --aml:#8fb8e0; --aml-soft:#1b2a3a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f141a; --paper:#161d25; --ink:#e7ecf1; --muted:#9aa6b2; --rule:#2a3540; --band:#1c252f;
+  --miss:#ef6b74; --aml:#8fb8e0; --aml-soft:#1b2a3a; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:980px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:40px}
+header{display:grid;gap:10px}
+.draft{font-family:var(--display);font-stretch:85%;font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--miss)}
+h1{font-family:var(--display);font-stretch:80%;font-weight:800;font-size:clamp(30px,5vw,46px);line-height:1.02;margin:0;text-wrap:balance}
+.meta{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.meta span{white-space:nowrap}
+section{display:grid;gap:12px}
+.label{font-family:var(--display);font-stretch:85%;font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h2{font-family:var(--display);font-stretch:85%;font-weight:700;font-size:24px;margin:0;text-wrap:balance}
+.plate{background:var(--paper);border:1px solid var(--rule);border-radius:6px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px;font-variant-numeric:tabular-nums}
+th,td{padding:12px 16px;text-align:center;vertical-align:middle}
+th:first-child,td:first-child{text-align:right;padding-right:28px;width:1%;white-space:nowrap}
+thead th{font-family:var(--display);font-stretch:85%;font-weight:600;font-size:13px;letter-spacing:.02em;color:var(--muted);border-bottom:1px solid var(--rule);line-height:1.25}
+thead tr.group th{font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:none;padding-bottom:6px}
+thead tr.group th.g-dolan{color:var(--ink);background:var(--band);border-bottom:2px solid var(--ink)}
+thead tr.group th.g-aml{color:var(--aml);background:var(--aml-soft);border-bottom:2px solid var(--aml)}
+tbody td{border-bottom:1px solid var(--rule);font-size:16px}
+tbody td:first-child{font-weight:500}
+tbody tr:last-child td{border-bottom:none}
+tr.total td{background:var(--band);font-weight:600;border-top:2px solid var(--ink)}
+.miss{color:var(--miss);font-weight:600}
+.inl{font-weight:500;font-size:12.5px;color:var(--muted);margin-left:6px}
+.pct{display:block;font-size:12.5px;font-weight:500;color:var(--muted);margin-top:2px}
+.col-aml{background:color-mix(in srgb,var(--aml-soft) 45%,transparent)}
+.aml-strong{color:var(--aml);font-weight:600}
+.notes{color:var(--muted);font-size:13.5px;margin:0;padding-left:18px;display:grid;gap:4px}
+.notes li{margin:0}
+.notes b{color:var(--ink);font-weight:600}
+.ps{border-top:1px dashed var(--rule);padding-top:28px}
+.detail{display:grid;gap:10px;margin-top:6px}
+.detail h3{font-family:var(--display);font-stretch:85%;font-weight:700;font-size:16px;margin:8px 0 0}
+table.mini{min-width:0;font-size:13px}
+table.mini th,table.mini td{padding:5px 10px;font-size:13px;text-align:left;width:auto;white-space:normal}
+table.mini td:last-child,table.mini th:last-child{text-align:right;white-space:nowrap}
+table.mini td:nth-child(2){white-space:nowrap}
+table.mini td.desc{min-width:0}
+.opt{color:var(--aml);font-size:12px}
+td.more{color:var(--muted);font-style:italic;text-align:left!important}
+ul.feat li.more{color:var(--muted);font-style:italic}
+ul.feat{list-style:none;margin:0;padding:0;columns:2 280px;column-gap:24px;font-size:13px}
+ul.feat li{break-inside:avoid;padding:2px 0}
+ul.feat .stk{color:var(--muted);font-size:12px;margin-left:6px}
+@media print{section[aria-labelledby="t2"]{break-before:page}}
+footer{color:var(--muted);font-size:13px;border-top:1px solid var(--rule);padding-top:16px}
+.subtitle{font-family:var(--display);font-stretch:85%;font-weight:600;font-size:clamp(17px,2.4vw,21px);color:var(--muted);margin:0}
+section.study{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:22px clamp(14px,3vw,24px) 26px;box-shadow:0 1px 0 var(--rule)}
+section.study.s1{border-top:6px solid var(--miss)}
+section.study.s2{border-top:6px solid var(--aml)}
+section.study .plate{border-color:var(--rule)}
+.chip{display:inline-block;font-family:var(--display);font-stretch:85%;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--miss);border-radius:4px;padding:3px 8px;margin-right:8px}
+section.s2 .chip{background:var(--aml)}
+section.road{display:grid;gap:12px;border-top:1px solid var(--rule);padding-top:22px}
+.road .sh{font-family:var(--display);font-stretch:85%;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.road .lead{font-family:var(--display);font-stretch:85%;font-weight:800;font-size:clamp(24px,3.6vw,32px);line-height:1.1;color:var(--ink)}
+.road .steps{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:16px}
+.road .steps li{padding-left:30px;position:relative}
+.road .steps li::before{content:"";position:absolute;left:0;top:.72em;width:18px;height:3px;background:var(--miss);border-radius:2px}
+.road .limit{margin:4px 0 0;font-size:15px;color:var(--muted)}
+.road .limit b{color:var(--ink)}
+.cta{margin-top:18px;background:#16294a;color:#fff;border-radius:12px;padding:22px clamp(16px,3vw,28px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 28px}
+.cta .a{flex:1 1 380px;max-width:640px;font-family:var(--display);font-stretch:85%;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.12}
+.cta .a small{display:block;font-family:var(--body);font-size:15px;font-weight:400;color:#c9d5e3;margin-top:8px;line-height:1.4}
+.cta .c{text-align:right}
+.cta .call{font-size:15px;color:#c9d5e3}
+.cta .num{font-family:var(--display);font-stretch:85%;font-size:clamp(24px,3.4vw,32px);font-weight:800;margin-top:2px}
+.cta .mail{font-size:15px;color:#dbe3ee;margin-top:2px}
+.cta a{color:inherit;text-decoration:none}
+.road .stamp{font-size:12.5px;color:var(--muted);text-align:right}
+@media (max-width:640px){.cta .c{text-align:left;margin-left:0}table.mini th,table.mini td{padding:5px 6px}table.mini td:nth-child(2){white-space:normal}table.mini td.desc{word-break:break-word}}
+.cta .c{margin-left:auto}
+@media print{section.road{break-before:page}}
+
+.banner{background:#fff4e5;border:1px solid #f0c48a;color:#6b4300;border-radius:8px;padding:10px 14px;font-size:13.5px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .banner{background:#3a2a10;border-color:#8a6a2a;color:#f3dcb0}}
+:root[data-theme="dark"] .banner{background:#3a2a10;border-color:#8a6a2a;color:#f3dcb0}
+section.study.s0{border-top:6px solid var(--ink)}
+section.s0 .chip{background:var(--ink)}
+.summary{font-size:17px;line-height:1.5;margin:0}
+.summary b{color:var(--miss)}
+table.mini td:nth-child(2){white-space:normal}
+table.mini.gaps td:last-child,table.mini.gaps th:last-child{text-align:center}
+table.mini.gaps td:nth-child(n+3),table.mini.gaps th:nth-child(n+3){text-align:center;white-space:nowrap}
+.pkg{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:16px}
+.pkg li{padding-left:30px;position:relative}
+.ex{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:4px 0 6px}
+.ex div{background:var(--band);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;font-size:14px;line-height:1.45}
+.ex b{display:block;font-family:var(--display);font-stretch:85%;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.ex .miss{font-weight:600}
+table.mini tr.tier td{background:var(--band);font-family:var(--display);font-stretch:85%;font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.disc{border-top:1px solid var(--rule);padding-top:16px;font-size:14px;color:var(--ink)}
+.disc b{font-family:var(--display);font-stretch:85%;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px;color:var(--muted);display:block;margin-bottom:4px}
+.pkg li::before{content:"";position:absolute;left:0;top:.72em;width:18px;height:3px;background:var(--aml);border-radius:2px}
+</style>
+
+
+
+<div class="wrap">
+  <p class="back"><a href="../dolan-automotive-group-executive-report/">&larr; Dolan Automotive Group report</a></p>
+  <header>
+    <div class="draft">Executive report #1 · v4</div>
+    <h1>Dolan Dodge Ram FIAT</h1>
+    <p class="subtitle">Is DDC Dropping Features?</p>
+  </header>
+
+  <section class="study s0" aria-labelledby="t0">
+    <div class="label"><span class="chip">Summary</span> Website Audit: Does It Sell Cars?</div>
+    <h2 id="t0">Team Dolan sends the features. Does Dealer.com drop any of them?</h2>
+    <p class="summary">Dolan Dodge Ram FIAT's export on 90 used cars lists <b>8,652</b> features in total. AutoMagic Labs knows what sells cars and we know that <b>1,357</b> of them are <b>hot features</b> that need high priority. Missing hot features makes the car harder to sell.</p>
+    <p class="summary">Here are 4 examples that Team Dolan sent to DDC and are missing:</p>
+    <div class="ex">
+      <div><b>Example: DE26073</b>Dolan Sent: Back-Up Camera<br>Hot feature: Platinum<br>Website: <span class="miss">Not Seen - or- very hard to find</span></div>
+      <div><b>Example: DE26074</b>Dolan Sent: Premium Sound System<br>Hot feature: Platinum<br>Website: <span class="miss">Not Seen - or- very hard to find</span></div>
+      <div><b>Example: DLN26052A</b>Dolan Sent: Heated Steering Wheel<br>Hot feature: Platinum<br>Website: <span class="miss">Not Seen - or- very hard to find</span></div>
+      <div><b>Example: DSA26213</b>Dolan Sent: Remote Engine Start<br>Hot feature: Platinum<br>Website: <span class="miss">Not Seen - or- very hard to find</span></div>
+    </div>
+  </section>
+
+<section class="study s1" aria-labelledby="t1v1">
+    <div class="label"><span class="chip">Study #1</span></div>
+    <h2 id="t1v1">Study #1: Compare Dolan Dodge Ram FIAT Export to DDC</h2>
+    <div class="plate">
+      <table>
+        <thead><tr><th>Tier</th><th>Exported by Dolan</th><th>Totally missing</th></tr></thead>
+        <tbody>
+          <tr><td>Packages</td><td>7</td><td><span class="miss">0</span><span class="inl">(0%)</span></td></tr>
+          <tr><td>Priced options</td><td>0</td><td><span class="miss">0</span><span class="inl">(0%)</span></td></tr>
+          <tr><td>Platinum</td><td>615</td><td><span class="miss">56</span><span class="inl">(9%)</span></td></tr>
+          <tr><td>Gold</td><td>408</td><td><span class="miss">29</span><span class="inl">(7%)</span></td></tr>
+          <tr><td>Silver</td><td>327</td><td><span class="miss">30</span><span class="inl">(9%)</span></td></tr>
+          <tr class="total"><td>Total</td><td>1,357</td><td><span class="miss">115</span><span class="inl">(8%)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="summary">Team Dolan exported <b>1,357</b> hot features and DDC dropped <b>115</b> (8% of all hot features).</p>
+    <ul class="notes"><li><b>Totally missing:</b> Dolan exported the item; it is in neither the VDP feature list nor the dealer notes.</li><li><b>Priced options</b> (<span class='opt'>&#9670;</span>): installed on their own, not in a package, with their own price on the build. Scarce, and high power for merchandising.</li><li>Packages and priced options under $500 MSRP are not counted.</li></ul>
+    <div class="detail">
+      <h3>Totally missing packages and options <span class="miss">$0</span></h3>
+      <table class="mini"><thead><tr><th>Stock</th><th>Vehicle</th><th>Package or option</th><th>MSRP</th></tr></thead><tbody>
+      </tbody></table>
+      <h3>Totally missing Platinum features <span class="miss">56</span></h3>
+      <ul class="feat">
+        <li><b>Rearview Camera</b> <span class='stk'>DAD26236, DE25105, DE26073, DE26074, DE26091S, DE26095S +9 more</span></li>
+        <li><b>Premium Audio</b> <span class='stk'>DAD26236, DAD26247S, DE26074, DE26093, DE26095S, DLN26085 +7 more</span></li>
+        <li><b>Running Boards</b> <span class='stk'>DBB26039, DSA26205S, DSA26207, RR252402D, RR262414C, RR262514C +2 more</span></li>
+        <li><b>Parking Sensors / Assist</b> <span class='stk'>DE26074, DE26095S, DSA26190, DSA26205S, RR252402D, RR261978C +1 more</span></li>
+        <li><b>Evasion Assist</b> <span class='stk'>DE26080, DE26083, DLN26091</span></li>
+        <li><b>Remote Start</b> <span class='stk'>DSA26213, RR262888B, RR272730A</span></li>
+        <li><b>Rear Air Conditioning</b> <span class='stk'>DLN26092, RR262506C</span></li>
+        <li><b>Heated Seats</b> <span class='stk'>RR261978C</span></li>
+        <li><b>Heated Steering Wheel</b> <span class='stk'>DLN26052A</span></li>
+        <li><b>Keyless Entry</b> <span class='stk'>RR261978C</span></li>
+        <li class='more'>&amp; More...</li>
+      </ul>
+      <h3>Totally missing Gold features <span class="miss">29</span></h3>
+      <ul class="feat">
+        <li><b>Forward Collision Warning</b> <span class='stk'>DE26073, DE26074, DE26095S, DSA26184, DSA26190, DSA26205S +3 more</span></li>
+        <li><b>Push Button Starting</b> <span class='stk'>DAD26225, DFJ26098S, DRT26162, RR261978C, RR262421A, RR262598C +2 more</span></li>
+        <li><b>Hands-Free Liftgate</b> <span class='stk'>DE26084, DLN26091, DLN26095S, DSA26205S, DSA26211, DSR26015 +1 more</span></li>
+        <li><b>Auto High-Beam Headlights</b> <span class='stk'>RR261978C</span></li>
+        <li><b>Fog Lights</b> <span class='stk'>RR261978C</span></li>
+        <li><b>Leather Seats</b> <span class='stk'>RR261978C</span></li>
+        <li><b>Power Seats</b> <span class='stk'>RR261978C</span></li>
+        <li><b>Rear Collision Mitigation</b> <span class='stk'>RR262727A</span></li>
+      </ul>
+      <h3>Totally missing Silver features <span class="miss">30</span></h3>
+      <ul class="feat">
+        <li><b>Power Folding Mirrors</b> <span class='stk'>DBB26039, DE26093, DE26095S, DFJ26088S, DLN26095S, DRT26176A +9 more</span></li>
+        <li><b>Cross-Traffic Alert</b> <span class='stk'>DE26083, DE26093, DSA26193A, DSA26207, RR261978C, RR262514C +2 more</span></li>
+        <li><b>Blind Spot Monitor</b> <span class='stk'>DBB26039, RR261978C, RR262853A</span></li>
+        <li><b>Heated Side Mirrors</b> <span class='stk'>RR261978C</span></li>
+        <li><b>Lane Assist</b> <span class='stk'>RR261978C</span></li>
+        <li><b>Lane Departure Warning</b> <span class='stk'>RR261978C</span></li>
+        <li><b>Universal Garage Door Opener</b> <span class='stk'>RR261978C</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="study s2" aria-labelledby="t2">
+    <div class="label"><span class="chip">Study #2</span></div>
+    <h2 id="t2">Study #2: Compare Dolan Dodge Ram FIAT Export to DDC SRP Filters</h2>
+    <p class="summary">Shoppers find cars on the website with the SRP Search filters (the "Features" check boxes on the used-car search page). Dolan Dodge Ram FIAT's export names <b>1,803</b> shopper features that pair with those filters, on 89 used cars on the site. The SRP Search filters show <b>1,138</b> of them (63 of 100) and do not show <b>665</b> (37 of 100). <b>69 of 89</b> cars have 5 or more features named in the export and not seen.</p>
+    <p class="summary">Here are 4 examples that Team Dolan sent to DDC and the SRP Search filters do not show:</p>
+    <div class="ex">
+      <div><b>Example: DE26073</b>2025 Ram 1500 Big Horn<br>Dolan Sent: Back-Up Camera<br>SRP Search filter: <span class="miss">Not Seen</span></div>
+      <div><b>Example: DE26093</b>2025 Mitsubishi Outlander SE<br>Dolan Sent: Premium Sound System<br>SRP Search filter: <span class="miss">Not Seen</span></div>
+      <div><b>Example: DE26083</b>2025 Chevrolet Equinox AWD LT<br>Dolan Sent: Satellite Radio<br>SRP Search filter: <span class="miss">Not Seen</span></div>
+      <div><b>Example: DLN26052A</b>2023 Toyota 4Runner SR5 Premium<br>Dolan Sent: Heated Steering Wheel<br>SRP Search filter: <span class="miss">Not Seen</span></div>
+    </div>
+    <div class="plate">
+      <table>
+        <thead><tr><th>Group</th><th># in Export</th><th># on SRP</th><th># not seen</th></tr></thead>
+        <tbody>
+          <tr><td>Safety and driver assist</td><td>605</td><td>383</td><td><span class="miss">222</span><span class="inl">(37%)</span></td></tr>
+          <tr><td>Comfort and convenience</td><td>607</td><td>316</td><td><span class="miss">291</span><span class="inl">(48%)</span></td></tr>
+          <tr><td>Audio and connectivity</td><td>384</td><td>293</td><td><span class="miss">91</span><span class="inl">(24%)</span></td></tr>
+          <tr><td>Exterior and utility</td><td>207</td><td>146</td><td><span class="miss">61</span><span class="inl">(29%)</span></td></tr>
+          <tr class="total"><td>Total</td><td>1,803</td><td>1,138</td><td><span class="miss">665</span><span class="inl">(37%)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li><b># in Export:</b> the exact phrase for the feature is an entry in the Options column of Dolan's export for that car. 48 features, each paired with the SRP Search filter for it.</li>
+      <li><b># on SRP:</b> of the cars the export names, those whose page on dolanautogroup.com lists that filter under Features, so a shopper filtering on it finds the car.</li>
+      <li><b># not seen:</b> in the export, not in the filters. The percent is against # in Export.</li>
+      <li>9 of the 48 features have no SRP Search filter at all; every car the export names them on counts as not shown.</li>
+    </ul>
+    <div class="detail">
+      <h3>Every SRP Search filter with a gap <span class="miss">602 feature-cars</span></h3>
+      <table class="mini gaps"><thead><tr><th>SRP Search filter</th><th>Dolan export phrase</th><th># in Export</th><th># on SRP</th><th># not seen</th></tr></thead><tbody>
+        <tr class='tier'><td colspan='5'>Platinum · 16 filters · 286 not seen</td></tr>
+        <tr><td>Heated Seats</td><td class='desc'>Heated Front Seat(s)</td><td>45</td><td>44</td><td class='miss'>1</td></tr>
+        <tr><td>Premium Audio</td><td class='desc'>Premium Sound System</td><td>27</td><td>4</td><td class='miss'>23</td></tr>
+        <tr><td>360 Camera</td><td class='desc'>Aerial View Display System</td><td>4</td><td>no filter</td><td class='miss'>4</td></tr>
+        <tr><td>Satellite Radio Ready</td><td class='desc'>Satellite Radio</td><td>63</td><td>52</td><td class='miss'>11</td></tr>
+        <tr><td>Android Auto</td><td class='desc'>Smart Device Integration</td><td>68</td><td>61</td><td class='miss'>7</td></tr>
+        <tr><td>Apple CarPlay</td><td class='desc'>Smart Device Integration</td><td>68</td><td>61</td><td class='miss'>7</td></tr>
+        <tr><td>Parking Sensors / Assist</td><td class='desc'>Rear Parking Aid</td><td>35</td><td>27</td><td class='miss'>8</td></tr>
+        <tr><td>Remote Start</td><td class='desc'>Remote Engine Start</td><td>45</td><td>no filter</td><td class='miss'>45</td></tr>
+        <tr><td>Rearview Camera</td><td class='desc'>Back-Up Camera</td><td>87</td><td>57</td><td class='miss'>30</td></tr>
+        <tr><td>Keyless Entry</td><td class='desc'>Keyless Entry</td><td>84</td><td>no filter</td><td class='miss'>84</td></tr>
+        <tr><td>Tow Hitch/Tow Package</td><td class='desc'>Tow Hitch</td><td>51</td><td>0</td><td class='miss'>51</td></tr>
+        <tr><td>Rear Air Conditioning</td><td class='desc'>Rear A/C</td><td>7</td><td>5</td><td class='miss'>2</td></tr>
+        <tr><td>Running Boards</td><td class='desc'>Running Boards/Side Steps</td><td>8</td><td>0</td><td class='miss'>8</td></tr>
+        <tr><td>Heated Steering Wheel</td><td class='desc'>Heated Steering Wheel</td><td>31</td><td>30</td><td class='miss'>1</td></tr>
+        <tr><td>Evasion Assist</td><td class='desc'>Evasion Assist</td><td>3</td><td>no filter</td><td class='miss'>3</td></tr>
+        <tr><td>Navigation System</td><td class='desc'>Navigation System</td><td>28</td><td>27</td><td class='miss'>1</td></tr>
+        <tr class='tier'><td colspan='5'>Gold · 8 filters · 56 not seen</td></tr>
+        <tr><td>Push Button Starting</td><td class='desc'>Keyless Start</td><td>83</td><td>75</td><td class='miss'>8</td></tr>
+        <tr><td>Power Seats</td><td class='desc'>Power Driver Seat</td><td>51</td><td>50</td><td class='miss'>1</td></tr>
+        <tr><td>Fog Lights</td><td class='desc'>Fog Lamps</td><td>62</td><td>61</td><td class='miss'>1</td></tr>
+        <tr><td>Rear Collision Mitigation</td><td class='desc'>Rear Collision Mitigation</td><td>21</td><td>no filter</td><td class='miss'>21</td></tr>
+        <tr><td>Leather Seats</td><td class='desc'>Leather Seats</td><td>31</td><td>29</td><td class='miss'>2</td></tr>
+        <tr><td>Forward Collision Warning</td><td class='desc'>Front Collision Warning / Front Collision Mitigation</td><td>58</td><td>49</td><td class='miss'>9</td></tr>
+        <tr><td>Auto High-Beam Headlights</td><td class='desc'>Automatic Highbeams</td><td>44</td><td>43</td><td class='miss'>1</td></tr>
+        <tr><td>Power Liftgate</td><td class='desc'>Power Liftgate</td><td>13</td><td>no filter</td><td class='miss'>13</td></tr>
+        <tr class='tier'><td colspan='5'>Silver · 7 filters · 260 not seen</td></tr>
+        <tr><td>Blind Spot Monitor</td><td class='desc'>Blind Spot Monitor</td><td>45</td><td>1</td><td class='miss'>44</td></tr>
+        <tr><td>Cross-Traffic Alert</td><td class='desc'>Cross-Traffic Alert</td><td>45</td><td>no filter</td><td class='miss'>45</td></tr>
+        <tr><td>Lane Assist</td><td class='desc'>Lane Keeping Assist</td><td>42</td><td>30</td><td class='miss'>12</td></tr>
+        <tr><td>Universal Garage Door Opener</td><td class='desc'>Universal Garage Door Opener</td><td>31</td><td>no filter</td><td class='miss'>31</td></tr>
+        <tr><td>Power Folding Mirrors</td><td class='desc'>Power Folding Mirrors</td><td>21</td><td>no filter</td><td class='miss'>21</td></tr>
+        <tr><td>Heated Side Mirrors</td><td class='desc'>Heated Mirrors</td><td>82</td><td>0</td><td class='miss'>82</td></tr>
+        <tr><td>Lane Departure Warning</td><td class='desc'>Lane Departure Warning</td><td>44</td><td>19</td><td class='miss'>25</td></tr>
+      </tbody></table>
+      <ul class="notes"><li># on SRP counts the cars the export names that the filter also shows, so # in Export = # on SRP + # not seen on every line.</li><li>The group table above counts all 48 paired filters (665 not seen). This list carries the 31 filters with a gap that AutoMagic Labs scores today (602 not seen); the other 3 filters with a gap (63 not seen) are held for a later release.</li><li>3 of the 92 stock numbers in Dolan Dodge Ram FIAT's export were not on the website when the filters were read on Oct 27, 2026. Two of them (DLN26070, DRT26132) had no page at the 12:39 PM page read either, so Study #1 covers 90 cars; DBB26037A left the site between the two reads.</li></ul>
+    </div>
+  </section>
+
+  <section class="road" aria-label="The research package">
+    <div class="sh">The research package</div>
+    <div class="lead">What the service delivers.</div>
+    <ul class="pkg">
+      <li>A research package written on Dolan's behalf: every feature, every car, the export beside the website.</li>
+      <li>Dealer.com engaged with it.</li>
+      <li>Each gap becomes a Dealer.com ticket, tied to Dealer.com's own ticket number.</li>
+      <li>Each ticket tracked to close and approval through a dedicated email address.</li>
+      <li>The website re-read after each close to confirm it.</li>
+      <li>A close-out report to Dolan's leaders.</li>
+    </ul>
+    <div class="cta">
+      <div class="a">Call me for a one-on-one and I will walk you through your lot.<small>Fifteen minutes.</small></div>
+      <div class="c"><div class="call">Joe Pistell · AutoMagic Labs</div><div class="num"><a href="tel:+13152009825">(315) 200-9825</a></div><div class="mail"><a href="mailto:joe@automagiclabs.ai">joe@automagiclabs.ai</a></div></div>
+    </div>
+    <div class="stamp">Audited Oct 27, 2026, 12:39 PM ET. Search filters read Oct 27, 2026, 3:35 PM ET.</div>
+  </section>
+
+  <div class="disc"><b>Disclaimer</b>What AML has uncovered is shocking. AML is not perfect, we have triple checked this. Study #2 rests on exact words in Dolan's export beside the website's search filters.</div>
+
+  <footer>Sources: Inputs: Dolan inventory exports, the vehicle pages and the Features search filters on dolanautogroup.com (Dealer.com). Computation: AutoMagicLabs.ai performed for Dolan Automotive Group.</footer>
+</div>
