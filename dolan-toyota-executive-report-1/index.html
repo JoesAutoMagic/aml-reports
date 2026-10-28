@@ -110,6 +110,7 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
 .disc{border-top:1px solid var(--rule);padding-top:16px;font-size:14px;color:var(--ink)}
 .disc b{font-family:var(--display);font-stretch:85%;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px;color:var(--muted);display:block;margin-bottom:4px}
 .pkg li::before{content:"";position:absolute;left:0;top:.72em;width:18px;height:3px;background:var(--aml);border-radius:2px}
+@media (max-width:700px){.plate,.detail{overflow-x:auto;-webkit-overflow-scrolling:touch}}
 </style>
 
 
@@ -125,13 +126,13 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
   <section class="study s0" aria-labelledby="t0">
     <div class="label"><span class="chip">Summary</span> Website Audit: Does It Sell Cars?</div>
     <h2 id="t0">Team Dolan sends the features. Does Dealer.com drop any of them?</h2>
-    <p class="summary">Dolan Toyota's export on 188 used cars lists <b>18,019</b> features in total. AutoMagic Labs knows what sells cars and we know that <b>2,666</b> of them are <b>hot features</b> that need high priority. Missing hot features makes the car harder to sell.</p>
+    <p class="summary">Dolan Toyota's export on 188 used cars lists <b>18,019</b> features in total. AutoMagic Labs knows what sells cars and we know that <b>3,684</b> of them are <b>hot features</b> that need high priority. Missing hot features makes the car harder to sell.</p>
     <p class="summary">Here are 4 examples that Team Dolan sent to DDC and are missing:</p>
     <div class="ex">
-      <div><b>Example: TBB26403A</b>2023 Cadillac Escalade ESV 4WD Sport Platinum<br>Dolan Sent: Onyx Package<br>Factory package<br>Website: <span class="miss">Not presented by Dealer.com</span></div>
-      <div><b>Example: TFJ26068S</b>2019 Jeep Wrangler Unlimited Rubicon<br>Dolan Sent: 8.4 Radio &amp; Premium Audio Group<br>Factory package<br>Website: <span class="miss">Not presented by Dealer.com</span></div>
-      <div><b>Example: TAD26504</b>2024 Chevrolet Silverado 1500 RST<br>Dolan Sent: Z71 Off-Road Package<br>Factory package<br>Website: <span class="miss">Not presented by Dealer.com</span></div>
-      <div><b>Example: T2612804B</b>2020 Chevrolet Tahoe Premier<br>Dolan Sent: Sun  Entertainment And Destinations Package<br>Factory package<br>Website: <span class="miss">Not presented by Dealer.com</span></div>
+      <div><b>Example: TR250031B</b>2024 Ford Super Duty F-350 SRW LARIAT<br>Dolan Sent: 6.7L 4V OHV POWER STROKE V8 TURBO DIESEL B20<br>MSRP: $10,495<br>Website: <span class="miss">Not in Dolan's words</span></div>
+      <div><b>Example: T2613262C</b>2018 Ram 2500 Tradesman<br>Dolan Sent: 6.7L I6 CUMMINS TURBO DIESEL<br>MSRP: $9,300<br>Website: <span class="miss">Not in Dolan's words</span></div>
+      <div><b>Example: TDR26159</b>2023 Jeep Grand Cherokee Summit<br>Dolan Sent: 19 SPEAKERS HIGH PERFORMANCE AUDIO<br>MSRP: $2,505<br>Website: <span class="miss">Not in Dolan's words</span></div>
+      <div><b>Example: TBB26403A</b>2023 Cadillac Escalade ESV 4WD Sport Platinum<br>Dolan Sent: ASSIST STEPS  POWER-RETRACTABLE WITH PERIMETER LIGHTING<br>MSRP: $1,750<br>Website: <span class="miss">Not in Dolan's words</span></div>
     </div>
   </section>
 
@@ -140,101 +141,115 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
     <h2 id="t1v1">Study #1: Compare Dolan Toyota Export to DDC</h2>
     <div class="plate">
       <table>
-        <thead><tr><th>Tier</th><th>Exported by Dolan</th><th>Totally missing</th></tr></thead>
+        <thead><tr><th>Tier</th><th>Exported by Dolan</th><th>Not presented</th></tr></thead>
         <tbody>
-          <tr><td>Platinum</td><td>317</td><td><span class="miss">79</span><span class="inl">(25%)</span></td></tr>
+          <tr><td>Packages</td><td>61</td><td><span class="miss">61</span><span class="inl">(100%)</span></td></tr>
+          <tr><td>Priced options</td><td>10</td><td><span class="miss">10</span><span class="inl">(100%)</span></td></tr>
+          <tr><td>Platinum</td><td>1,264</td><td><span class="miss">720</span><span class="inl">(57%)</span></td></tr>
           <tr><td>Gold</td><td>622</td><td><span class="miss">223</span><span class="inl">(36%)</span></td></tr>
           <tr><td>Silver</td><td>1,727</td><td><span class="miss">284</span><span class="inl">(16%)</span></td></tr>
-          <tr class="total"><td>Total</td><td>2,666</td><td><span class="miss">586</span><span class="inl">(22%)</span></td></tr>
+          <tr class="total"><td>Total</td><td>3,684</td><td><span class="miss">1,298</span><span class="inl">(35%)</span></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="summary">Team Dolan exported <b>2,666</b> hot features and DDC dropped <b>586</b> (22% of all hot features).</p>
-    <ul class="notes"><li><b>Totally missing:</b> Dolan exported the item; it is in neither the VDP feature list nor the dealer notes.</li></ul>
+    <p class="summary">Team Dolan exported <b>3,684</b> hot features and DDC did not present <b>1,298</b> of them as sent (35% of all hot features).</p>
+    <ul class="notes"><li><b>Packages, priced options and Platinum:</b> presented only when Dolan's own wording is on the vehicle page, outside the "Notes from the dealer" box (our own text). Near-exact match: case, punctuation, spacing, plurals, &amp; for and, w/ for with, and Pkg for Package are ignored; any other different word is a miss. Vehicle pages read Oct 28, 2026, 1:42 PM ET.</li><li><b>Gold and Silver:</b> not presented means the item is in neither the vehicle page's feature list nor the dealer notes (pages read Oct 22, 2026).</li><li><b>Priced options</b> (<span class='opt'>&#9670;</span>): installed on their own, with their own price on the factory build, and named in Dolan's export. The table shows Dolan's export wording.</li></ul>
     <div class="detail">
-      <h3>Packages Dealer.com does not present <span class="miss">65 of 65</span></h3>
-      <table class="mini"><thead><tr><th>Stock</th><th>Vehicle</th><th>Factory package</th></tr></thead><tbody>
-        <tr><td>T2611064C</td><td>2022 Ram 2500 Power Wagon</td><td class='desc'>Bed Utility Group</td></tr>
-        <tr><td>T2611064C</td><td>2022 Ram 2500 Power Wagon</td><td class='desc'>Level 1 Equipment Group</td></tr>
-        <tr><td>T2611064C</td><td>2022 Ram 2500 Power Wagon</td><td class='desc'>Safety Group</td></tr>
-        <tr><td>T2611662A</td><td>2015 GMC Sierra 2500HD available WiFi SLT</td><td class='desc'>Driver Alert Package</td></tr>
-        <tr><td>T2611662A</td><td>2015 GMC Sierra 2500HD available WiFi SLT</td><td class='desc'>Duramax Plus Package</td></tr>
-        <tr><td>T2611662A</td><td>2015 GMC Sierra 2500HD available WiFi SLT</td><td class='desc'>Suspension Package  Handling/Trailering  Heavy-Duty</td></tr>
-        <tr><td>T2611951A</td><td>2018 Nissan Rogue SV Hybrid</td><td class='desc'>Premium Package</td></tr>
-        <tr><td>T2612369A</td><td>2022 GMC Canyon 4WD AT4 w/Leather</td><td class='desc'>Trailering Package</td></tr>
-        <tr><td>T2612395A</td><td>2023 Mazda CX-50 2.5 Turbo</td><td class='desc'>Cargo Package</td></tr>
-        <tr><td>T2612395B</td><td>2025 Chevrolet Equinox AWD LT</td><td class='desc'>Convenience Package Ii</td></tr>
-        <tr><td>T2612395B</td><td>2025 Chevrolet Equinox AWD LT</td><td class='desc'>Safety And Technology Package</td></tr>
-        <tr><td>T2612804B</td><td>2020 Chevrolet Tahoe Premier</td><td class='desc'>Sun  Entertainment And Destinations Package</td></tr>
-        <tr><td>T2612813A</td><td>2024 GMC Sierra 1500 SLE</td><td class='desc'>Remote Start Package</td></tr>
-        <tr><td>T2612814A</td><td>2017 Porsche Macan S</td><td class='desc'>Memory Package</td></tr>
-        <tr><td>T2612828B</td><td>2023 Jeep Wrangler Willys</td><td class='desc'>Cold Weather Group</td></tr>
-        <tr><td>T2612828B</td><td>2023 Jeep Wrangler Willys</td><td class='desc'>Convenience Group</td></tr>
-        <tr><td>T2612828B</td><td>2023 Jeep Wrangler Willys</td><td class='desc'>Quick Order Package 22W Willys</td></tr>
-        <tr><td>T2612887B</td><td>2022 Subaru Crosstrek Limited</td><td class='desc'>Popular Package #4</td></tr>
-        <tr><td>T2613050A</td><td>2017 Dodge Durango GT</td><td class='desc'>Nav &amp; Power Liftgate Group</td></tr>
-        <tr><td>T2613050A</td><td>2017 Dodge Durango GT</td><td class='desc'>Quick Order Package 23E</td></tr>
-        <tr><td>T2613060B</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Bsd/Rcta &amp; Moonrf &amp; All Weather Pkg &amp; Pwr Dr. Seat</td></tr>
-        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Ltz Convenience Package</td></tr>
-        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Ltz Convenience Package Ii</td></tr>
-        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Ltz Premium Package</td></tr>
-        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Safety Package</td></tr>
-        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Safety Package Ii</td></tr>
-        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Suspension Package</td></tr>
-        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Technology Package</td></tr>
-        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Z71 Off-Road Package</td></tr>
-        <tr><td>T2613262C</td><td>2018 Ram 2500 Tradesman</td><td class='desc'>Chrome Appearance Group</td></tr>
-        <tr><td>T2613262C</td><td>2018 Ram 2500 Tradesman</td><td class='desc'>Popular Equipment Group</td></tr>
-        <tr><td>T2613262C</td><td>2018 Ram 2500 Tradesman</td><td class='desc'>Protection Group</td></tr>
-        <tr><td>T2613376A</td><td>2023 BMW X1 xDrive28i</td><td class='desc'>Convenience Package</td></tr>
-        <tr><td>T2613377A</td><td>2023 Ram 1500 Big Horn</td><td class='desc'>Big Horn Level B Equipment Group</td></tr>
-        <tr><td>T2613377A</td><td>2023 Ram 1500 Big Horn</td><td class='desc'>Sport Appearance Package</td></tr>
-        <tr><td>TAD26503</td><td>2017 Toyota Tacoma TRD Pro</td><td class='desc'>Tow Package</td></tr>
-        <tr><td>TAD26504</td><td>2024 Chevrolet Silverado 1500 RST</td><td class='desc'>Dark Essentials Package</td></tr>
-        <tr><td>TAD26504</td><td>2024 Chevrolet Silverado 1500 RST</td><td class='desc'>Protection Package</td></tr>
-        <tr><td>TAD26504</td><td>2024 Chevrolet Silverado 1500 RST</td><td class='desc'>Z71 Off-Road Package</td></tr>
-        <tr><td>TAD26508</td><td>2022 GMC Sierra 1500 Limited SLT</td><td class='desc'>Slt Convenience Package</td></tr>
-        <tr><td>TAD26508</td><td>2022 GMC Sierra 1500 Limited SLT</td><td class='desc'>Slt Premium Package</td></tr>
-        <tr><td>TAD26508</td><td>2022 GMC Sierra 1500 Limited SLT</td><td class='desc'>X31 Off-Road And Protection Package</td></tr>
-        <tr><td>TAD26508</td><td>2022 GMC Sierra 1500 Limited SLT</td><td class='desc'>X31 Off-Road Package</td></tr>
-        <tr><td>TBB26403A</td><td>2023 Cadillac Escalade ESV 4WD Sport Platinum</td><td class='desc'>Onyx Package</td></tr>
-        <tr><td>TDR26137B</td><td>2021 Lexus GX GX 460 Premium</td><td class='desc'>Navigation Package</td></tr>
-        <tr><td>TDR26144</td><td>2023 Jeep Wrangler 4xe Sahara</td><td class='desc'>Cold Weather Group</td></tr>
-        <tr><td>TDR26144</td><td>2023 Jeep Wrangler 4xe Sahara</td><td class='desc'>Trailer Tow &amp; Aux Switch Group</td></tr>
-        <tr><td>TDR26159</td><td>2023 Jeep Grand Cherokee Summit</td><td class='desc'>Luxury Tech Group V</td></tr>
-        <tr><td>TDR26159</td><td>2023 Jeep Grand Cherokee Summit</td><td class='desc'>Quick Order Package 23S</td></tr>
-        <tr><td>TFJ26066A</td><td>2017 Chevrolet Equinox Premier</td><td class='desc'>Enhanced Convenience Package</td></tr>
-        <tr><td>TFJ26068S</td><td>2019 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>8.4 Radio &amp; Premium Audio Group</td></tr>
-        <tr><td>TFJ26068S</td><td>2019 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>Led Lighting Group</td></tr>
-        <tr><td>TFJ26068S</td><td>2019 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>Quick Order Package 28R</td></tr>
-        <tr><td>TFJ26068S</td><td>2019 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>Trailer Tow &amp; Hd Electrical Group</td></tr>
-        <tr><td>TLN26142</td><td>2026 Nissan Rogue Rock Creek</td><td class='desc'>Rock Creek Premium Package</td></tr>
-        <tr><td>TLN26151B</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Popular Package #4</td></tr>
-        <tr><td>TLN26163</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Bsd/Rcta &amp; Moonrf &amp; All Weather Pkg &amp; Pwr Dr. Seat</td></tr>
-        <tr><td>TLN26163</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Popular Package #3</td></tr>
-        <tr><td>TLN26175</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Bsd/Rcta &amp; Moonrf &amp; All Weather Pkg &amp; Pwr Dr. Seat</td></tr>
-        <tr><td>TLN26175</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Popular Package #3</td></tr>
-        <tr><td>TLN26178</td><td>2023 Chevrolet Colorado 4WD ZR2</td><td class='desc'>Safety Package</td></tr>
-        <tr><td>TLN26178</td><td>2023 Chevrolet Colorado 4WD ZR2</td><td class='desc'>Zr2 Convenience Package Iii</td></tr>
-        <tr><td>TSA26250A</td><td>2025 Buick Encore GX Preferred</td><td class='desc'>Comfort Package</td></tr>
-        <tr><td>TSA26313</td><td>2023 GMC Canyon 4WD AT4</td><td class='desc'>Canyon Safety Plus Package</td></tr>
-        <tr><td>TSA26313</td><td>2023 GMC Canyon 4WD AT4</td><td class='desc'>Trailering Package</td></tr>
-        <tr><td colspan='3' class='desc more'>Vehicle pages read Oct 28, 2026, 10:44 AM ET. Same method for all five stores: <a href='../dolan-automotive-group-executive-report/'>Dolan Automotive Group report, Study A</a>.</td></tr>
+      <h3>Packages and priced options not presented <span class="miss">71</span> · <span class="miss">$34,470</span> at MSRP</h3>
+      <table class="mini"><thead><tr><th>Stock</th><th>Vehicle</th><th>Package or option</th><th>MSRP</th></tr></thead><tbody>
+        <tr><td>TR250031B</td><td>2024 Ford Super Duty F-350 SRW LARIAT</td><td class='desc'><span class="opt">&#9670;</span> 6.7L 4V OHV POWER STROKE V8 TURBO DIESEL B20</td><td class='miss'>$10,495</td></tr>
+        <tr><td>T2613262C</td><td>2018 Ram 2500 Tradesman</td><td class='desc'><span class="opt">&#9670;</span> 6.7L I6 CUMMINS TURBO DIESEL</td><td class='miss'>$9,300</td></tr>
+        <tr><td>TAD26519</td><td>2021 Chevrolet Colorado 4WD ZR2</td><td class='desc'><span class="opt">&#9670;</span> 2.8L DURAMAX TURBO-DIESEL  DI  4-CYLINDER</td><td class='miss'>$3,500</td></tr>
+        <tr><td>TDR26159</td><td>2023 Jeep Grand Cherokee Summit</td><td class='desc'><span class="opt">&#9670;</span> 19 SPEAKERS HIGH PERFORMANCE AUDIO</td><td class='miss'>$2,505</td></tr>
+        <tr><td>TAD26508</td><td>2022 GMC Sierra 1500 Limited SLT</td><td class='desc'><span class="opt">&#9670;</span> 6.2L ECOTEC3 V8</td><td class='miss'>$2,495</td></tr>
+        <tr><td>TBB26403A</td><td>2023 Cadillac Escalade ESV 4WD Sport Platinum</td><td class='desc'><span class="opt">&#9670;</span> ASSIST STEPS  POWER-RETRACTABLE WITH PERIMETER LIGHTING</td><td class='miss'>$1,750</td></tr>
+        <tr><td>TAD26504</td><td>2024 Chevrolet Silverado 1500 RST</td><td class='desc'><span class="opt">&#9670;</span> 5.3L ECOTEC3 V8</td><td class='miss'>$1,595</td></tr>
+        <tr><td>TLR26171A</td><td>2023 Ford F-150 XL 2WD SuperCab 6.5&#x27; Box</td><td class='desc'><span class="opt">&#9670;</span> 2.7L V6 ECOBOOST</td><td class='miss'>$1,285</td></tr>
+        <tr><td>TFJ26068S</td><td>2019 Jeep Wrangler Unlimited Rubicon</td><td class='desc'><span class="opt">&#9670;</span> 2.0L I4 DOHC DI TURBO ETORQUE</td><td class='miss'>$1,000</td></tr>
+        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'><span class="opt">&#9670;</span> CHEVYTEC SPRAY-ON BEDLINER  Black with Chevrolet logo</td><td class='miss'>$545</td></tr>
+        <tr><td>T2611064C</td><td>2022 Ram 2500 Power Wagon</td><td class='desc'>Bed Utility Group</td><td class='miss'>—</td></tr>
+        <tr><td>T2611064C</td><td>2022 Ram 2500 Power Wagon</td><td class='desc'>Level 1 Equipment Group</td><td class='miss'>—</td></tr>
+        <tr><td>T2611064C</td><td>2022 Ram 2500 Power Wagon</td><td class='desc'>Safety Group</td><td class='miss'>—</td></tr>
+        <tr><td>T2611662A</td><td>2015 GMC Sierra 2500HD available WiFi SLT</td><td class='desc'>Driver Alert Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2611662A</td><td>2015 GMC Sierra 2500HD available WiFi SLT</td><td class='desc'>Duramax Plus Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2611662A</td><td>2015 GMC Sierra 2500HD available WiFi SLT</td><td class='desc'>Suspension Package  Handling/Trailering  Heavy-Duty</td><td class='miss'>—</td></tr>
+        <tr><td>T2611951A</td><td>2018 Nissan Rogue SV Hybrid</td><td class='desc'>Premium Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2612369A</td><td>2022 GMC Canyon 4WD AT4 w/Leather</td><td class='desc'>Trailering Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2612395A</td><td>2023 Mazda CX-50 2.5 Turbo</td><td class='desc'>Cargo Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2612395B</td><td>2025 Chevrolet Equinox AWD LT</td><td class='desc'>Convenience Package Ii</td><td class='miss'>—</td></tr>
+        <tr><td>T2612395B</td><td>2025 Chevrolet Equinox AWD LT</td><td class='desc'>Safety And Technology Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2612804B</td><td>2020 Chevrolet Tahoe Premier</td><td class='desc'>Sun  Entertainment And Destinations Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2612813A</td><td>2024 GMC Sierra 1500 SLE</td><td class='desc'>Remote Start Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2612814A</td><td>2017 Porsche Macan S</td><td class='desc'>Memory Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2612828B</td><td>2023 Jeep Wrangler Willys</td><td class='desc'>Cold Weather Group</td><td class='miss'>—</td></tr>
+        <tr><td>T2612828B</td><td>2023 Jeep Wrangler Willys</td><td class='desc'>Convenience Group</td><td class='miss'>—</td></tr>
+        <tr><td>T2612887B</td><td>2022 Subaru Crosstrek Limited</td><td class='desc'>Popular Package #4</td><td class='miss'>—</td></tr>
+        <tr><td>T2613050A</td><td>2017 Dodge Durango GT</td><td class='desc'>Nav &amp; Power Liftgate Group</td><td class='miss'>—</td></tr>
+        <tr><td>T2613060B</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Bsd/Rcta &amp; Moonrf &amp; All Weather Pkg &amp; Pwr Dr. Seat</td><td class='miss'>—</td></tr>
+        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Ltz Convenience Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Ltz Convenience Package Ii</td><td class='miss'>—</td></tr>
+        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Ltz Premium Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Safety Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Safety Package Ii</td><td class='miss'>—</td></tr>
+        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Suspension Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Technology Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Z71 Off-Road Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2613262C</td><td>2018 Ram 2500 Tradesman</td><td class='desc'>Chrome Appearance Group</td><td class='miss'>—</td></tr>
+        <tr><td>T2613262C</td><td>2018 Ram 2500 Tradesman</td><td class='desc'>Popular Equipment Group</td><td class='miss'>—</td></tr>
+        <tr><td>T2613262C</td><td>2018 Ram 2500 Tradesman</td><td class='desc'>Protection Group</td><td class='miss'>—</td></tr>
+        <tr><td>T2613376A</td><td>2023 BMW X1 xDrive28i</td><td class='desc'>Convenience Package</td><td class='miss'>—</td></tr>
+        <tr><td>T2613377A</td><td>2023 Ram 1500 Big Horn</td><td class='desc'>Big Horn Level B Equipment Group</td><td class='miss'>—</td></tr>
+        <tr><td>T2613377A</td><td>2023 Ram 1500 Big Horn</td><td class='desc'>Sport Appearance Package</td><td class='miss'>—</td></tr>
+        <tr><td>TAD26503</td><td>2017 Toyota Tacoma TRD Pro</td><td class='desc'>Tow Package</td><td class='miss'>—</td></tr>
+        <tr><td>TAD26504</td><td>2024 Chevrolet Silverado 1500 RST</td><td class='desc'>Dark Essentials Package</td><td class='miss'>—</td></tr>
+        <tr><td>TAD26504</td><td>2024 Chevrolet Silverado 1500 RST</td><td class='desc'>Protection Package</td><td class='miss'>—</td></tr>
+        <tr><td>TAD26504</td><td>2024 Chevrolet Silverado 1500 RST</td><td class='desc'>Z71 Off-Road Package</td><td class='miss'>—</td></tr>
+        <tr><td>TAD26508</td><td>2022 GMC Sierra 1500 Limited SLT</td><td class='desc'>Slt Convenience Package</td><td class='miss'>—</td></tr>
+        <tr><td>TAD26508</td><td>2022 GMC Sierra 1500 Limited SLT</td><td class='desc'>Slt Premium Package</td><td class='miss'>—</td></tr>
+        <tr><td>TAD26508</td><td>2022 GMC Sierra 1500 Limited SLT</td><td class='desc'>X31 Off-Road And Protection Package</td><td class='miss'>—</td></tr>
+        <tr><td>TAD26508</td><td>2022 GMC Sierra 1500 Limited SLT</td><td class='desc'>X31 Off-Road Package</td><td class='miss'>—</td></tr>
+        <tr><td>TBB26403A</td><td>2023 Cadillac Escalade ESV 4WD Sport Platinum</td><td class='desc'>Onyx Package</td><td class='miss'>—</td></tr>
+        <tr><td>TDR26137B</td><td>2021 Lexus GX GX 460 Premium</td><td class='desc'>Navigation Package</td><td class='miss'>—</td></tr>
+        <tr><td>TDR26144</td><td>2023 Jeep Wrangler 4xe Sahara</td><td class='desc'>Cold Weather Group</td><td class='miss'>—</td></tr>
+        <tr><td>TDR26144</td><td>2023 Jeep Wrangler 4xe Sahara</td><td class='desc'>Trailer Tow &amp; Aux Switch Group</td><td class='miss'>—</td></tr>
+        <tr><td>TDR26159</td><td>2023 Jeep Grand Cherokee Summit</td><td class='desc'>Luxury Tech Group V</td><td class='miss'>—</td></tr>
+        <tr><td>TFJ26066A</td><td>2017 Chevrolet Equinox Premier</td><td class='desc'>Enhanced Convenience Package</td><td class='miss'>—</td></tr>
+        <tr><td>TFJ26068S</td><td>2019 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>8.4 Radio &amp; Premium Audio Group</td><td class='miss'>—</td></tr>
+        <tr><td>TFJ26068S</td><td>2019 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>Led Lighting Group</td><td class='miss'>—</td></tr>
+        <tr><td>TFJ26068S</td><td>2019 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>Trailer Tow &amp; Hd Electrical Group</td><td class='miss'>—</td></tr>
+        <tr><td>TLN26142</td><td>2026 Nissan Rogue Rock Creek</td><td class='desc'>Rock Creek Premium Package</td><td class='miss'>—</td></tr>
+        <tr><td>TLN26151B</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Popular Package #4</td><td class='miss'>—</td></tr>
+        <tr><td>TLN26163</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Bsd/Rcta &amp; Moonrf &amp; All Weather Pkg &amp; Pwr Dr. Seat</td><td class='miss'>—</td></tr>
+        <tr><td>TLN26163</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Popular Package #3</td><td class='miss'>—</td></tr>
+        <tr><td>TLN26175</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Bsd/Rcta &amp; Moonrf &amp; All Weather Pkg &amp; Pwr Dr. Seat</td><td class='miss'>—</td></tr>
+        <tr><td>TLN26175</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Popular Package #3</td><td class='miss'>—</td></tr>
+        <tr><td>TLN26178</td><td>2023 Chevrolet Colorado 4WD ZR2</td><td class='desc'>Safety Package</td><td class='miss'>—</td></tr>
+        <tr><td>TLN26178</td><td>2023 Chevrolet Colorado 4WD ZR2</td><td class='desc'>Zr2 Convenience Package Iii</td><td class='miss'>—</td></tr>
+        <tr><td>TSA26250A</td><td>2025 Buick Encore GX Preferred</td><td class='desc'>Comfort Package</td><td class='miss'>—</td></tr>
+        <tr><td>TSA26313</td><td>2023 GMC Canyon 4WD AT4</td><td class='desc'>Canyon Safety Plus Package</td><td class='miss'>—</td></tr>
+        <tr><td>TSA26313</td><td>2023 GMC Canyon 4WD AT4</td><td class='desc'>Trailering Package</td><td class='miss'>—</td></tr>
+        <tr><td colspan='4' class='desc more' style='white-space:normal;text-align:left'>MSRP only where a published price of $500 or more exists; "—" means no published price. Same method at all five stores: <a href='../dolan-automotive-group-executive-report/'>Dolan Automotive Group report</a>.</td></tr>
       </tbody></table>
-      <h3>Totally missing Platinum features <span class="miss">79</span></h3>
-      <ul class="feat">
-        <li><b>Evasion Assist</b> <span class='stk'>T2612913A, T2613081A, T2613190A, T2613231B, T2613389A, TACV26104C +38 more</span></li>
-        <li><b>Panoramic Sunroof</b> <span class='stk'>T2612375A, T2612395A, T2612645A, T2612681A, T2612734A, T2612913A +8 more</span></li>
-        <li><b>Remote Start</b> <span class='stk'>T2511169E, T2612375A, T2612395A, T2613081A, TR250068</span></li>
-        <li><b>360° Camera</b> <span class='stk'>T2613110B, TBB26541</span></li>
-        <li><b>Apple CarPlay &amp; Android Auto</b> <span class='stk'>T2612251C, TMK26127</span></li>
-        <li><b>Dual Sunroof</b> <span class='stk'>TDR26161A, TE26227</span></li>
-        <li><b>8-Passenger Seating</b> <span class='stk'>T2613110B</span></li>
-        <li><b>Ambient Lighting</b> <span class='stk'>TBB26403A</span></li>
-        <li><b>Bed Camera</b> <span class='stk'>TR250031B</span></li>
-        <li><b>Heated Front Seats</b> <span class='stk'>T2612369A</span></li>
-        <li class='more'>&amp; More...</li>
-      </ul>
+      <h3>Platinum features not in Dolan's words <span class="miss">720</span></h3>
+      <table class="mini"><thead><tr><th>Dolan sent</th><th>Cars</th><th>Not in Dolan's words</th><th>Not on the page in any words</th><th>What DDC shows instead</th></tr></thead><tbody>
+        <tr><td class='desc'>Back-Up Camera</td><td>178</td><td class='miss'>178</td><td>12</td><td class='desc'>Exterior parking camera rear</td></tr>
+        <tr><td class='desc'>Satellite Radio</td><td>159</td><td class='miss'>159</td><td>2</td><td class='desc'>SiriusXM</td></tr>
+        <tr><td class='desc'>Rear Parking Aid</td><td>63</td><td class='miss'>63</td><td>13</td><td class='desc'>Parking sensors</td></tr>
+        <tr><td class='desc'>Tow Hitch</td><td>50</td><td class='miss'>50</td><td>1</td><td class='desc'>Trailer hitch</td></tr>
+        <tr><td class='desc'>Sun/Moonroof</td><td>45</td><td class='miss'>45</td><td>1</td><td class='desc'>Power moonroof</td></tr>
+        <tr><td class='desc'>Evasion Assist</td><td>42</td><td class='miss'>42</td><td>42</td><td class='desc'>—</td></tr>
+        <tr><td class='desc'>Premium Sound System</td><td>40</td><td class='miss'>40</td><td>3</td><td class='desc'>A brand name (Harman Kardon, JBL, Bose, AKG)</td></tr>
+        <tr><td class='desc'>Rear A/C</td><td>36</td><td class='miss'>36</td><td>3</td><td class='desc'>Rear air conditioning</td></tr>
+        <tr><td class='desc'>Cooled Front Seat(s)</td><td>31</td><td class='miss'>31</td><td>3</td><td class='desc'>Ventilated front seats</td></tr>
+        <tr><td class='desc'>Smart Device Integration</td><td>164</td><td class='miss'>26</td><td>3</td><td class='desc'>CarPlay</td></tr>
+        <tr><td class='desc'>Aerial View Display System</td><td>23</td><td class='miss'>23</td><td>2</td><td class='desc'>Surround view</td></tr>
+        <tr><td class='desc'>Navigation System</td><td>59</td><td class='miss'>7</td><td>5</td><td class='desc'>Navigation</td></tr>
+        <tr><td class='desc'>Running Boards/Side Steps</td><td>7</td><td class='miss'>7</td><td>4</td><td class='desc'>Running boards</td></tr>
+        <tr><td class='desc'>Heated Front Seat(s)</td><td>94</td><td class='miss'>5</td><td>4</td><td class='desc'>—</td></tr>
+        <tr><td class='desc'>Keyless Entry</td><td>179</td><td class='miss'>5</td><td>1</td><td class='desc'>Smart key</td></tr>
+        <tr><td class='desc'>Heated Steering Wheel</td><td>50</td><td class='miss'>2</td><td>2</td><td class='desc'>—</td></tr>
+        <tr><td class='desc'>Heads-Up Display</td><td>4</td><td class='miss'>1</td><td>0</td><td class='desc'>Head-up display</td></tr>
+      </tbody></table>
       <h3>Totally missing Gold features <span class="miss">223</span></h3>
       <ul class="feat">
         <li><b>Tinted Windows</b> <span class='stk'>T2511169E, T2611378A, T2611813B, T2611951A, T2612305A, T2612365A +129 more</span></li>

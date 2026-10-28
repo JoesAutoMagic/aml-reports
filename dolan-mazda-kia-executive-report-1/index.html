@@ -110,6 +110,7 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
 .disc{border-top:1px solid var(--rule);padding-top:16px;font-size:14px;color:var(--ink)}
 .disc b{font-family:var(--display);font-stretch:85%;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px;color:var(--muted);display:block;margin-bottom:4px}
 .pkg li::before{content:"";position:absolute;left:0;top:.72em;width:18px;height:3px;background:var(--aml);border-radius:2px}
+@media (max-width:700px){.plate,.detail{overflow-x:auto;-webkit-overflow-scrolling:touch}}
 </style>
 
 
@@ -125,13 +126,13 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
   <section class="study s0" aria-labelledby="t0">
     <div class="label"><span class="chip">Summary</span> Website Audit: Does It Sell Cars?</div>
     <h2 id="t0">Team Dolan sends the features. Does Dealer.com drop any of them?</h2>
-    <p class="summary">Dolan Mazda Kia's export on 77 used cars lists <b>8,062</b> features in total. AutoMagic Labs knows what sells cars and we know that <b>1,110</b> of them are <b>hot features</b> that need high priority. Missing hot features makes the car harder to sell.</p>
+    <p class="summary">Dolan Mazda Kia's export on 77 used cars lists <b>8,062</b> features in total. AutoMagic Labs knows what sells cars and we know that <b>1,544</b> of them are <b>hot features</b> that need high priority. Missing hot features makes the car harder to sell.</p>
     <p class="summary">Here are 4 examples that Team Dolan sent to DDC and are missing:</p>
     <div class="ex">
-      <div><b>Example: K263335A</b>2021 Jeep Wrangler Unlimited Rubicon<br>Dolan Sent: 8.4 Radio &amp; Premium Audio Group<br>Factory package<br>Website: <span class="miss">Not presented by Dealer.com</span></div>
-      <div><b>Example: K273764A</b>2022 Kia Telluride SX<br>Dolan Sent: Sx Prestige Package<br>Factory package<br>Website: <span class="miss">Not presented by Dealer.com</span></div>
-      <div><b>Example: K273135B</b>2022 Kia Telluride EX<br>Dolan Sent: Nightfall Edition Package<br>Factory package<br>Website: <span class="miss">Not presented by Dealer.com</span></div>
-      <div><b>Example: KR25025A</b>2016 Mazda CX-5 Touring<br>Dolan Sent: Bose/Moonroof Package<br>Factory package<br>Website: <span class="miss">Not presented by Dealer.com</span></div>
+      <div><b>Example: K273789B</b>2025 Ford Bronco Outer Banks<br>Dolan Sent: 2.7L ECOBOOST V6<br>MSRP: $2,145<br>Website: <span class="miss">Not in Dolan's words</span></div>
+      <div><b>Example: K273608B</b>2017 Dodge Challenger SXT<br>Dolan Sent: Blacktop Package<br>MSRP: $1,395<br>Website: <span class="miss">Not presented</span></div>
+      <div><b>Example: K262777A</b>2023 Chevrolet Trailblazer RS<br>Dolan Sent: Back-Up Camera<br>Hot feature: Platinum<br>Website: <span class="miss">Not on the page</span></div>
+      <div><b>Example: K262979D</b>2025 Chevrolet Traverse AWD LT<br>Dolan Sent: Evasion Assist<br>Hot feature: Platinum<br>Website: <span class="miss">Not on the page</span></div>
     </div>
   </section>
 
@@ -140,76 +141,82 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
     <h2 id="t1v1">Study #1: Compare Dolan Mazda Kia Export to DDC</h2>
     <div class="plate">
       <table>
-        <thead><tr><th>Tier</th><th>Exported by Dolan</th><th>Totally missing</th></tr></thead>
+        <thead><tr><th>Tier</th><th>Exported by Dolan</th><th>Not presented</th></tr></thead>
         <tbody>
-          <tr><td>Platinum</td><td>123</td><td><span class="miss">24</span><span class="inl">(20%)</span></td></tr>
+          <tr><td>Packages</td><td>38</td><td><span class="miss">38</span><span class="inl">(100%)</span></td></tr>
+          <tr><td>Priced options</td><td>1</td><td><span class="miss">1</span><span class="inl">(100%)</span></td></tr>
+          <tr><td>Platinum</td><td>518</td><td><span class="miss">256</span><span class="inl">(49%)</span></td></tr>
           <tr><td>Gold</td><td>284</td><td><span class="miss">89</span><span class="inl">(31%)</span></td></tr>
           <tr><td>Silver</td><td>703</td><td><span class="miss">106</span><span class="inl">(15%)</span></td></tr>
-          <tr class="total"><td>Total</td><td>1,110</td><td><span class="miss">219</span><span class="inl">(20%)</span></td></tr>
+          <tr class="total"><td>Total</td><td>1,544</td><td><span class="miss">490</span><span class="inl">(32%)</span></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="summary">Team Dolan exported <b>1,110</b> hot features and DDC dropped <b>219</b> (20% of all hot features).</p>
-    <ul class="notes"><li><b>Totally missing:</b> Dolan exported the item; it is in neither the VDP feature list nor the dealer notes.</li></ul>
+    <p class="summary">Team Dolan exported <b>1,544</b> hot features and DDC did not present <b>490</b> of them as sent (32% of all hot features).</p>
+    <ul class="notes"><li><b>Packages, priced options and Platinum:</b> presented only when Dolan's own wording is on the vehicle page, outside the "Notes from the dealer" box (our own text). Near-exact match: case, punctuation, spacing, plurals, &amp; for and, w/ for with, and Pkg for Package are ignored; any other different word is a miss. Vehicle pages read Oct 28, 2026, 1:42 PM ET.</li><li><b>Gold and Silver:</b> not presented means the item is in neither the vehicle page's feature list nor the dealer notes (pages read Oct 22, 2026).</li><li><b>Priced options</b> (<span class='opt'>&#9670;</span>): installed on their own, with their own price on the factory build, and named in Dolan's export. The table shows Dolan's export wording.</li></ul>
     <div class="detail">
-      <h3>Packages Dealer.com does not present <span class="miss">41 of 41</span></h3>
-      <table class="mini"><thead><tr><th>Stock</th><th>Vehicle</th><th>Factory package</th></tr></thead><tbody>
-        <tr><td>K263255B</td><td>2018 Kia Optima S</td><td class='desc'>Panoramic Sunroof Package</td></tr>
-        <tr><td>K263335A</td><td>2021 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>8.4 Radio &amp; Premium Audio Group</td></tr>
-        <tr><td>K263335A</td><td>2021 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>Quick Order Package 22R</td></tr>
-        <tr><td>K263335A</td><td>2021 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>Trailer Tow &amp; Hd Electrical Group</td></tr>
-        <tr><td>K263376A</td><td>2024 Kia Sportage X-Pro Prestige</td><td class='desc'>X-Pro Two-Tone Roof Package</td></tr>
-        <tr><td>K263403C</td><td>2022 Jeep Compass Latitude Lux</td><td class='desc'>Quick Order Package 2Gl</td></tr>
-        <tr><td>K263489A</td><td>2023 Hyundai Tucson SEL</td><td class='desc'>Convenience Package</td></tr>
-        <tr><td>K263490C</td><td>2024 Kia Telluride S</td><td class='desc'>S Sunroof Package</td></tr>
-        <tr><td>K263773A</td><td>2022 Buick Encore Preferred</td><td class='desc'>Safety Package</td></tr>
-        <tr><td>K273135B</td><td>2022 Kia Telluride EX</td><td class='desc'>Ex Premium Package</td></tr>
-        <tr><td>K273135B</td><td>2022 Kia Telluride EX</td><td class='desc'>Nightfall Edition Package</td></tr>
-        <tr><td>K273135B</td><td>2022 Kia Telluride EX</td><td class='desc'>Towing Package</td></tr>
-        <tr><td>K273510A</td><td>2024 Jeep Grand Cherokee Limited</td><td class='desc'>Quick Order Package 23E</td></tr>
-        <tr><td>K273510A</td><td>2024 Jeep Grand Cherokee Limited</td><td class='desc'>Trailer Tow Package</td></tr>
-        <tr><td>K273608B</td><td>2017 Dodge Challenger SXT</td><td class='desc'>Blacktop Package</td></tr>
-        <tr><td>K273608B</td><td>2017 Dodge Challenger SXT</td><td class='desc'>Sound Group</td></tr>
-        <tr><td>K273656A</td><td>2025 Chevrolet Trax 2RS</td><td class='desc'>Driver Confidence Package</td></tr>
-        <tr><td>K273668A</td><td>2024 Kia Telluride SX Prestige X-Pro</td><td class='desc'>Terracotta Interior Color Package</td></tr>
-        <tr><td>K273704A</td><td>2026 Chevrolet Colorado 4WD ZR2</td><td class='desc'>Technology Package</td></tr>
-        <tr><td>K273764A</td><td>2022 Kia Telluride SX</td><td class='desc'>Nightfall Edition Package</td></tr>
-        <tr><td>K273764A</td><td>2022 Kia Telluride SX</td><td class='desc'>Sx Prestige Package</td></tr>
-        <tr><td>K273764A</td><td>2022 Kia Telluride SX</td><td class='desc'>Towing Package</td></tr>
-        <tr><td>K273766A</td><td>2022 Nissan Rogue Platinum</td><td class='desc'>Head-Up Display Package</td></tr>
-        <tr><td>K273778B</td><td>2025 Jeep Wrangler Willys</td><td class='desc'>Convenience Group</td></tr>
-        <tr><td>K273778B</td><td>2025 Jeep Wrangler Willys</td><td class='desc'>Safety Group</td></tr>
-        <tr><td>K273778B</td><td>2025 Jeep Wrangler Willys</td><td class='desc'>Technology Group</td></tr>
-        <tr><td>K273778B</td><td>2025 Jeep Wrangler Willys</td><td class='desc'>Trailer Tow &amp; Aux Switch Group</td></tr>
-        <tr><td>K273778B</td><td>2025 Jeep Wrangler Willys</td><td class='desc'>Xtreme 35 Tire Package</td></tr>
-        <tr><td>K273841D</td><td>2022 Kia Telluride EX</td><td class='desc'>Ex Premium Package</td></tr>
-        <tr><td>K273841D</td><td>2022 Kia Telluride EX</td><td class='desc'>Towing Package</td></tr>
-        <tr><td>K273870A</td><td>2027 Kia Telluride Hybrid X-Line SX-Prestige</td><td class='desc'>Towing Package</td></tr>
-        <tr><td>KBB26028</td><td>2024 Kia Telluride S</td><td class='desc'>S Sunroof Package</td></tr>
-        <tr><td>KBB26030</td><td>2020 Kia Telluride SX</td><td class='desc'>Towing Package</td></tr>
-        <tr><td>KLN26031</td><td>2022 Hyundai Santa Fe SEL</td><td class='desc'>Convenience + Premium Package</td></tr>
-        <tr><td>KLR26044</td><td>2022 Kia Stinger GT2</td><td class='desc'>Scorpion Package</td></tr>
-        <tr><td>KR25025A</td><td>2016 Mazda CX-5 Touring</td><td class='desc'>Bose/Moonroof Package</td></tr>
-        <tr><td>M261737A</td><td>2017 Mazda CX-5 Grand Touring</td><td class='desc'>Premium Package</td></tr>
-        <tr><td>M261790A</td><td>2025 Mazda MX-5 Miata RF Grand Touring</td><td class='desc'>Weather Package</td></tr>
-        <tr><td>M262023A</td><td>2021 Subaru Crosstrek Sport</td><td class='desc'>Moonroof Package</td></tr>
-        <tr><td>M262023A</td><td>2021 Subaru Crosstrek Sport</td><td class='desc'>Popular Package #2B</td></tr>
-        <tr><td>M262056A</td><td>2025 Kia K5 GT-Line</td><td class='desc'>Gt-Line Premium Package</td></tr>
-        <tr><td colspan='3' class='desc more'>Vehicle pages read Oct 28, 2026, 10:44 AM ET. Same method for all five stores: <a href='../dolan-automotive-group-executive-report/'>Dolan Automotive Group report, Study A</a>.</td></tr>
+      <h3>Packages and priced options not presented <span class="miss">39</span> · <span class="miss">$4,335</span> at MSRP</h3>
+      <table class="mini"><thead><tr><th>Stock</th><th>Vehicle</th><th>Package or option</th><th>MSRP</th></tr></thead><tbody>
+        <tr><td>K273789B</td><td>2025 Ford Bronco Outer Banks</td><td class='desc'><span class="opt">&#9670;</span> 2.7L ECOBOOST V6</td><td class='miss'>$2,145</td></tr>
+        <tr><td>K273608B</td><td>2017 Dodge Challenger SXT</td><td class='desc'>Blacktop Package</td><td class='miss'>$1,395</td></tr>
+        <tr><td>K273608B</td><td>2017 Dodge Challenger SXT</td><td class='desc'>Sound Group</td><td class='miss'>$795</td></tr>
+        <tr><td>K263255B</td><td>2018 Kia Optima S</td><td class='desc'>Panoramic Sunroof Package</td><td class='miss'>—</td></tr>
+        <tr><td>K263335A</td><td>2021 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>8.4 Radio &amp; Premium Audio Group</td><td class='miss'>—</td></tr>
+        <tr><td>K263335A</td><td>2021 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>Trailer Tow &amp; Hd Electrical Group</td><td class='miss'>—</td></tr>
+        <tr><td>K263376A</td><td>2024 Kia Sportage X-Pro Prestige</td><td class='desc'>X-Pro Two-Tone Roof Package</td><td class='miss'>—</td></tr>
+        <tr><td>K263489A</td><td>2023 Hyundai Tucson SEL</td><td class='desc'>Convenience Package</td><td class='miss'>—</td></tr>
+        <tr><td>K263490C</td><td>2024 Kia Telluride S</td><td class='desc'>S Sunroof Package</td><td class='miss'>—</td></tr>
+        <tr><td>K263773A</td><td>2022 Buick Encore Preferred</td><td class='desc'>Safety Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273135B</td><td>2022 Kia Telluride EX</td><td class='desc'>Ex Premium Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273135B</td><td>2022 Kia Telluride EX</td><td class='desc'>Nightfall Edition Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273135B</td><td>2022 Kia Telluride EX</td><td class='desc'>Towing Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273510A</td><td>2024 Jeep Grand Cherokee Limited</td><td class='desc'>Trailer Tow Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273656A</td><td>2025 Chevrolet Trax 2RS</td><td class='desc'>Driver Confidence Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273668A</td><td>2024 Kia Telluride SX Prestige X-Pro</td><td class='desc'>Terracotta Interior Color Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273704A</td><td>2026 Chevrolet Colorado 4WD ZR2</td><td class='desc'>Technology Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273764A</td><td>2022 Kia Telluride SX</td><td class='desc'>Nightfall Edition Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273764A</td><td>2022 Kia Telluride SX</td><td class='desc'>Sx Prestige Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273764A</td><td>2022 Kia Telluride SX</td><td class='desc'>Towing Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273766A</td><td>2022 Nissan Rogue Platinum</td><td class='desc'>Head-Up Display Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273778B</td><td>2025 Jeep Wrangler Willys</td><td class='desc'>Convenience Group</td><td class='miss'>—</td></tr>
+        <tr><td>K273778B</td><td>2025 Jeep Wrangler Willys</td><td class='desc'>Safety Group</td><td class='miss'>—</td></tr>
+        <tr><td>K273778B</td><td>2025 Jeep Wrangler Willys</td><td class='desc'>Technology Group</td><td class='miss'>—</td></tr>
+        <tr><td>K273778B</td><td>2025 Jeep Wrangler Willys</td><td class='desc'>Trailer Tow &amp; Aux Switch Group</td><td class='miss'>—</td></tr>
+        <tr><td>K273778B</td><td>2025 Jeep Wrangler Willys</td><td class='desc'>Xtreme 35 Tire Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273841D</td><td>2022 Kia Telluride EX</td><td class='desc'>Ex Premium Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273841D</td><td>2022 Kia Telluride EX</td><td class='desc'>Towing Package</td><td class='miss'>—</td></tr>
+        <tr><td>K273870A</td><td>2027 Kia Telluride Hybrid X-Line SX-Prestige</td><td class='desc'>Towing Package</td><td class='miss'>—</td></tr>
+        <tr><td>KBB26028</td><td>2024 Kia Telluride S</td><td class='desc'>S Sunroof Package</td><td class='miss'>—</td></tr>
+        <tr><td>KBB26030</td><td>2020 Kia Telluride SX</td><td class='desc'>Towing Package</td><td class='miss'>—</td></tr>
+        <tr><td>KLN26031</td><td>2022 Hyundai Santa Fe SEL</td><td class='desc'>Convenience + Premium Package</td><td class='miss'>—</td></tr>
+        <tr><td>KLR26044</td><td>2022 Kia Stinger GT2</td><td class='desc'>Scorpion Package</td><td class='miss'>—</td></tr>
+        <tr><td>KR25025A</td><td>2016 Mazda CX-5 Touring</td><td class='desc'>Bose/Moonroof Package</td><td class='miss'>—</td></tr>
+        <tr><td>M261737A</td><td>2017 Mazda CX-5 Grand Touring</td><td class='desc'>Premium Package</td><td class='miss'>—</td></tr>
+        <tr><td>M261790A</td><td>2025 Mazda MX-5 Miata RF Grand Touring</td><td class='desc'>Weather Package</td><td class='miss'>—</td></tr>
+        <tr><td>M262023A</td><td>2021 Subaru Crosstrek Sport</td><td class='desc'>Moonroof Package</td><td class='miss'>—</td></tr>
+        <tr><td>M262023A</td><td>2021 Subaru Crosstrek Sport</td><td class='desc'>Popular Package #2B</td><td class='miss'>—</td></tr>
+        <tr><td>M262056A</td><td>2025 Kia K5 GT-Line</td><td class='desc'>Gt-Line Premium Package</td><td class='miss'>—</td></tr>
+        <tr><td colspan='4' class='desc more' style='white-space:normal;text-align:left'>MSRP only where a published price of $500 or more exists; "—" means no published price. Same method at all five stores: <a href='../dolan-automotive-group-executive-report/'>Dolan Automotive Group report</a>.</td></tr>
       </tbody></table>
-      <h3>Totally missing Platinum features <span class="miss">24</span></h3>
-      <ul class="feat">
-        <li><b>Evasion Assist</b> <span class='stk'>K273508C, K273610B, K273627B, K273668A, K273870A, KMA26012S +1 more</span></li>
-        <li><b>Panoramic Sunroof</b> <span class='stk'>K263376A, K273575B, K273589B, K273766A, KLN26033, KLN26037 +1 more</span></li>
-        <li><b>Remote Parking</b> <span class='stk'>K263319A, K273589B, K273870A</span></li>
-        <li><b>7-Passenger Seating</b> <span class='stk'>K262979D</span></li>
-        <li><b>Dual Sunroof</b> <span class='stk'>K273585F</span></li>
-        <li><b>Power Retractable Hard Top</b> <span class='stk'>M261790A</span></li>
-        <li><b>Power Sliding Rear Seats</b> <span class='stk'>KACV26013B</span></li>
-        <li><b>Rear Climate Control</b> <span class='stk'>K273610D</span></li>
-        <li><b>Remote Start</b> <span class='stk'>K263376A</span></li>
-        <li><b>Sunroof</b> <span class='stk'>K273585F</span></li>
-      </ul>
+      <h3>Platinum features not in Dolan's words <span class="miss">256</span></h3>
+      <table class="mini"><thead><tr><th>Dolan sent</th><th>Cars</th><th>Not in Dolan's words</th><th>Not on the page in any words</th><th>What DDC shows instead</th></tr></thead><tbody>
+        <tr><td class='desc'>Back-Up Camera</td><td>64</td><td class='miss'>64</td><td>5</td><td class='desc'>Exterior parking camera rear</td></tr>
+        <tr><td class='desc'>Satellite Radio</td><td>51</td><td class='miss'>51</td><td>1</td><td class='desc'>SiriusXM</td></tr>
+        <tr><td class='desc'>Rear Parking Aid</td><td>31</td><td class='miss'>31</td><td>3</td><td class='desc'>Parking sensors</td></tr>
+        <tr><td class='desc'>Sun/Moonroof</td><td>25</td><td class='miss'>25</td><td>3</td><td class='desc'>Power moonroof</td></tr>
+        <tr><td class='desc'>Premium Sound System</td><td>19</td><td class='miss'>19</td><td>3</td><td class='desc'>A brand name (Harman Kardon, JBL, Bose, AKG)</td></tr>
+        <tr><td class='desc'>Rear A/C</td><td>18</td><td class='miss'>18</td><td>0</td><td class='desc'>Rear air conditioning</td></tr>
+        <tr><td class='desc'>Cooled Front Seat(s)</td><td>16</td><td class='miss'>16</td><td>0</td><td class='desc'>Ventilated front seats</td></tr>
+        <tr><td class='desc'>Aerial View Display System</td><td>10</td><td class='miss'>10</td><td>0</td><td class='desc'>Surround view</td></tr>
+        <tr><td class='desc'>Evasion Assist</td><td>6</td><td class='miss'>6</td><td>6</td><td class='desc'>—</td></tr>
+        <tr><td class='desc'>Smart Device Integration</td><td>64</td><td class='miss'>5</td><td>1</td><td class='desc'>CarPlay</td></tr>
+        <tr><td class='desc'>Navigation System</td><td>37</td><td class='miss'>3</td><td>2</td><td class='desc'>Navigation</td></tr>
+        <tr><td class='desc'>Tow Hitch</td><td>3</td><td class='miss'>3</td><td>0</td><td class='desc'>Trailer hitch</td></tr>
+        <tr><td class='desc'>Remote Parking System</td><td>2</td><td class='miss'>2</td><td>2</td><td class='desc'>—</td></tr>
+        <tr><td class='desc'>Panoramic Roof</td><td>1</td><td class='miss'>1</td><td>0</td><td class='desc'>Moonroof</td></tr>
+        <tr><td class='desc'>Remote Engine Start</td><td>30</td><td class='miss'>1</td><td>1</td><td class='desc'>—</td></tr>
+        <tr><td class='desc'>Running Boards/Side Steps</td><td>1</td><td class='miss'>1</td><td>1</td><td class='desc'>—</td></tr>
+      </tbody></table>
       <h3>Totally missing Gold features <span class="miss">89</span></h3>
       <ul class="feat">
         <li><b>Tinted Windows</b> <span class='stk'>K262777A, K262979D, K263319A, K263335A, K263376A, K263403C +52 more</span></li>

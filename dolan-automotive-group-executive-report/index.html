@@ -110,6 +110,7 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
 .disc{border-top:1px solid var(--rule);padding-top:16px;font-size:14px;color:var(--ink)}
 .disc b{font-family:var(--display);font-stretch:85%;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px;color:var(--muted);display:block;margin-bottom:4px}
 .pkg li::before{content:"";position:absolute;left:0;top:.72em;width:18px;height:3px;background:var(--aml);border-radius:2px}
+@media (max-width:700px){.plate,.detail{overflow-x:auto;-webkit-overflow-scrolling:touch}}
 .grp a{color:inherit;text-decoration:underline;text-underline-offset:2px}.back{font-size:13px;margin:0 0 10px}.back a{color:inherit}@media (max-width:700px){.plate,.detail{overflow-x:auto;-webkit-overflow-scrolling:touch}}
 </style>
 
@@ -125,11 +126,11 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
   <section class="study s0" aria-labelledby="g0">
     <div class="label"><span class="chip">Group summary</span> Dealer.com Partnership Audit</div>
     <h2 id="g0">DDC's significant VDP errors are reducing DAG's business potential.</h2>
-    <p class="summary">Between October 22 and October 28, 2026, we performed a comprehensive audit where we compared our export vs what DDC presents on our VDPs. Our merchandising team recorded and exported <b>52,871</b> shopper feature names on <b>535</b> used cars. Dolan tracks the Top 10% of the most valuable shopper attributes, which are <b>8,391</b> hot features. Our audit found that Dealer.com dropped <b>1,168</b> of the most important, hot features from the vehicle pages (14%). Dealer.com does not present <b>133</b> of the <b>311</b> factory packages our team sent (43%). At Dolan Toyota and Dolan Mazda Kia, it presents none of them.</p>
-    <p class="summary">The search page is worse. Our team's export names <b>7,701</b> hot shopper features that pair with Dealer.com's own search filters. The DDC filters do not show <b>1,979</b> of them (26%). <b>153 of 523</b> cars on our website have 5 or more features that a shopper cannot find with those filters. A shopper who filters for what they want does not see our car.</p>
+    <p class="summary">Between October 22 and October 28, 2026, we performed a comprehensive audit where we compared our export vs what DDC presents on our VDPs. Our merchandising team recorded and exported <b>52,871</b> shopper feature names on <b>535</b> used cars. Dolan tracks the most valuable shopper attributes, which are <b>9,989</b> hot features. Our audit found that Dealer.com did not present <b>3,060</b> of the most important, hot features the way our team sent them (31%). Dealer.com does not present <b>127</b> of the <b>272</b> factory packages our team sent (47%). At Dolan Toyota and Dolan Mazda Kia, it presents none of them. The missing packages and optionally installed items with a published price total <b>$49,732</b> at factory MSRP.</p>
+    <p class="summary">The search page fails too. Our team's export names <b>7,701</b> hot shopper features that pair with Dealer.com's own search filters. The DDC filters do not show <b>1,979</b> of them (26%). <b>153 of 523</b> cars on our website have 5 or more features that a shopper cannot find with those filters. A shopper who filters for what they want does not see our car.</p>
     <div class="ex">
-      <div><b>Packages not presented</b><span class="miss" style="font-size:28px;font-weight:700">133</span><br>of 311 factory packages Dolan sent (43%); none presented at Dolan Toyota or Dolan Mazda Kia</div>
-      <div><b>Hot features dropped</b><span class="miss" style="font-size:28px;font-weight:700">1,168</span><br>of 8,391 hot features Dolan sent (14%)</div>
+      <div><b>Packages not presented</b><span class="miss" style="font-size:28px;font-weight:700">127</span><br>of 272 factory packages Dolan sent (47%), plus 11 priced options: $49,732 at factory MSRP</div>
+      <div><b>Hot features not presented as sent</b><span class="miss" style="font-size:28px;font-weight:700">3,060</span><br>of 9,989 hot features Dolan sent (31%)</div>
       <div><b>Search-filter gaps</b><span class="miss" style="font-size:28px;font-weight:700">1,979</span><br>of 7,701 hot features with a Dealer.com filter (26%)</div>
       <div><b>Cars hard to find</b><span class="miss" style="font-size:28px;font-weight:700">153 of 523</span><br>cars have 5 or more hot features a shopper cannot filter on</div>
     </div>
@@ -140,29 +141,30 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
     <h2 id="g1">Every store shows the same failure</h2>
     <div class="plate">
       <table class="grp">
-        <thead><tr><th style='text-align:left'>Store</th><th>Used cars</th><th>Hot features sent</th><th>Dropped from the vehicle page</th><th>Packages not presented</th><th>Search-filter gaps</th><th>Cars with 5+ gaps</th></tr></thead>
+        <thead><tr><th style='text-align:left'>Store</th><th>Used cars</th><th>Hot features sent</th><th>Not presented as sent</th><th>Packages not presented</th><th>Search-filter gaps</th><th>Cars with 5+ gaps</th></tr></thead>
         <tbody>
-          <tr><td style='text-align:left'><a href='../dolan-toyota-executive-report-1/'>Dolan Toyota</a></td><td>188</td><td>2,666</td><td><span class='miss'>586</span><span class='inl'>(22%)</span></td><td><span class='miss'>65</span><span class='inl'>of 65</span></td><td><span class='miss'>774</span><span class='inl'>(29%)</span></td><td style='white-space:nowrap'>72 / 182</td></tr>
-          <tr><td style='text-align:left'><a href='../dolan-mazda-kia-executive-report-1/'>Dolan Mazda Kia</a></td><td>77</td><td>1,110</td><td><span class='miss'>219</span><span class='inl'>(20%)</span></td><td><span class='miss'>41</span><span class='inl'>of 41</span></td><td><span class='miss'>253</span><span class='inl'>(22%)</span></td><td style='white-space:nowrap'>17 / 72</td></tr>
-          <tr><td style='text-align:left'><a href='../dolan-lexus-executive-report-1/'>Dolan Lexus</a></td><td>102</td><td>1,965</td><td><span class='miss'>150</span><span class='inl'>(8%)</span></td><td><span class='miss'>12</span><span class='inl'>of 21</span></td><td><span class='miss'>366</span><span class='inl'>(23%)</span></td><td style='white-space:nowrap'>23 / 102</td></tr>
-          <tr><td style='text-align:left'><a href='../dolan-dodge-ram-fiat-executive-report-1/'>Dolan Dodge Ram FIAT</a></td><td>90</td><td>1,350</td><td><span class='miss'>115</span><span class='inl'>(9%)</span></td><td><span class='miss'>12</span><span class='inl'>of 101</span></td><td><span class='miss'>331</span><span class='inl'>(29%)</span></td><td style='white-space:nowrap'>26 / 89</td></tr>
-          <tr><td style='text-align:left'><a href='../dolan-fernley-cdjr-executive-report-1/'>Dolan Fernley CDJR</a></td><td>78</td><td>1,300</td><td><span class='miss'>98</span><span class='inl'>(8%)</span></td><td><span class='miss'>3</span><span class='inl'>of 83</span></td><td><span class='miss'>255</span><span class='inl'>(23%)</span></td><td style='white-space:nowrap'>15 / 78</td></tr>
-          <tr class='total'><td style='text-align:left'>Dolan Automotive Group</td><td>535</td><td>8,391</td><td><span class='miss'>1,168</span><span class='inl'>(14%)</span></td><td><span class='miss'>133</span><span class='inl'>of 311</span></td><td><span class='miss'>1,979</span><span class='inl'>(26%)</span></td><td style='white-space:nowrap'>153 / 523</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-toyota-executive-report-1/'>Dolan Toyota</a></td><td>188</td><td>3,684</td><td><span class='miss'>1,298</span><span class='inl'>(35%)</span></td><td><span class='miss'>61</span><span class='inl'>of 61</span></td><td><span class='miss'>774</span><span class='inl'>(29%)</span></td><td style='white-space:nowrap'>72 / 182</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-mazda-kia-executive-report-1/'>Dolan Mazda Kia</a></td><td>77</td><td>1,544</td><td><span class='miss'>490</span><span class='inl'>(32%)</span></td><td><span class='miss'>38</span><span class='inl'>of 38</span></td><td><span class='miss'>253</span><span class='inl'>(22%)</span></td><td style='white-space:nowrap'>17 / 72</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-lexus-executive-report-1/'>Dolan Lexus</a></td><td>102</td><td>1,959</td><td><span class='miss'>529</span><span class='inl'>(27%)</span></td><td><span class='miss'>11</span><span class='inl'>of 19</span></td><td><span class='miss'>366</span><span class='inl'>(23%)</span></td><td style='white-space:nowrap'>23 / 102</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-dodge-ram-fiat-executive-report-1/'>Dolan Dodge Ram FIAT</a></td><td>90</td><td>1,415</td><td><span class='miss'>374</span><span class='inl'>(26%)</span></td><td><span class='miss'>12</span><span class='inl'>of 91</span></td><td><span class='miss'>331</span><span class='inl'>(29%)</span></td><td style='white-space:nowrap'>26 / 89</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-fernley-cdjr-executive-report-1/'>Dolan Fernley CDJR</a></td><td>78</td><td>1,387</td><td><span class='miss'>369</span><span class='inl'>(27%)</span></td><td><span class='miss'>5</span><span class='inl'>of 63</span></td><td><span class='miss'>255</span><span class='inl'>(23%)</span></td><td style='white-space:nowrap'>15 / 78</td></tr>
+          <tr class='total'><td style='text-align:left'>Dolan Automotive Group</td><td>535</td><td>9,989</td><td><span class='miss'>3,060</span><span class='inl'>(31%)</span></td><td><span class='miss'>127</span><span class='inl'>of 272</span></td><td><span class='miss'>1,979</span><span class='inl'>(26%)</span></td><td style='white-space:nowrap'>153 / 523</td></tr>
         </tbody>
       </table>
     </div>
     <ul class="notes">
       <li>Each store name opens that store's full report, with every table, every example and the stock numbers.</li>
-      <li><b>Dropped:</b> Team Dolan exported the item, and it is in neither the vehicle page's feature list nor the dealer notes.</li>
+      <li><b>Not presented as sent:</b> for packages, priced options and Platinum features, Dolan's own words are not on the vehicle page outside the dealer notes (pages read Oct 28, 2026, 1:42 PM ET). For Gold and Silver, the item is in neither the feature list nor the dealer notes.</li>
       <li><b>Packages not presented:</b> Study A below. Dolan's export names the factory package, and Dealer.com does not break it out on the vehicle page.</li>
-      <li><b>Search-filter gaps:</b> Study B below. Our export names the hot feature for the car, Dealer.com has a search filter for it, and the filter does not show the car.</li>
+      <li><b>Platinum and above:</b> Studies A and B below use the near-exact rule.</li>
+      <li><b>Search-filter gaps:</b> Study C below. Our export names the hot feature for the car, Dealer.com has a search filter for it, and the filter does not show the car.</li>
     </ul>
   </section>
 
   <section class="study s1" aria-labelledby="gp">
     <div class="label"><span class="chip">Study A</span></div>
-    <h2 id="gp">Factory packages Dealer.com does not present</h2>
-    <p class="summary">Factory packages are the most valuable attributes we merchandise on a used car. Dealer.com has a package section on the vehicle page ("A closer look at what's included"). It does not present <b>133</b> of the <b>311</b> packages our team sent (43%). At Dolan Toyota and Dolan Mazda Kia, the package section is on none of the vehicle pages.</p>
+    <h2 id="gp">Factory packages and options Dealer.com does not present</h2>
+    <p class="summary">Factory packages are the most valuable attributes we merchandise on a used car. Dealer.com has a package section on the vehicle page ("A closer look at what's included"). It does not present <b>127</b> of the <b>272</b> packages our team sent (47%), or any of the <b>11</b> priced options that Dolan's export names at Dolan Toyota and Dolan Mazda Kia (for example "6.7L I6 Cummins Turbo Diesel"). The items not presented that have a published price total <b>$49,732</b> at factory MSRP. At Dolan Toyota and Dolan Mazda Kia, the package section is on none of the vehicle pages.</p>
     <p class="summary">Same package, same model, three stores:</p>
     <div class="ex">
       <div><b>Example: K263335A</b>2021 Jeep Wrangler Unlimited Rubicon · Dolan Mazda Kia<br>Dolan Sent: 8.4" Radio &amp; Premium Audio Group<br>Dealer.com package section: <span class="miss">Not presented</span></div>
@@ -171,25 +173,26 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
     </div>
     <div class="plate">
       <table class="grp">
-        <thead><tr><th style='text-align:left'>Store</th><th>Packages sent</th><th>Presented by Dealer.com</th><th>Not presented</th><th>Pages with a package section</th></tr></thead>
+        <thead><tr><th style='text-align:left'>Store</th><th>Packages sent</th><th>Presented by Dealer.com</th><th>Not presented</th><th>Priced options not presented</th><th>Not presented, at MSRP</th><th>Pages with a package section</th></tr></thead>
         <tbody>
-          <tr><td style='text-align:left'><a href='../dolan-toyota-executive-report-1/'>Dolan Toyota</a></td><td>65</td><td>0</td><td><span class='miss'>65</span><span class='inl'>(100%)</span></td><td style='white-space:nowrap'>0 of 43</td></tr>
-          <tr><td style='text-align:left'><a href='../dolan-mazda-kia-executive-report-1/'>Dolan Mazda Kia</a></td><td>41</td><td>0</td><td><span class='miss'>41</span><span class='inl'>(100%)</span></td><td style='white-space:nowrap'>0 of 31</td></tr>
-          <tr><td style='text-align:left'><a href='../dolan-lexus-executive-report-1/'>Dolan Lexus</a></td><td>21</td><td>9</td><td><span class='miss'>12</span><span class='inl'>(57%)</span></td><td style='white-space:nowrap'>9 of 17</td></tr>
-          <tr><td style='text-align:left'><a href='../dolan-dodge-ram-fiat-executive-report-1/'>Dolan Dodge Ram FIAT</a></td><td>101</td><td>89</td><td><span class='miss'>12</span><span class='inl'>(12%)</span></td><td style='white-space:nowrap'>62 of 64</td></tr>
-          <tr><td style='text-align:left'><a href='../dolan-fernley-cdjr-executive-report-1/'>Dolan Fernley CDJR</a></td><td>83</td><td>80</td><td><span class='miss'>3</span><span class='inl'>(4%)</span></td><td style='white-space:nowrap'>51 of 56</td></tr>
-          <tr class='total'><td style='text-align:left'>Dolan Automotive Group</td><td>311</td><td>178</td><td><span class='miss'>133</span><span class='inl'>(43%)</span></td><td style='white-space:nowrap'>122 of 211</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-toyota-executive-report-1/'>Dolan Toyota</a></td><td>61</td><td>0</td><td><span class='miss'>61</span><span class='inl'>(100%)</span></td><td>10 of 10</td><td class='miss'>$34,470</td><td style='white-space:nowrap'>0 of 33</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-mazda-kia-executive-report-1/'>Dolan Mazda Kia</a></td><td>38</td><td>0</td><td><span class='miss'>38</span><span class='inl'>(100%)</span></td><td>1 of 1</td><td class='miss'>$4,335</td><td style='white-space:nowrap'>0 of 26</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-lexus-executive-report-1/'>Dolan Lexus</a></td><td>19</td><td>8</td><td><span class='miss'>11</span><span class='inl'>(58%)</span></td><td>—</td><td class='miss'>$7,022</td><td style='white-space:nowrap'>5 of 12</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-dodge-ram-fiat-executive-report-1/'>Dolan Dodge Ram FIAT</a></td><td>91</td><td>79</td><td><span class='miss'>12</span><span class='inl'>(13%)</span></td><td>—</td><td class='miss'>$2,600</td><td style='white-space:nowrap'>48 of 48</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-fernley-cdjr-executive-report-1/'>Dolan Fernley CDJR</a></td><td>63</td><td>58</td><td><span class='miss'>5</span><span class='inl'>(8%)</span></td><td>—</td><td class='miss'>$1,305</td><td style='white-space:nowrap'>31 of 32</td></tr>
+          <tr class='total'><td style='text-align:left'>Dolan Automotive Group</td><td>272</td><td>145</td><td><span class='miss'>127</span><span class='inl'>(47%)</span></td><td>11 of 11</td><td class='miss'>$49,732</td><td style='white-space:nowrap'>84 of 151</td></tr>
         </tbody>
       </table>
     </div>
     <ul class="notes">
-      <li><b>Not presented:</b> Dolan's export names the factory package, and Dealer.com does not show it in the package section or the feature list of that car's vehicle page.</li>
+      <li><b>Not presented:</b> Dolan's export names the factory package or option, and Dolan's wording is not on that car's vehicle page outside the dealer notes. Near-exact match: case, punctuation, spacing, plurals, &amp; for and, w/ for with, and Pkg for Package are ignored; "6.7L" in a page title is not "6.7L Power Stroke V8 Turbo Diesel".</li>
+      <li><b>Priced options:</b> installed on their own, with their own price on the factory build, and named in Dolan's export. Factory build data is on file for Dolan Toyota and Dolan Mazda Kia only. Quick Order Package codes are left out as order codes. MSRP counts only a published price of $500 or more.</li>
       <li>Our own "Notes from the dealer" text flows through from Dolan's team, in a box that is closed when the page opens. It does not count as Dealer.com presenting the package.</li>
       <li>Not counted: trim-level groups (for example "LT Preferred Equipment Group" or "Quick Order Package 21H Laramie"), because the page title shows the trim; front license plate brackets; Hyundai "Option Group 01" (standard equipment); weight ratings.</li>
-      <li>Vehicle pages read Oct 28, 2026, 10:44 AM ET, against the Oct 27–28 exports: 211 cars on the website, 170 of them with a counted factory package.</li>
+      <li>Vehicle pages read Oct 28, 2026, 1:42 PM ET, against the Oct 27–28 exports: 519 cars on the website, 151 of them with a counted factory package.</li>
     </ul>
     <div class="detail">
-      <h3>Every package Dealer.com does not present <span class="miss">133</span></h3>
+      <h3>Every package Dealer.com does not present <span class="miss">127</span> <span style="font-weight:400">(priced options are listed on the Toyota and Mazda Kia pages)</span></h3>
       <table class="mini gaps"><thead><tr><th>Store</th><th>Stock</th><th>Vehicle</th><th>Factory package</th></tr></thead><tbody>
         <tr><td>Toyota</td><td>T2611064C</td><td>2022 Ram 2500 Power Wagon</td><td class='desc'>Bed Utility Group</td></tr>
         <tr><td>Toyota</td><td>T2611064C</td><td>2022 Ram 2500 Power Wagon</td><td class='desc'>Level 1 Equipment Group</td></tr>
@@ -207,10 +210,8 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
         <tr><td>Toyota</td><td>T2612814A</td><td>2017 Porsche Macan S</td><td class='desc'>Memory Package</td></tr>
         <tr><td>Toyota</td><td>T2612828B</td><td>2023 Jeep Wrangler Willys</td><td class='desc'>Cold Weather Group</td></tr>
         <tr><td>Toyota</td><td>T2612828B</td><td>2023 Jeep Wrangler Willys</td><td class='desc'>Convenience Group</td></tr>
-        <tr><td>Toyota</td><td>T2612828B</td><td>2023 Jeep Wrangler Willys</td><td class='desc'>Quick Order Package 22W Willys</td></tr>
         <tr><td>Toyota</td><td>T2612887B</td><td>2022 Subaru Crosstrek Limited</td><td class='desc'>Popular Package #4</td></tr>
         <tr><td>Toyota</td><td>T2613050A</td><td>2017 Dodge Durango GT</td><td class='desc'>Nav &amp; Power Liftgate Group</td></tr>
-        <tr><td>Toyota</td><td>T2613050A</td><td>2017 Dodge Durango GT</td><td class='desc'>Quick Order Package 23E</td></tr>
         <tr><td>Toyota</td><td>T2613060B</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Bsd/Rcta &amp; Moonrf &amp; All Weather Pkg &amp; Pwr Dr. Seat</td></tr>
         <tr><td>Toyota</td><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Ltz Convenience Package</td></tr>
         <tr><td>Toyota</td><td>T2613246B</td><td>2021 Chevrolet Silverado 2500HD LTZ</td><td class='desc'>Ltz Convenience Package Ii</td></tr>
@@ -239,11 +240,9 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
         <tr><td>Toyota</td><td>TDR26144</td><td>2023 Jeep Wrangler 4xe Sahara</td><td class='desc'>Cold Weather Group</td></tr>
         <tr><td>Toyota</td><td>TDR26144</td><td>2023 Jeep Wrangler 4xe Sahara</td><td class='desc'>Trailer Tow &amp; Aux Switch Group</td></tr>
         <tr><td>Toyota</td><td>TDR26159</td><td>2023 Jeep Grand Cherokee Summit</td><td class='desc'>Luxury Tech Group V</td></tr>
-        <tr><td>Toyota</td><td>TDR26159</td><td>2023 Jeep Grand Cherokee Summit</td><td class='desc'>Quick Order Package 23S</td></tr>
         <tr><td>Toyota</td><td>TFJ26066A</td><td>2017 Chevrolet Equinox Premier</td><td class='desc'>Enhanced Convenience Package</td></tr>
         <tr><td>Toyota</td><td>TFJ26068S</td><td>2019 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>8.4 Radio &amp; Premium Audio Group</td></tr>
         <tr><td>Toyota</td><td>TFJ26068S</td><td>2019 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>Led Lighting Group</td></tr>
-        <tr><td>Toyota</td><td>TFJ26068S</td><td>2019 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>Quick Order Package 28R</td></tr>
         <tr><td>Toyota</td><td>TFJ26068S</td><td>2019 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>Trailer Tow &amp; Hd Electrical Group</td></tr>
         <tr><td>Toyota</td><td>TLN26142</td><td>2026 Nissan Rogue Rock Creek</td><td class='desc'>Rock Creek Premium Package</td></tr>
         <tr><td>Toyota</td><td>TLN26151B</td><td>2024 Subaru Crosstrek Premium</td><td class='desc'>Popular Package #4</td></tr>
@@ -258,17 +257,14 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
         <tr><td>Toyota</td><td>TSA26313</td><td>2023 GMC Canyon 4WD AT4</td><td class='desc'>Trailering Package</td></tr>
         <tr><td>Mazda Kia</td><td>K263255B</td><td>2018 Kia Optima S</td><td class='desc'>Panoramic Sunroof Package</td></tr>
         <tr><td>Mazda Kia</td><td>K263335A</td><td>2021 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>8.4 Radio &amp; Premium Audio Group</td></tr>
-        <tr><td>Mazda Kia</td><td>K263335A</td><td>2021 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>Quick Order Package 22R</td></tr>
         <tr><td>Mazda Kia</td><td>K263335A</td><td>2021 Jeep Wrangler Unlimited Rubicon</td><td class='desc'>Trailer Tow &amp; Hd Electrical Group</td></tr>
         <tr><td>Mazda Kia</td><td>K263376A</td><td>2024 Kia Sportage X-Pro Prestige</td><td class='desc'>X-Pro Two-Tone Roof Package</td></tr>
-        <tr><td>Mazda Kia</td><td>K263403C</td><td>2022 Jeep Compass Latitude Lux</td><td class='desc'>Quick Order Package 2Gl</td></tr>
         <tr><td>Mazda Kia</td><td>K263489A</td><td>2023 Hyundai Tucson SEL</td><td class='desc'>Convenience Package</td></tr>
         <tr><td>Mazda Kia</td><td>K263490C</td><td>2024 Kia Telluride S</td><td class='desc'>S Sunroof Package</td></tr>
         <tr><td>Mazda Kia</td><td>K263773A</td><td>2022 Buick Encore Preferred</td><td class='desc'>Safety Package</td></tr>
         <tr><td>Mazda Kia</td><td>K273135B</td><td>2022 Kia Telluride EX</td><td class='desc'>Ex Premium Package</td></tr>
         <tr><td>Mazda Kia</td><td>K273135B</td><td>2022 Kia Telluride EX</td><td class='desc'>Nightfall Edition Package</td></tr>
         <tr><td>Mazda Kia</td><td>K273135B</td><td>2022 Kia Telluride EX</td><td class='desc'>Towing Package</td></tr>
-        <tr><td>Mazda Kia</td><td>K273510A</td><td>2024 Jeep Grand Cherokee Limited</td><td class='desc'>Quick Order Package 23E</td></tr>
         <tr><td>Mazda Kia</td><td>K273510A</td><td>2024 Jeep Grand Cherokee Limited</td><td class='desc'>Trailer Tow Package</td></tr>
         <tr><td>Mazda Kia</td><td>K273608B</td><td>2017 Dodge Challenger SXT</td><td class='desc'>Blacktop Package</td></tr>
         <tr><td>Mazda Kia</td><td>K273608B</td><td>2017 Dodge Challenger SXT</td><td class='desc'>Sound Group</td></tr>
@@ -305,7 +301,6 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
         <tr><td>Lexus</td><td>LLN26079A</td><td>2019 Nissan Kicks SR</td><td class='desc'>Interior Electronics Package</td></tr>
         <tr><td>Lexus</td><td>LLN26089SA</td><td>2015 Jeep Wrangler Unlimited Sahara</td><td class='desc'>Connectivity Group</td></tr>
         <tr><td>Lexus</td><td>LLN26089SA</td><td>2015 Jeep Wrangler Unlimited Sahara</td><td class='desc'>Max Tow Package</td></tr>
-        <tr><td>Lexus</td><td>LLN26089SA</td><td>2015 Jeep Wrangler Unlimited Sahara</td><td class='desc'>Quick Order Package 24G</td></tr>
         <tr><td>Lexus</td><td>LMA26067S</td><td>2025 Nissan Murano SL</td><td class='desc'>Cargo Package</td></tr>
         <tr><td>Lexus</td><td>LRT26108</td><td>2021 Lexus GX GX 460 Premium</td><td class='desc'>Navigation Package</td></tr>
         <tr><td>Lexus</td><td>LSA26082S</td><td>2025 Nissan Pathfinder SL</td><td class='desc'>Sl Premium Package</td></tr>
@@ -324,12 +319,58 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
         <tr><td>Fernley CDJR</td><td>FD260207A</td><td>2023 Jeep Grand Cherokee L Limited</td><td class='desc'>Luxury Tech Group Ii</td></tr>
         <tr><td>Fernley CDJR</td><td>JAD26225S</td><td>2023 Ram 1500 Big Horn</td><td class='desc'>Sport Appearance Package</td></tr>
         <tr><td>Fernley CDJR</td><td>JLD26007</td><td>2024 Subaru Ascent Limited</td><td class='desc'>Technology Package</td></tr>
+        <tr><td>Fernley CDJR</td><td>JLR26056</td><td>2026 Jeep Wrangler Rubicon X</td><td class='desc'>Trailer Tow &amp; Aux Switch Group</td></tr>
+        <tr><td>Fernley CDJR</td><td>JSA26181A</td><td>2016 GMC Sierra 1500 SLT</td><td class='desc'>Suspension Package  Off-Road</td></tr>
       </tbody></table>
     </div>
   </section>
 
-  <section class="study s2" aria-labelledby="g2">
+  <section class="study s1" aria-labelledby="gq">
     <div class="label"><span class="chip">Study B</span></div>
+    <h2 id="gq">Platinum features Dealer.com does not present in Dolan's words</h2>
+    <p class="summary">Dealer.com does not show Dolan's wording for <b>2,015</b> of the <b>3,751</b> Platinum features we sent (54%). <b>347</b> of them are not on the page in any words.</p>
+    <div class="plate">
+      <table class="grp">
+        <thead><tr><th style='text-align:left'>Store</th><th>Platinum features sent</th><th>Not in Dolan's words</th><th>Not on the page in any words</th></tr></thead>
+        <tbody>
+          <tr><td style='text-align:left'><a href='../dolan-toyota-executive-report-1/'>Dolan Toyota</a></td><td>1,264</td><td><span class='miss'>720</span><span class='inl'>(57%)</span></td><td>101</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-mazda-kia-executive-report-1/'>Dolan Mazda Kia</a></td><td>518</td><td><span class='miss'>256</span><span class='inl'>(49%)</span></td><td>28</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-lexus-executive-report-1/'>Dolan Lexus</a></td><td>773</td><td><span class='miss'>431</span><span class='inl'>(56%)</span></td><td>90</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-dodge-ram-fiat-executive-report-1/'>Dolan Dodge Ram FIAT</a></td><td>589</td><td><span class='miss'>303</span><span class='inl'>(51%)</span></td><td>76</td></tr>
+          <tr><td style='text-align:left'><a href='../dolan-fernley-cdjr-executive-report-1/'>Dolan Fernley CDJR</a></td><td>607</td><td><span class='miss'>305</span><span class='inl'>(50%)</span></td><td>52</td></tr>
+          <tr class='total'><td style='text-align:left'>Dolan Automotive Group</td><td>3,751</td><td><span class='miss'>2,015</span><span class='inl'>(54%)</span></td><td>347</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="detail">
+      <table class="mini gaps"><thead><tr><th>Dolan sent</th><th>Cars</th><th>Not in Dolan's words</th><th>Not on the page in any words</th><th>What Dealer.com shows instead</th></tr></thead><tbody>
+        <tr><td>Back-Up Camera</td><td>497</td><td class='miss'>496</td><td>72</td><td class='desc'>Exterior parking camera rear</td></tr>
+        <tr><td>Satellite Radio</td><td>429</td><td class='miss'>424</td><td>10</td><td class='desc'>SiriusXM</td></tr>
+        <tr><td>Rear Parking Aid</td><td>208</td><td class='miss'>208</td><td>47</td><td class='desc'>Parking sensors</td></tr>
+        <tr><td>Premium Sound System</td><td>134</td><td class='miss'>133</td><td>35</td><td class='desc'>A brand name (Harman Kardon, JBL, Bose, AKG)</td></tr>
+        <tr><td>Sun/Moonroof</td><td>132</td><td class='miss'>132</td><td>4</td><td class='desc'>Power moonroof</td></tr>
+        <tr><td>Tow Hitch</td><td>132</td><td class='miss'>132</td><td>1</td><td class='desc'>Trailer hitch</td></tr>
+        <tr><td>Cooled Front Seat(s)</td><td>104</td><td class='miss'>104</td><td>4</td><td class='desc'>Ventilated front seats</td></tr>
+        <tr><td>Rear A/C</td><td>103</td><td class='miss'>103</td><td>8</td><td class='desc'>Rear air conditioning</td></tr>
+        <tr><td>Evasion Assist</td><td>93</td><td class='miss'>93</td><td>93</td><td class='desc'>—</td></tr>
+        <tr><td>Smart Device Integration</td><td>449</td><td class='miss'>56</td><td>14</td><td class='desc'>CarPlay</td></tr>
+        <tr><td>Aerial View Display System</td><td>55</td><td class='miss'>55</td><td>2</td><td class='desc'>Surround view</td></tr>
+        <tr><td>Running Boards/Side Steps</td><td>26</td><td class='miss'>26</td><td>18</td><td class='desc'>Running boards</td></tr>
+        <tr><td>Navigation System</td><td>200</td><td class='miss'>20</td><td>14</td><td class='desc'>Navigation</td></tr>
+        <tr><td>Heated Front Seat(s)</td><td>302</td><td class='miss'>9</td><td>8</td><td class='desc'>—</td></tr>
+        <tr><td>Keyless Entry</td><td>499</td><td class='miss'>7</td><td>3</td><td class='desc'>Smart key</td></tr>
+        <tr><td>Remote Engine Start</td><td>198</td><td class='miss'>6</td><td>6</td><td class='desc'>—</td></tr>
+        <tr><td>Heated Steering Wheel</td><td>165</td><td class='miss'>5</td><td>5</td><td class='desc'>—</td></tr>
+        <tr><td>Remote Parking System</td><td>3</td><td class='miss'>3</td><td>3</td><td class='desc'>—</td></tr>
+        <tr><td>Panoramic Roof</td><td>2</td><td class='miss'>2</td><td>0</td><td class='desc'>Moonroof</td></tr>
+        <tr><td>Heads-Up Display</td><td>20</td><td class='miss'>1</td><td>0</td><td class='desc'>Head-up display</td></tr>
+      </tbody></table>
+      <ul class="notes"><li>Same near-exact rule as Study A. Dolan's "Notes from the dealer" text does not count. Vehicle pages read Oct 28, 2026, 1:42 PM ET.</li><li>"What Dealer.com shows instead" is the most common other wording found on those pages.</li></ul>
+    </div>
+  </section>
+
+  <section class="study s2" aria-labelledby="g2">
+    <div class="label"><span class="chip">Study C</span></div>
     <h2 id="g2">Hot features that have a Dealer.com search filter</h2>
     <p class="summary">Dealer.com offers these search filters on our website. Our export names the feature, and the filter does not show the car: <b>1,979</b> of <b>7,701</b> (26%).</p>
     <div class="detail">
@@ -364,12 +405,12 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
         <tr><td>Lane Assist</td><td>Silver</td><td>343</td><td>274</td><td class='miss'>69</td></tr>
         <tr><td>Rain Sensing Wipers</td><td>Silver</td><td>151</td><td>149</td><td class='miss'>2</td></tr>
       </tbody></table>
-      <ul class="notes"><li>Counts add the five stores, on the 523 cars that were on the website when the filters were read. # in Export = # on SRP + # not seen on every line.</li><li>Parking Sensors / Assist counts as shown when the car carries the "Parking Sensors / Assist" filter or the "Reverse Sensing System" filter.</li><li>Tow Hitch/Tow Package counts every tow hitch or tow package in our export (for example "Tow Hitch", "Trailer Tow Package", "Max Tow Package", "Trailer Tow Group"). On Oct 28, 2026, 10:05 AM ET, Dealer.com showed this filter on 4 of 543 used cars on the whole site. 3 of those 4 were on the site when the filters above were read; the 4th (JMK26084) was added later.</li><li>Only filters that Dealer.com offers on dolanautogroup.com are in Study B.</li></ul>
+      <ul class="notes"><li>Counts add the five stores, on the 523 cars that were on the website when the filters were read. # in Export = # on SRP + # not seen on every line.</li><li>Parking Sensors / Assist counts as shown when the car carries the "Parking Sensors / Assist" filter or the "Reverse Sensing System" filter.</li><li>Tow Hitch/Tow Package counts every tow hitch or tow package in our export (for example "Tow Hitch", "Trailer Tow Package", "Max Tow Package", "Trailer Tow Group"). On Oct 28, 2026, 10:05 AM ET, Dealer.com showed this filter on 4 of 543 used cars on the whole site. 3 of those 4 were on the site when the filters above were read; the 4th (JMK26084) was added later.</li><li>Only filters that Dealer.com offers on dolanautogroup.com are in Study C.</li></ul>
     </div>
   </section>
 
   <section class="study s2" aria-labelledby="g3">
-    <div class="label"><span class="chip">Study C</span></div>
+    <div class="label"><span class="chip">Study D</span></div>
     <h2 id="g3">Platinum features with no Dealer.com search filter</h2>
     <p class="summary">Dealer.com offers no search filter for these Platinum features. A shopper cannot filter our cars for any of them. Five of them are separate entries in our export. Together they appear <b>861</b> times on cars that are on our website today.</p>
     <div class="detail">
@@ -385,7 +426,7 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
     </div>
   </section>
 
-  <div class="disc"><b>How these numbers were measured</b>Packages (Study A): exports of Oct 27–28 and vehicle pages read Oct 28, 2026, 10:44 AM ET, all five stores, one method. Hot features: each store report states its own dates. Dolan Toyota and Dolan Mazda Kia: vehicle pages audited Oct 22, 2026, against the full hot-feature list. Dolan Lexus, Dolan Dodge Ram FIAT and Dolan Fernley CDJR: vehicle pages read Oct 27, 2026, against 37 hot features that pair with the search filters. Packages are not counted as hot features. Because the two methods cover different feature lists, compare the counts, not the percentages, between those two groups. Search filters were read Oct 25 and Oct 27, 2026. "Dropped" means the wording is not on the page when it was read; it does not prove what equipment the car has.</div>
+  <div class="disc"><b>How these numbers were measured</b>Packages, priced options and Platinum features (Studies A and B): exports of Oct 27–28, 2026 and vehicle pages read Oct 28, 2026, 1:42 PM ET, all five stores, one near-exact rule. Gold and Silver features: Dolan Toyota and Dolan Mazda Kia vehicle pages read Oct 22, 2026, against the full hot-feature list; Dolan Lexus, Dolan Dodge Ram FIAT and Dolan Fernley CDJR read Oct 27, 2026, against the hot features that pair with the search filters, so compare those counts, not the percentages. Search filters were read Oct 25 and Oct 27, 2026. "Not presented" means the wording is not on the page when it was read; it does not prove what equipment the car has.</div>
 
   <footer>Store reports: <ul class="notes"><li><a href='../dolan-toyota-executive-report-1/'>Dolan Toyota</a> · Audited Oct 22, 2026, 2:21 PM ET. Search filters read Oct 25, 2026, 12:20 PM ET.</li><li><a href='../dolan-mazda-kia-executive-report-1/'>Dolan Mazda Kia</a> · Audited Oct 22, 2026, 2:25 PM ET. Search filters read Oct 27, 2026, 12:44 AM ET.</li><li><a href='../dolan-lexus-executive-report-1/'>Dolan Lexus</a> · Audited Oct 27, 2026, 12:37 PM ET. Search filters read Oct 27, 2026, 2:35 PM ET.</li><li><a href='../dolan-dodge-ram-fiat-executive-report-1/'>Dolan Dodge Ram FIAT</a> · Audited Oct 27, 2026, 12:39 PM ET. Search filters read Oct 27, 2026, 3:35 PM ET.</li><li><a href='../dolan-fernley-cdjr-executive-report-1/'>Dolan Fernley CDJR</a> · Audited Oct 27, 2026, 12:41 PM ET. Search filters read Oct 27, 2026, 3:57 PM ET.</li></ul>Sources: Inputs: Dolan inventory exports, the vehicle pages and the Features search filters on dolanautogroup.com (Dealer.com). Computation: AutoMagicLabs.ai performed for Dolan Automotive Group.</footer>
 </div>

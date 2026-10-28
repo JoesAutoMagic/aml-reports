@@ -110,6 +110,7 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
 .disc{border-top:1px solid var(--rule);padding-top:16px;font-size:14px;color:var(--ink)}
 .disc b{font-family:var(--display);font-stretch:85%;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px;color:var(--muted);display:block;margin-bottom:4px}
 .pkg li::before{content:"";position:absolute;left:0;top:.72em;width:18px;height:3px;background:var(--aml);border-radius:2px}
+@media (max-width:700px){.plate,.detail{overflow-x:auto;-webkit-overflow-scrolling:touch}}
 </style>
 
 
@@ -125,13 +126,13 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
   <section class="study s0" aria-labelledby="t0">
     <div class="label"><span class="chip">Summary</span> Website Audit: Does It Sell Cars?</div>
     <h2 id="t0">Team Dolan sends the features. Does Dealer.com drop any of them?</h2>
-    <p class="summary">Dolan Fernley Chrysler Jeep Dodge Ram's export on 78 used cars lists <b>7,729</b> features in total. AutoMagic Labs knows what sells cars and we know that <b>1,300</b> of them are <b>hot features</b> that need high priority. Missing hot features makes the car harder to sell.</p>
+    <p class="summary">Dolan Fernley Chrysler Jeep Dodge Ram's export on 78 used cars lists <b>7,729</b> features in total. AutoMagic Labs knows what sells cars and we know that <b>1,387</b> of them are <b>hot features</b> that need high priority. Missing hot features makes the car harder to sell.</p>
     <p class="summary">Here are 4 examples that Team Dolan sent to DDC and are missing:</p>
     <div class="ex">
-      <div><b>Example: FR261167A</b>Dolan Sent: Back-Up Camera<br>Hot feature: Platinum<br>Website: <span class="miss">Not Seen - or- very hard to find</span></div>
-      <div><b>Example: JBB26032</b>Dolan Sent: Back-Up Camera<br>Hot feature: Platinum<br>Website: <span class="miss">Not Seen - or- very hard to find</span></div>
-      <div><b>Example: JBB26031</b>Dolan Sent: Remote Engine Start<br>Hot feature: Platinum<br>Website: <span class="miss">Not Seen - or- very hard to find</span></div>
-      <div><b>Example: C270068B</b>Dolan Sent: Evasion Assist<br>Hot feature: Platinum<br>Website: <span class="miss">Not Seen - or- very hard to find</span></div>
+      <div><b>Example: JAD26225S</b>2023 Ram 1500 Big Horn<br>Dolan Sent: Sport Appearance Package<br>MSRP: $1,305<br>Website: <span class="miss">Not presented</span></div>
+      <div><b>Example: FD260207A</b>2023 Jeep Grand Cherokee L Limited<br>Dolan Sent: Back-Up Camera<br>Hot feature: Platinum<br>Website: <span class="miss">Not on the page</span></div>
+      <div><b>Example: C270068B</b>2026 Hyundai Palisade Hybrid Calligraphy<br>Dolan Sent: Evasion Assist<br>Hot feature: Platinum<br>Website: <span class="miss">Not on the page</span></div>
+      <div><b>Example: JACV26008A</b>2022 Ram 3500 Laramie<br>Dolan Sent: Premium Sound System<br>Hot feature: Platinum<br>Website: <span class="miss">Not on the page</span></div>
     </div>
   </section>
 
@@ -140,35 +141,46 @@ table.mini tr.tier td{background:var(--band);font-family:var(--display);font-str
     <h2 id="t1v1">Study #1: Compare Dolan Fernley Chrysler Jeep Dodge Ram Export to DDC</h2>
     <div class="plate">
       <table>
-        <thead><tr><th>Tier</th><th>Exported by Dolan</th><th>Totally missing</th></tr></thead>
+        <thead><tr><th>Tier</th><th>Exported by Dolan</th><th>Not presented</th></tr></thead>
         <tbody>
-          <tr><td>Platinum</td><td>583</td><td><span class="miss">39</span><span class="inl">(7%)</span></td></tr>
+          <tr><td>Packages</td><td>63</td><td><span class="miss">5</span><span class="inl">(8%)</span></td></tr>
+          <tr><td>Platinum</td><td>607</td><td><span class="miss">305</span><span class="inl">(50%)</span></td></tr>
           <tr><td>Gold</td><td>397</td><td><span class="miss">28</span><span class="inl">(7%)</span></td></tr>
           <tr><td>Silver</td><td>320</td><td><span class="miss">31</span><span class="inl">(10%)</span></td></tr>
-          <tr class="total"><td>Total</td><td>1,300</td><td><span class="miss">98</span><span class="inl">(8%)</span></td></tr>
+          <tr class="total"><td>Total</td><td>1,387</td><td><span class="miss">369</span><span class="inl">(27%)</span></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="summary">Team Dolan exported <b>1,300</b> hot features and DDC dropped <b>98</b> (8% of all hot features).</p>
-    <ul class="notes"><li><b>Totally missing:</b> Dolan exported the item; it is in neither the VDP feature list nor the dealer notes.</li></ul>
+    <p class="summary">Team Dolan exported <b>1,387</b> hot features and DDC did not present <b>369</b> of them as sent (27% of all hot features).</p>
+    <ul class="notes"><li><b>Packages, priced options and Platinum:</b> presented only when Dolan's own wording is on the vehicle page, outside the "Notes from the dealer" box (our own text). Near-exact match: case, punctuation, spacing, plurals, &amp; for and, w/ for with, and Pkg for Package are ignored; any other different word is a miss. Vehicle pages read Oct 28, 2026, 1:42 PM ET.</li><li><b>Gold and Silver:</b> not presented means the item is in neither the vehicle page's feature list nor the dealer notes (pages read Oct 27, 2026).</li><li><b>Priced options</b> (<span class='opt'>&#9670;</span>): installed on their own, with their own price on the factory build, and named in Dolan's export. The table shows Dolan's export wording. No factory build data is on file for this store, so priced options are not counted here.</li></ul>
     <div class="detail">
-      <h3>Packages Dealer.com does not present <span class="miss">3 of 83</span></h3>
-      <table class="mini"><thead><tr><th>Stock</th><th>Vehicle</th><th>Factory package</th></tr></thead><tbody>
-        <tr><td>FD260207A</td><td>2023 Jeep Grand Cherokee L Limited</td><td class='desc'>Luxury Tech Group Ii</td></tr>
-        <tr><td>JAD26225S</td><td>2023 Ram 1500 Big Horn</td><td class='desc'>Sport Appearance Package</td></tr>
-        <tr><td>JLD26007</td><td>2024 Subaru Ascent Limited</td><td class='desc'>Technology Package</td></tr>
-        <tr><td colspan='3' class='desc more'>Vehicle pages read Oct 28, 2026, 10:44 AM ET. Same method for all five stores: <a href='../dolan-automotive-group-executive-report/'>Dolan Automotive Group report, Study A</a>.</td></tr>
+      <h3>Packages and priced options not presented <span class="miss">5</span> · <span class="miss">$1,305</span> at MSRP</h3>
+      <table class="mini"><thead><tr><th>Stock</th><th>Vehicle</th><th>Package or option</th><th>MSRP</th></tr></thead><tbody>
+        <tr><td>JAD26225S</td><td>2023 Ram 1500 Big Horn</td><td class='desc'>Sport Appearance Package</td><td class='miss'>$1,305</td></tr>
+        <tr><td>FD260207A</td><td>2023 Jeep Grand Cherokee L Limited</td><td class='desc'>Luxury Tech Group Ii</td><td class='miss'>—</td></tr>
+        <tr><td>JLD26007</td><td>2024 Subaru Ascent Limited</td><td class='desc'>Technology Package</td><td class='miss'>—</td></tr>
+        <tr><td>JLR26056</td><td>2026 Jeep Wrangler Rubicon X</td><td class='desc'>Trailer Tow &amp; Aux Switch Group</td><td class='miss'>—</td></tr>
+        <tr><td>JSA26181A</td><td>2016 GMC Sierra 1500 SLT</td><td class='desc'>Suspension Package  Off-Road</td><td class='miss'>—</td></tr>
+        <tr><td colspan='4' class='desc more' style='white-space:normal;text-align:left'>MSRP only where a published price of $500 or more exists; "—" means no published price. Same method at all five stores: <a href='../dolan-automotive-group-executive-report/'>Dolan Automotive Group report</a>.</td></tr>
       </tbody></table>
-      <h3>Totally missing Platinum features <span class="miss">39</span></h3>
-      <ul class="feat">
-        <li><b>Parking Sensors / Assist</b> <span class='stk'>C260061D, C270066A, J260861B, JACV26013, JAD26200, JE26105 +6 more</span></li>
-        <li><b>Premium Audio</b> <span class='stk'>FR261167A, JACV26008A, JAD26195S, JAD26199, JBB26031, JE26112 +3 more</span></li>
-        <li><b>Evasion Assist</b> <span class='stk'>C270068B, J260861A, JLN26058S, JMA26009, JMK26080S, JRT26204B</span></li>
-        <li><b>Rearview Camera</b> <span class='stk'>FR261167A, JAD26199, JBB26032, JFM26027, JSA26184, JSA26199</span></li>
-        <li><b>Rear Air Conditioning</b> <span class='stk'>JAD26219, JSA26197</span></li>
-        <li><b>Remote Start</b> <span class='stk'>C270066A, JBB26031</span></li>
-        <li><b>Running Boards</b> <span class='stk'>JDR26159S, JRT26204A</span></li>
-      </ul>
+      <h3>Platinum features not in Dolan's words <span class="miss">305</span></h3>
+      <table class="mini"><thead><tr><th>Dolan sent</th><th>Cars</th><th>Not in Dolan's words</th><th>Not on the page in any words</th><th>What DDC shows instead</th></tr></thead><tbody>
+        <tr><td class='desc'>Back-Up Camera</td><td>79</td><td class='miss'>78</td><td>15</td><td class='desc'>Exterior parking camera rear</td></tr>
+        <tr><td class='desc'>Satellite Radio</td><td>67</td><td class='miss'>66</td><td>0</td><td class='desc'>SiriusXM</td></tr>
+        <tr><td class='desc'>Rear Parking Aid</td><td>35</td><td class='miss'>35</td><td>12</td><td class='desc'>Parking sensors</td></tr>
+        <tr><td class='desc'>Premium Sound System</td><td>30</td><td class='miss'>30</td><td>9</td><td class='desc'>A brand name (Harman Kardon, JBL, Bose, AKG)</td></tr>
+        <tr><td class='desc'>Tow Hitch</td><td>23</td><td class='miss'>23</td><td>0</td><td class='desc'>Trailer hitch</td></tr>
+        <tr><td class='desc'>Rear A/C</td><td>16</td><td class='miss'>16</td><td>2</td><td class='desc'>Rear air conditioning</td></tr>
+        <tr><td class='desc'>Sun/Moonroof</td><td>16</td><td class='miss'>16</td><td>0</td><td class='desc'>Power moonroof</td></tr>
+        <tr><td class='desc'>Cooled Front Seat(s)</td><td>14</td><td class='miss'>14</td><td>0</td><td class='desc'>Ventilated front seats</td></tr>
+        <tr><td class='desc'>Aerial View Display System</td><td>8</td><td class='miss'>8</td><td>0</td><td class='desc'>Surround view</td></tr>
+        <tr><td class='desc'>Evasion Assist</td><td>7</td><td class='miss'>7</td><td>7</td><td class='desc'>—</td></tr>
+        <tr><td class='desc'>Running Boards/Side Steps</td><td>4</td><td class='miss'>4</td><td>2</td><td class='desc'>Running boards</td></tr>
+        <tr><td class='desc'>Smart Device Integration</td><td>76</td><td class='miss'>4</td><td>1</td><td class='desc'>CarPlay</td></tr>
+        <tr><td class='desc'>Remote Engine Start</td><td>38</td><td class='miss'>2</td><td>2</td><td class='desc'>—</td></tr>
+        <tr><td class='desc'>Keyless Entry</td><td>80</td><td class='miss'>1</td><td>1</td><td class='desc'>—</td></tr>
+        <tr><td class='desc'>Remote Parking System</td><td>1</td><td class='miss'>1</td><td>1</td><td class='desc'>—</td></tr>
+      </tbody></table>
       <h3>Totally missing Gold features <span class="miss">28</span></h3>
       <ul class="feat">
         <li><b>Hands-Free Liftgate</b> <span class='stk'>C270068B, J260886A, JAD26200, JE26108, JE26112, JE26114 +7 more</span></li>
